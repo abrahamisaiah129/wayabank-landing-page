@@ -7,7 +7,7 @@ pipeline {
         AWS_DEFAULT_REGION = credentials('AWS_DEFAULT_REGION')
         CLUSTER_NAME = credentials('CLUSTER_NAME')
         REGISTRY = credentials('REGISTRY')
-        SERVICE_NAME = 'reactjs-new-website'
+        SERVICE_NAME = 'wayabank-home-website'
         VERSION = sh (script: 'git rev-parse HEAD', returnStdout: true).trim().take(10)
     }
 
