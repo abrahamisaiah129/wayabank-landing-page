@@ -20,9 +20,6 @@ function TopNav(params) {
       </button>
       <div className="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
         <ul className="navbar-nav mr-4">
-          <li className="nav-item active">
-            <a className="nav-link" href="/about">About us <span className="sr-only">(current)</span></a>
-          </li>
           <li className="nav-item dropdown">
             <a className="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Business
@@ -30,7 +27,7 @@ function TopNav(params) {
             <div className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
               <a className="dropdown-item" href="/merchant">Merchants</a>
               <a className="dropdown-item" href="/agent">Agents</a>
-              {/* <a className="dropdown-item" href="#">E-Commerce</a> */}
+              <a className="dropdown-item" href="/commerce">E-Commerce</a>
             </div>
           </li>
           <li className="nav-item dropdown">
@@ -41,7 +38,7 @@ function TopNav(params) {
               {categories && categories.map(cat => {
                 return (
                   <li className="nav-item dropdown" key={cat.id}>
-                    <a className="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <a className="nav-link dropdown-toggle" href={`/product/${cat.url}`} id="navbarDropdownMenuLink" data-toggle="link" aria-haspopup="true" aria-expanded="false">
                       {cat.category_name}
                     </a>
                     <div className="dropdown-menu inner-menu" aria-labelledby="navbarDropdownMenuLink">
@@ -57,17 +54,46 @@ function TopNav(params) {
               })}
             </div>
           </li>
-          <li className="nav-item">
+
+          <li className="nav-item dropdown">
+            {/* <a className="nav-link" href="/developers"></a> */}
+            <a className="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Developers
+            </a>
+            <div className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a className="dropdown-item" href="/developer/developer-docs">Developer Docs</a>
+              <a className="dropdown-item" href="/developer/integration">Integration</a>
+              <a className="dropdown-item" href="/developer/api-reference">Api Reference</a>
+            </div>
+          </li>
+
+          <li className="nav-item active">
+            <a className="nav-link" href="/pricing-page">Pricing</a>
+          </li>
+          <li className="nav-item dropdown">
+            <a className="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Learn
+            </a>
+            <div className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a className="dropdown-item" href="/about">About Us</a>
+              <a className="dropdown-item" href="/contact">Contact Us</a>
+              <a className="dropdown-item" href="/blogs">Blog</a>
+            </div>
+          </li>
+          {/* <li className="nav-item">
             <a className="nav-link" href="/how-it-works">How it works</a>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="/contact">Contact</a>
+            <a className="nav-link" href="/pricing">Contact</a>
           </li>
           <li className="nav-item">
             <a className="nav-link" href="/blogs">Blog</a>
+          </li> */}
+          <li className={`${location.pathname == '/signin' ? 'hiding' : 'showing'} nav-item`}>
+            <a className="nav-link" href="https://customer.staging.mywayapay.com/login">LOGIN</a>
           </li>
-          <li className={`${location.pathname == '/signin' ? 'hiding' : 'showing'} nav-item link-btn`}>
-            <a className="nav-link" href="/signin">LOGIN</a>
+          <li className={`nav-item link-btn`}>
+            <a className="nav-link" href="https://customer.staging.mywayapay.com/signup">REGISTER</a>
           </li>
         </ul>
       </div>

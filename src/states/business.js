@@ -1,5 +1,5 @@
 import { selector } from "recoil";
-import { getSiteApi } from "../services/apiCalls";
+import { getData, getSiteApi } from "../services/apiCalls";
 
 export const getMerchants = selector({
   key: "getMerchants",
@@ -39,3 +39,18 @@ export const getHowToJoin = selector({
     }
   }
 });
+
+export const getBusinessType = selector({
+  key: "getBusinessType",
+  get: async ({ get }) => {
+    try {
+      const result = await getData("business/type/find/all");
+      return result || [];
+    } catch (error) {
+      console.error(`ERROR: \n${error}`);
+      return [];
+    }
+  }
+});
+
+// http://68.183.60.114:8059/api/v1/

@@ -8,6 +8,7 @@ import { useRecoilState, useRecoilValueLoadable, useSetRecoilState } from 'recoi
 import { blogId, getBlogs } from '../states/blog'
 import { fetching } from '../states/home'
 import { imageUrl } from '../services/axios'
+import { Image } from 'antd'
 
 function Blog(props) {
   let { url } = useRouteMatch();
@@ -28,6 +29,60 @@ function Blog(props) {
     }
   }, [data])
 
+
+
+  const blogsBackup=[
+    {
+      id: 1,
+      image_url: '/blogPic.png',
+      title: 'PAYMENT SOLUTION',
+      short_content: 'Register, Login and Transact with your Phone number',
+      updated_at: '2020-03-21'
+    },
+    {
+      id: 2,
+      image_url: '/blogPic.png',
+      title: 'EASY TO USE',
+      short_content: 'Add Bank card / setup Bank account and start transacting',
+      updated_at: '2020-03-21'
+    },
+    {
+      id: 3,
+      image_url: '/blogPic.png',
+      title: 'EASY TO TRANSACT',
+      short_content: 'Link Your BVN, Top up your Wallet, Request for Payment, Accept payment, Transfer money, Pay for Subscriptions and Services, with just few clicks.',
+      updated_at: '2020-03-21'
+    },
+    {
+      id: 4,
+      image_url: '/blogPic.png',
+      title: 'PAYMENT OPTIONS',
+      short_content: 'Transact, and Receive payments with or without Internet access with our multiple payment options.',
+      updated_at: '2020-03-21'
+    },
+    {
+      id: 5,
+      image_url: '/blogPic.png',
+      title: 'QR CODE',
+      short_content: 'Scan and make payments, Send QR code to customers/contact list and get paid in minutes.',
+      updated_at: '2020-03-21'
+    },
+    {
+      id: 6,
+      image_url: '/blogPic.png',
+      title: 'CHAT, CALL, TRANSACT',
+      short_content: 'Get in touch with your loved ones, send them pictures and videos, make free video and audio calls, and send them money',
+      updated_at: '2020-03-21'
+    },
+    {
+      id: 7,
+      image_url: '/blogPic.png',
+      title: 'SOCIALIZE',
+      short_content: 'Meet new people, Post pictures and videos, create groups, advertise your products, follow people and synchronize with your other social media accounts',
+      updated_at: '2020-03-21'
+    },
+  ]
+
   return (
     <div>
       <TopNav />
@@ -45,9 +100,20 @@ function Blog(props) {
         </div>
         <div className={`${loading ? 'hiding' : 'showing'}`}>
           <div className='blogs pb-4'>
-            {blogs.map(el => {
+            {blogsBackup.map(el => {
               return <div className="card blog-card" key={el.id} >
-                <img className="card-img-top" src={`${imageUrl}${el.image_url}`} alt="Blog Image" />
+                <Image
+                    className="card-img-top" 
+                    preview={false} 
+                    src={el.image_url}
+                    alt="Blog Image"
+                    placeholder={
+                      <Image
+                        src={`${imageUrl}${el.image_url}`} 
+                        preview={false}
+                      />
+                    }
+                  />
                 <div className="card-body">
                   <div className='row justify-content-between'>
                     <p className='col'>{dateFormater(el.updated_at)}</p>

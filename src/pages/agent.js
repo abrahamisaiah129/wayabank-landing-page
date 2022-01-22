@@ -7,6 +7,7 @@ import { useRecoilValueLoadable } from 'recoil';
 import { getAgents, getHowToJoin } from '../states/business';
 import { getSettings } from '../states/home';
 import { imageUrl } from '../services/axios';
+import { Image } from 'antd';
 
 function Agent() {
   const data = useRecoilValueLoadable(getAgents)
@@ -16,12 +17,32 @@ function Agent() {
   const settings = dataS.state === "hasValue" ? dataS.contents : {}
   const steps = dataH.state === "hasValue" ? dataH.contents : []
   const boss = agents.be_your_own_boss ? agents.be_your_own_boss.split("*") : []
+  
+  const backupSteps=[
+    {
+      id: 1,
+      image_url:'/agent/down.png',
+      title:'Download WayaPay',
+    },
+    {
+      id: 2,
+      image_url:'/agent/reg.png',
+      title:'Signup as an agent',
+    },
+    {
+      id: 3,
+      image_url:'/agent/start.png',
+      title:'Start transacting immediately',
+    },
+  ]
+
   return (
+
     <div>
       <TopNav />
       <div id='agentsection' >
         <Fade right cascade>
-          <div className="about-jumbotron pb-4 mb-4 pl-4 pb-2">
+          <div className="about-jumbotron pb-4 px-lg-4 pb-2 my-5">
             <div className="pb-4 row justify-content-center">
               <div className='col-md-5 pt-4'>
                 <div className='pb-4'>
@@ -30,10 +51,22 @@ function Agent() {
                 </div>
               </div>
               <div className='col-md-6'>
-                <img src={`${imageUrl}${agents.hero_image_url}`} alt='banner' />
+                <Image 
+                  style={{marginTop:'-20px', marginLeft:'80px'}}
+                  width={400}
+                  preview={false} 
+                  src='/operate.png'
+                  alt='banner' 
+                  placeholder={
+                    <Image
+                      src={`${imageUrl}${agents.hero_image_url}`} 
+                      preview={false}
+                    />
+                  }
+                />
               </div>
             </div>
-            <div className=' socials justify-content-start pl-4'>
+            <div className=' socials justify-content-start px-lg-5'>
               <a href={settings.play_store_link} className='col col-md-4' target='_blank'>
                 <img alt='Google Play Download' src='/google-play-badge.png' className='' />
               </a>
@@ -47,7 +80,20 @@ function Agent() {
           <Zoom cascade>
             <div className='row justify-content-center'>
               <h3 className='col-sm-12 text-center'>Why become a Waya Agent?</h3>
-              <img src={`${imageUrl}${agents.why_become_agent_image}`} className='col-sm-12' alt='Waya Agent Options' />
+              <div className='col-12 text-center'>
+                <Image 
+                  className='mx-auto'
+                  preview={false} 
+                  src='/range.png'
+                  alt='Waya Agent Options' 
+                  placeholder={
+                    <Image
+                      src={`${imageUrl}${agents.why_become_agent_image}`} 
+                      preview={false}
+                    />
+                  }
+                />
+              </div>
             </div>
           </Zoom>
         </div>
@@ -60,9 +106,20 @@ function Agent() {
                   <h5 className="text-center">How to join</h5>
                   <Fade bottom cascade>
                     <div className=' justify-content-center last-banner-phones'>
-                      {steps.map(s => (<div className='single'>
-                        <div>
-                          <img className='mt-2' src={`${imageUrl}${s.image_url}`} />
+                      {backupSteps.map(s => (<div className='single'>
+                        <div key={s.id}>
+                          <Image 
+                            className='pt-2'
+                            preview={false} 
+                            src={s.image_url}
+                            alt='Waya Agent Options' 
+                            placeholder={
+                              <Image
+                                src={`${imageUrl}${s.image_url}`} 
+                                preview={false}
+                              />
+                            }
+                          />
                         </div>
                         <p className='mt-4 text-center'>{s.title}</p>
                       </div>))}
@@ -89,29 +146,45 @@ function Agent() {
               </Fade>
             </div>
           </div>
-          <div className='ending container-fluid ' style={{ backgroundImage: 'url(/wave.png)' }}>
-            <Fade right>
-              <div className="row justify-content-center">
-                <div className='col-sm-8 col-md-6 pt-4 pb-4 pr-0 pl-4 mt-4'>
-                  <div className='pb-md-4'>
-                    <h2 className="">sign up now to join for free</h2>
-                  </div>
-                  <div className='row justify-content-left last-socials mt-4'>
-                    <a href={settings.play_store_link} className='col col-md-4' target='_blank'>
-                      <img alt='Google Play Download' src='/google-play-badge.png' className='' />
-                    </a>
-                    <a className='col col-md-4' href={settings.app_store_link} target='_blank'>
-                      <img alt='App Store Download' src='/app-store-badge.png' />
-                    </a>
 
+          <div className='ending' style={{ backgroundImage: 'url(/wave.png)' }}>
+            <div className='container'>
+              <Fade right>
+                <div className="row">
+                  <div className='col-sm-8 col-md-6 pt-5 pr-0 ps-4 mt-5'>
+                    <div className='pb-md-4'>
+                      <h2 className=""><span className='text-orange text-decoration-underline'>sign up</span> now to join for free</h2>
+                    </div>
+                    <div className='row justify-content-left last-socials mt-4'>
+                      <a href={settings.play_store_link} className='col col-md-4' target='_blank'>
+                        <img alt='Google Play Download' src='/google-play-badge.png' className='' />
+                      </a>
+                      <a className='col col-md-4' href={settings.app_store_link} target='_blank'>
+                        <img alt='App Store Download' src='/app-store-badge.png' />
+                      </a>
+
+                    </div>
+                  </div>
+                  <div className='col-sm-3 col-md-5 pl-0 lastphone'>
+                    <Image 
+                      style={{ marginLeft:'80px'}}
+                      width={600}
+                      preview={false} 
+                      src='/wayaphone.png'
+                      alt='banner pic'
+                      placeholder={
+                        <Image
+                          src={`${imageUrl}${agents.sign_up_image_url}`} 
+                          preview={false}
+                        />
+                      }
+                    />
                   </div>
                 </div>
-                <div className='col-sm-3 col-md-5 pl-0 lastphone'>
-                  <img src={`${imageUrl}${agents.sign_up_image_url}`} alt='banner pic' />
-                </div>
-              </div>
-            </Fade>
+              </Fade>
+            </div>
           </div>
+
           <section className='container-fluid last-form'>
             <Zoom>
               <h4 className='text-center'>sign up now as an Agent</h4>

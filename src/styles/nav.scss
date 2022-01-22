@@ -10,10 +10,10 @@ nav{
             font-weight: 600;
             font-size: 14px;
             margin-left: 10px;
-            a{
+            a.nav-link{
                 color: #FFFFFF;
             }
-            a:hover, a:active{
+            a.nav-link:hover, a.nav-link:active{
                 color: black
             }
             .dropdown-menu{

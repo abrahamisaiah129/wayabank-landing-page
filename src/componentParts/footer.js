@@ -1,3 +1,4 @@
+import { Divider } from 'antd';
 import { useState } from 'react';
 import Fade from 'react-reveal/Zoom';
 import { useRecoilValueLoadable } from 'recoil';
@@ -34,7 +35,7 @@ function PageFooter() {
         <div className='top row' style={{ backgroundImage: 'url(/chat.png)' }}>
           <Fade right cascade>
             <div className='col mr-4 justify-content-between'>
-              <h4>Customer Support</h4>
+              <h4 className='text-white'>Customer Support</h4>
               <p>If you have any questions or want to know more about Waya PayChat
                 and our services, check our FAQ or contact our Customer Support</p>
               <div className='contacts row'>
@@ -77,7 +78,8 @@ function PageFooter() {
           </Fade>
         </div>
         <div className='bottom container pt-4'>
-          <hr className='pt-4 mt-4' />
+          {/* <hr className='pt-4 mt-4' /> */}
+          <Divider type='horizontal' className='bg-secondary' />
           <div className='row justify-content-between'>
             <p className='col-sm-12 col-lg-4'>
               Copyright &copy; Waya {new Date().getFullYear()}  All rights reserved</p>

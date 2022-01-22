@@ -1,6 +1,7 @@
 import Blog from './pages/blog';
 import ContactPage from './pages/contact'
 import MerchantPage from './pages/merchant'
+import CommercePage from './pages/commerce'
 import SignIn from './pages/signIn';
 import WayaGram from './pages/wayagram';
 import WayaPay from './pages/wayapay'
@@ -19,10 +20,14 @@ import HowItWorks from './pages/how-it-works';
 import SinglePost from './pages/single-post';
 import TermsOfUse from './pages/terms';
 import PrivacyPage from './pages/privacy';
+import PricingPage from './pages/pricing';
+import DeveloperPage from './pages/developer';
+import WayaPos from './pages/product/wayapos';
+// import SignUp from './pages/signup';
 
 function App() {
   return (
-    <div className="App">
+    <div>
       <Router>
         <Switch>
           <Route exact path="/about">
@@ -40,8 +45,17 @@ function App() {
           <Route exact path='/merchant'>
             <MerchantPage />
           </Route>
+          <Route exact path='/commerce'>
+            <CommercePage />
+          </Route>
           <Route exact path='/product/:cat'>
             <WayaChat />
+          </Route>
+          <Route exact path='/waya-pos'>
+            <WayaPos />
+          </Route>
+          <Route exact path='/developer/:cat'>
+            <DeveloperPage />
           </Route>
           <Route exact path='/wayapay'>
             <WayaPay />
@@ -54,6 +68,12 @@ function App() {
           </Route>
           <Route exact path='/signin'>
             <SignIn />
+          </Route>
+          {/* <Route exact path='/signup'>
+            <SignUp />
+          </Route> */}
+          <Route exact path='/pricing-page'>
+            <PricingPage />
           </Route>
           <Route exact path='/how-it-works'>
             <HowItWorks />

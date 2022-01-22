@@ -1,5 +1,9 @@
+// miscelleneous styles
+
+
+
+
 .home-jumbotron{
-    padding-left: 6%;
     background-color: #FF4400;
     background-blend-mode: darken;
     background-repeat: no-repeat;
@@ -29,11 +33,53 @@
     color: #fff;
     font-family: 'Sarabun', sans-serif;
    }
+//    img[alt='jumbotron']{
+//        position: absolute;
+//        max-width: 48%;
+//        right: 8%;
+//        top: 16%;
+//    }
+    .md-m{
+        margin-bottom: -24px;
+    }
+}
+
+.genericJumbo{
+    .gjButton{
+        .btn-orange{
+            background-color: #FF4400;
+            color: #fff;
+            border-radius: 4px;
+            padding-inline-start: 10px;
+            padding-inline-end: 10px;
+            font-size: 14px;
+            transition: all 1s ease-out;
+        }
+        .btn-orange:hover{
+            background-color: #fff;
+            color: #FF4400;
+        }
+
+        .btn-link{
+            color: #FF4400;
+            transition: all 1s ease-out;
+        }
+        .btn-orange:hover{
+            color: #FE7756;
+        }
+         // li.link-btn:hover, li.link-btn:active{
+         //     background-color: #FE7756;
+         // }
+    }
    img[alt='jumbotron']{
-       position: absolute;
-       max-width: 48%;
-       right: 8%;
-       top: 16%;
+    //    position: absolute;
+       max-width: 58%;
+    //    right: 8%;
+    //    top: 16%;
+   }
+   .mx-40{
+       margin-left: 170px;
+       margin-right: 170px;
    }
 }
 
@@ -53,7 +99,6 @@ section.categories{
         font-size: 14px;
         line-height: 150%;
         color: #4F4F4F;
-
     }
     img{
         max-width: 110px;
@@ -66,6 +111,20 @@ section.categories{
     //     right: 5%;
     //     bottom: 4%;
     // }
+    h1{
+        font-family:'Open Sans', sans-serif;
+        font-weight: 800;
+        font-size: 30px;
+        line-height: 116.6%;
+        color: #FF4400;
+    }
+    .text-orange-tick{
+        color: #FF4400;
+    } 
+    .text-orange-fade{
+        color:#FE7756;
+    }
+    
 }
 
 section.features{
@@ -99,7 +158,7 @@ section.features{
         padding: 2%;
         max-width: 90vw;
         padding: 4em 10em;
-        .singlePhone img{
+        .singlePhone Image{
             max-width: 92%;
         }
         .singlePhone:before {
@@ -107,11 +166,11 @@ section.features{
             background: #fff;
             display: inline-block;
             position: absolute;
-            left: 48%;
+            left: 96.5%;
             margin-top: 53px;
-            // margin-bottom: 70px !important;
-            width: 2px;
-            height: 88%;
+            margin-bottom: 70px !important;
+            width: 3px;
+            height: 82%;
             z-index: 400;
             border-radius: 1rem;
         }
@@ -120,11 +179,10 @@ section.features{
             background: #fff;
             display: inline-block;
             position: absolute;
-            left: 45%;
-
-           margin-top: 25%;
-            width: 40px;
-            height: 2px;
+            left: 90%;
+            margin-top: 83%;
+            width: 30px;
+            height: 3px;
             z-index: 400;
             border-radius: 1rem;
         }
@@ -133,7 +191,7 @@ section.features{
             margin-top: 20px;
             display: grid;
             grid-template-columns: 1fr 4fr;
-            img{
+            Image{
                 max-width: 78%;
             }
             h6{
@@ -195,6 +253,7 @@ section.features{
             opacity: 0.6;
         }
     }
+
     
     
     /* Timeline item circle marker */
@@ -221,6 +280,22 @@ section.features{
         }
     }
 }
+
+.wayaPos{
+    .switchPos{
+        background-color: gainsboro;
+        .posButton{
+            color: gray;
+            background: none;
+            font-weight: 600;
+        }
+        .posButton:hover,.active{
+            color: #FFFFFF;
+            background-color: #FF4400;
+        }
+}
+}
+
 
 .last-jumbotron {
     background-color: #FF4400;
@@ -265,8 +340,12 @@ section.features{
            }
            img[alt='jumbotron']{
             max-width: 68%;
-            right: 10vw;
-            top: 76vh;
+            // right: 10vw;
+            // top: 76vh;
+        }
+        .mx-40{
+            margin-left: 0px;
+            margin-right: 0px;
         }
         }
         .home-jumbotron .bannerLinks{
@@ -331,9 +410,9 @@ section.features{
             line-height: 180%;
            }
            img[alt='jumbotron']{
-            max-width: 78%;
-            right: 10vw;
-            top: 76vh;
+            max-width: 88%;
+            // right: 10vw;
+            // top: 76vh;
         }
         }
         .home-jumbotron .bannerLinks{
@@ -403,3 +482,7 @@ section.features{
         }
     }
 }
+
+// .wayaPosFeatures{
+//     background-image: url('public/featuresbg.png');
+// }

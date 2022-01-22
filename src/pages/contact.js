@@ -32,15 +32,38 @@ function Contact() {
     setData(data => ({ ...data, [name]: value }))
   }
 
+
+  const contactsBackup=[
+    {
+      id: 1,
+      key: 'Head Office',
+      value: '69 Seefeldstrasse, Zurich, Switzerland',
+      type: 'ADDRESS'
+    },
+    {
+      id: 2,
+      key: 'African Hub Office',
+      value: '5, Ogunsiji Close, By Adeboye Solanke Avenue, Off Allen Avenue, Ikeja, Lagos.',
+      type: 'ADDRESS'
+    },
+    {
+      id: 3,
+      value: 'info@wayapaychat.com',
+      type: 'EMAIL'
+    },
+  ]
+
+
+
   return (
     <div id="contactPage">
       <TopNav />
-      <div className="row actual-content pt-4 pl-4 justify-content-start">
+      <div className="row actual-content py-4 px-lg-4 justify-content-start">
         <Fade right>
           <div className="col-sm-10 col-md-6 text first">
             <h3>Contact Us</h3>
             <p className="">You are welcome to reach us at any of the contacts below</p>
-            {contacts.map(contact => (
+            {contactsBackup.map(contact => (
               <address className='row' key={contact.id}>
                 <div className='col-sm-1 pr-2 mt-md-1'>
                   <img src={contact.type === "ADDRESS" ? '/ion_home.png' : '/send.png'} alt='icon' />
@@ -59,6 +82,7 @@ function Contact() {
             </div>
           </div>
         </Fade>
+
         <Fade left>
           <div className="col-sm-10 col-md-6 text-start">
             <h4>Get in touch</h4>
@@ -76,8 +100,8 @@ function Contact() {
             </form>
           </div>
         </Fade>
-        <PageFooter />
       </div>
+      <PageFooter />
     </div>
   )
 }
