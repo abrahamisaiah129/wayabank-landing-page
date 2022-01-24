@@ -39,14 +39,14 @@ div.hero-section {
     background-image: url("./assets/bg.svg");
     background-color: #f1f1f1;
     grid-template-columns: 46% 54%;
-    height: calc(100vh - 40px);
+    /* height: calc(100vh - 40px); */
 }
 
 div.hero-left-section {
     background-image: url("./assets/hero-bg.svg");
     background-size: contain;
     background-repeat: no-repeat;
-    height: 87vh;
+    height: auto;
     width: 100%;
     background-position: 0 0;
 }
