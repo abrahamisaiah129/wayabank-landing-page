@@ -1,4 +1,5 @@
 import { Swiper, SwiperSlide } from 'swiper/react/swiper-react';
+import {Navigation} from 'swiper';
 import 'swiper/swiper.min.css';
 import 'swiper/modules/navigation/navigation.min.css';
 import 'swiper/modules/pagination/pagination.min.css';
@@ -14,6 +15,8 @@ function Testimonials() {
             </div>
             <Swiper
                 navigation
+                modules={[Navigation]}
+                pagination={{ clickable: true }}
                 loop
                 spaceBetween={50}
                 slidesPerView={1}
