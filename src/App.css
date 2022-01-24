@@ -1,0 +1,239 @@
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+nav.navbar {
+    background-image: url("./assets/bg.svg");
+    height: 92px;
+    background-color: #FF4400;
+    /* display: flex; */
+    align-items: center;
+    justify-content: space-between;
+}
+.menu-btn{
+    width: 28px;
+    height: 2px;
+    background-color: #fff;
+}
+.menu-btn::before{
+    content: "";
+    width: 20px;
+    height: 2px;
+    background-color: #fff;
+    position: absolute;
+    top: -8px;
+}
+.menu-btn::after{
+    content: "";
+    width: 16px;
+    height: 2px;
+    background-color: #fff;
+    position: absolute;
+    top: 8px;
+}
+
+div.hero-section {
+    display: grid;
+    background-image: url("./assets/bg.svg");
+    background-color: #f1f1f1;
+    grid-template-columns: 46% 54%;
+    height: calc(100vh - 40px);
+}
+
+div.hero-left-section {
+    background-image: url("./assets/hero-bg.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 87vh;
+    width: 100%;
+    background-position: 0 0;
+}
+
+div.hero-right-section {
+    /* display: flex; */
+    justify-content: flex-end;
+    align-items: flex-start;
+}
+
+/* div.hero-right-section img {
+    width: 100%;
+} */
+
+div.hero-right-section::before {
+    content: "";
+    background-image: url("./assets/hero-shadow.svg");
+    position: absolute;
+    right: 30%;
+    bottom: -54px;
+}
+
+.nav a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.nav-btn {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.nav-btn .login-btn {
+    color: white;
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
+.nav-btn .register-btn {
+    color: #FF4400;
+    background-color: #ffffff;
+    border-radius: 4px;
+    height: 56px;
+    border: none;
+    outline: none;
+    padding: 15px 29px;
+}
+
+.trust-section {
+    height: 166.98px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url("./assets/bg.svg");
+    background-color: #fff;
+}
+
+.trusted-brands {
+    display: flex;
+    gap: 16px;
+    margin-top: 24px;
+}
+
+.trust-section p {
+    position: relative;
+}
+
+.trust-section p::before {
+    content: "";
+    height: 4px;
+    width: 56px;
+    background-color: #D3D3D3;
+    position: absolute;
+    left: 50%;
+    top: 36px;
+    margin-left: -28px;
+}
+
+.trusted-brands img:nth-child(2) {
+    margin-left: 22px;
+}
+
+.trusted-brands img {
+    height: 58.28px;
+}
+
+.hero-title {
+    align-items: center;
+    font-size: 50px;
+}
+
+.hero-title span {
+    position: relative;
+}
+
+.hero-title span::before {
+    content: "";
+    background-image: url("./assets/hero-intro.svg");
+    background-repeat: no-repeat;
+    height: 120px;
+    width: 285px;
+    position: absolute;
+    top: -35px;
+    left: -16px;
+}
+
+.hero-title+p {
+    font-size: 22px;
+}
+.btn-container{
+    display: flex;
+    gap: 12px;
+}
+.btn-container .btn-register2{
+    background-color: #FF4400;
+    outline: none;
+    border: none;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 15px 20px;
+    color: white;
+}
+.btn-container .explore-btn{
+    background-color: white;
+    outline: none;
+    border: none;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 15px 20px;
+    color: #FF4400;
+}
+.product-features2{
+    background-color: #F4F7FA;
+}
+.testimonial{
+    background-image: url("./assets/testimonials-bg.svg");
+    background-repeat: no-repeat;
+    background-position: 4em -4em;
+}
+
+.download-cta-container{
+    height: 480px;
+    background-image: url("./assets/bg.svg");
+}
+.caution-container{
+    background-image: url("./assets/bg.svg");
+}
+@media screen and (max-width: 765px){
+    div.hero-section {
+        display: grid;
+        background-image: url("./assets/bg.svg") url("./assets/hero-bg.svg");
+        background-color: #FAFAFA;
+        grid-template-columns: 1fr;
+        height: calc(78vh - 40px);
+    }
+    .hero-title span::before{
+        display: none;
+    }
+    .hero-title{
+        font-size: 40px;
+    }
+    .hero-right-section{
+        display: none;
+    }
+
+    .trust-section{
+        height: auto;
+        padding-top: 24px;
+        padding-bottom: 24px;
+    }
+    .trusted-brands{
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .swiper{
+        height: 75vh;
+    }
+    .download-cta-container{
+        height: auto;
+    }
+}
