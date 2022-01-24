@@ -17,7 +17,7 @@ function Hero() {
                 <h3 data-aos="fade-up" class="hero-title font-semibold leading-tight text-gray-600">Start accepting payments in <span>minutes</span></h3>
                 <p data-aos="fade-up" data-aos-delay="300" className="mt-5">One platform that lets you sell wherever your customers are — online, in‑person, anywhere in the world
             </p>
-            <div class="btn-container mt-14 flex flex-col md:flex-row rounded">
+            <div class="btn-container mt-8 space-y-4 flex flex-col md:flex-row rounded">
                 <button data-aos="fade-right" class="btn-register2 rounded text-sm shadow">
                     REGISTER NOW
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -28,7 +28,7 @@ function Hero() {
             </div>
             </div>
             <div class="hero-right-section px-16 hidden md:flex">
-                <img data-aos="fade-up" data-aos-duration="1500" src={HeroRightImage} alt="" width="710px"/>
+                <img data-aos="fade-up" data-aos-duration="1500" src={HeroRightImage} alt="" width="100%"/>
             </div>
         </div>
     )

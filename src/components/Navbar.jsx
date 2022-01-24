@@ -20,14 +20,14 @@ function Navbar() {
                 <button class="text-white font-semibold">LOGIN</button>
                 <button class="bg-white py-3 px-8 rounded text-primary-theme font-semibold">REGISTER</button>
             </div>
-            <div className="flex md:hidden relative">
+            <div className="flex md:hidden">
                 <span className="menu-btn relative w-6 h-1 bg-white block" onClick={showDropdown}></span>
 
-                <div className="dropdown absolute w-48 right-0 py-4 top-8 flex hidden flex-col space-y-3 h-40 bg-white rounded-lg shadow">
-                    <Link to="/solution" className="font-medium px-4 text-md text-gray-700">OUR SOLUTIONS</Link>
-                    <Link to="/contact" className="font-medium px-4 text-md text-gray-700">CONTACT</Link>
-                    <Link to="/#" className="font-medium px-4 text-md text-gray-700">LOGIN</Link>
-                    <Link to="/#" className="font-medium px-4 text-md text-gray-700">REGISTER</Link>
+                <div className="dropdown absolute w-full left-0 top-24 z-20 bg-primary-theme flex hidden sm:hidden flex-col h-auto rounded shadow">
+                    <Link to="/solution" className="font-medium px-4 text-md text-white border-b border-white h-12 flex items-center">OUR SOLUTIONS</Link>
+                    <Link to="/contact" className="font-medium px-4 text-md text-white border-b border-white h-12 flex items-center">CONTACT</Link>
+                    <Link to="/#" className="font-medium px-4 text-md text-white border-b border-white h-12 flex items-center">LOGIN</Link>
+                    <Link to="/#" className="font-medium px-4 text-md text-white h-12 flex items-center">REGISTER</Link>
                 </div>
             </div>
         </nav>

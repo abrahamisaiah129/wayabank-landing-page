@@ -26,15 +26,15 @@ function ProductFeatures() {
             <div className="pt-3">
                 <div className="h-48">
                     <h4 data-aos="fade-up" data-aos-delay="300" className="text-primary-theme text-2xl font-semibold">Protected Access</h4>
-                    <p data-aos="fade-up" data-aos-delay="500" className="w-full md:w-3/4 pr-14 mt-4 leading-relaxed">Your Wayapay Account is protected with multiple layers of security. If you lose your phone, you can have your Wayapay account blocked at any time.</p>
+                    <p data-aos="fade-up" data-aos-delay="500" className="w-full lg:w-3/4 pr-8 lg:pr-14 mt-4 leading-relaxed">Your Wayapay Account is protected with multiple layers of security. If you lose your phone, you can have your Wayapay account blocked at any time.</p>
                 </div>
                 <div className="h-52 pt-2">
                     <h4 data-aos="fade-up" data-aos-delay="300" className="text-primary-theme text-2xl font-semibold">Secure Transcations</h4>
-                    <p data-aos="fade-up" data-aos-delay="500" className="w-full md:w-3/4 pr-14 mt-4 leading-relaxed">At Wayapay, we take security seriously so every payment made on our platform is 100% secure, even exceeding industry standard.</p>
+                    <p data-aos="fade-up" data-aos-delay="500" className="w-full lg:w-3/4 pr-8 lg:pr-14 mt-4 leading-relaxed">At Wayapay, we take security seriously so every payment made on our platform is 100% secure, even exceeding industry standard.</p>
                 </div>
                 <div className="h-48 -mt-1">
                     <h4 data-aos="fade-up" data-aos-delay="300" className="text-primary-theme text-2xl font-semibold">Data Protection</h4>
-                    <p data-aos="fade-up" data-aos-delay="500" className="w-full md:w-3/4 pr-14 mt-4 leading-relaxed">Wayapay stores all personal data at a secure location and we do not disclose any personal data to third parties.</p>
+                    <p data-aos="fade-up" data-aos-delay="500" className="w-full lg:w-3/4 pr-8 lg:pr-14 mt-4 leading-relaxed">Wayapay stores all personal data at a secure location and we do not disclose any personal data to third parties.</p>
                 </div>
             </div>
 

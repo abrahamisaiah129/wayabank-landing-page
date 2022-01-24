@@ -3,31 +3,13 @@
 @tailwind components;
 @tailwind utilities;
 
-/* import fonts */
-/* @font-face {
-  src: url("./assets/fonts/BR\ Firma\ Light.woff");
-  font-family: "CWC BR Firma";
-  font-weight: 100;
-}
-@font-face {
-  src: url("./assets/fonts/BR\ Firma\ Regular.woff");
-  font-family: "CWC BR Firma";
-  font-weight: 400;
-}
-@font-face {
-  src: url("./assets/fonts/BR\ Firma\ Bold.woff");
-  font-family: "CWC BR Firma";
-  font-weight: 600;
-} */
-
-/* Color system */
 :root{
   --primary-theme: #FF4400;
 }
 
 body {
   margin: 0;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Inter', 'Open Sans', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   border: 0;

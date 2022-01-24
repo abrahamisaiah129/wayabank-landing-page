@@ -53,8 +53,8 @@ div.hero-left-section {
 
 div.hero-right-section {
     /* display: flex; */
-    justify-content: flex-end;
-    align-items: flex-start;
+    justify-content: center;
+    align-items: center;
 }
 
 /* div.hero-right-section img {
@@ -137,11 +137,12 @@ div.hero-right-section::before {
 
 .hero-title {
     align-items: center;
-    font-size: 50px;
+    font-size: 3rem;
 }
 
 .hero-title span {
     position: relative;
+    display: inline-block;
 }
 
 .hero-title span::before {
@@ -149,6 +150,7 @@ div.hero-right-section::before {
     background-image: url("./assets/hero-intro.svg");
     background-repeat: no-repeat;
     height: 120px;
+    display: block;
     width: 285px;
     position: absolute;
     top: -35px;
@@ -156,7 +158,8 @@ div.hero-right-section::before {
 }
 
 .hero-title+p {
-    font-size: 22px;
+    /* font-size: 22px; */
+    font-size: 1.35rem;
 }
 .btn-container{
     display: flex;
@@ -202,6 +205,30 @@ div.hero-right-section::before {
 .caution-container{
     background-image: url("./assets/bg.svg");
 }
+@media screen and (max-width: 1100px){
+    div.hero-right-section{
+        padding: 0 12px;
+    }
+    .hero-title{
+        font-size: 42px;
+    }
+    .hero-title span::before {
+        content: "";
+        background-image: url("./assets/hero-intro.svg");
+        background-repeat: no-repeat;
+        height: 120px;
+        width: 285px;
+        position: absolute;
+        bottom: 0px;
+        left: 0;
+    }
+    div.hero-section{
+        grid-template-columns: 65% 35%;
+    }
+}
+
+
+
 @media screen and (max-width: 765px){
     div.hero-section {
         display: grid;
@@ -231,9 +258,90 @@ div.hero-right-section::before {
         justify-content: space-between;
     }
     .swiper{
-        height: 75vh;
+        /* height: 90vh; */
     }
     .download-cta-container{
         height: auto;
+    }
+}
+
+
+/* Mobile screens */
+@media screen and (max-width: 640px){
+    .hero-title{
+        font-size: 38px;
+    }
+    div.hero-section{
+        height: auto;
+        padding-bottom: 32px;
+        background-color: #FFF8F5;
+    }
+    div.hero-left-section {
+        background-image: url("./assets/hero-bg.svg");
+        background-size: 30%;
+        height: auto;
+        background-repeat: no-repeat;
+        padding-top: 64px;
+        width: 100%;
+        background-position: 0 0;
+    }
+    .trust-section p{
+        font-size: 24px;
+        font-weight: 700;
+        text-align: center;
+        margin-top: 16px;
+    }
+    .trust-section p::before{
+        top: 64px;
+        background-color: #222222;
+    }
+    .trust-section{
+        background-color: white;
+    }
+    .trusted-brands img{
+        margin-top: 16px;
+        margin-bottom: 16px;
+    }
+    .title{
+        font-size: 24px;
+        font-weight: 700;
+    }
+    .title2{
+        font-size: 34px;
+    }
+    .swiper-button-next{
+        background-color: var(--primary-theme);
+        color: white;
+        width: 54px;
+        height: 54px;
+        border-radius: 42px;
+        box-shadow: 2px 2px 4px lightgray;
+        border: 1px solid lightgray;
+    }
+    .swiper-button-prev{
+        background-color: #ebebeb;
+        color: #000000;
+        width: 54px;
+        height: 54px;
+        border-radius: 42px;
+        box-shadow: 2px 2px 4px lightgray;
+        border: 1px solid lightgray;
+    }
+
+    .swiper-button-prev::after,
+    .swiper-button-next::after{
+        font-size: 20px;
+    }
+
+    .btn-container .explore-btn2{
+        background-color: white;
+        outline: none;
+        border: none;
+        height: 56px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        color: #FF4400;
     }
 }

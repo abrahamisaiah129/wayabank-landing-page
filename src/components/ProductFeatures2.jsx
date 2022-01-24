@@ -23,7 +23,7 @@ function ProductFeatures2() {
                         <path d="M29.75 27.9898C29.0207 27.9898 28.3212 27.7031 27.8055 27.1927C27.2897 26.6823 27 25.9901 27 25.2683C27 24.5466 27.2897 23.8543 27.8055 23.344C28.3212 22.8336 29.0207 22.5469 29.75 22.5469C30.4793 22.5469 31.1788 22.8336 31.6945 23.344C32.2103 23.8543 32.5 24.5466 32.5 25.2683C32.5 25.9901 32.2103 26.6823 31.6945 27.1927C31.1788 27.7031 30.4793 27.9898 29.75 27.9898Z" fill="#FF4400" />
                         <path d="M34.6305 40.2344C33.7209 42.3875 31.9909 44.0994 29.8152 44.9996C27.6396 44.0994 25.9096 42.3875 25 40.2344H28.1075C28.5558 40.8998 29.1346 41.4754 29.8152 41.9258C30.4959 41.4767 31.0748 40.8998 31.5244 40.2344H34.6305Z" fill="#FF4400" />
                     </svg>
-                    <h5  data-aos="fade-up" data-aos-delay="300" className="font-semibold text-xl mt-2 mb-3">Instant Activation</h5>
+                    <h5  data-aos="fade-up" data-aos-delay="300" className="font-semibold text-xl mt-4 mb-3">Instant Activation</h5>
                     <p  data-aos="fade-up" data-aos-delay="300">Get enacted and execute inside 2 minutes. Totally internet onboarding with least documentation.</p>
                 </div>
                 <div className="">
@@ -33,7 +33,7 @@ function ProductFeatures2() {
                         <circle cx="30.2493" cy="30.2513" r="7.08333" fill="#FF4400" />
                         <path d="M33.7923 28.4805L28.9225 33.793L26.709 30.4123" stroke="white" stroke-linecap="round" stroke-linejoin="round" />
                     </svg>
-                    <h5  data-aos="fade-up" data-aos-delay="300" className="font-semibold text-xl mt-2 mb-3">Easy Integration</h5>
+                    <h5  data-aos="fade-up" data-aos-delay="300" className="font-semibold text-xl mt-4 mb-3">Easy Integration</h5>
                     <p  data-aos="fade-up" data-aos-delay="300">With modules for every significant stage and dialects, coordinate and go live with wayaPay in under 60 minutes.</p>
                 </div>
                 <div className="">
@@ -42,7 +42,7 @@ function ProductFeatures2() {
                         <path d="M30.7335 20.7051H42.0562C42.406 20.7051 42.7414 20.8476 42.9887 21.1013C43.2361 21.3549 43.375 21.699 43.375 22.0577V40.9936C43.375 41.3523 43.2361 41.6963 42.9887 41.95C42.7414 42.2037 42.406 42.3462 42.0562 42.3462H18.3187C17.969 42.3462 17.6336 42.2037 17.3863 41.95C17.1389 41.6963 17 41.3523 17 40.9936V19.3526C17 18.9938 17.1389 18.6498 17.3863 18.3962C17.6336 18.1425 17.969 18 18.3187 18H28.096L30.7335 20.7051ZM19.6375 20.7051V39.641H40.7375V23.4103H29.6415L27.004 20.7051H19.6375Z" fill="white" />
                         <path d="M25.9246 32.494C25.7564 31.8025 25.7564 31.0821 25.9246 30.3906L24.6094 29.6489L25.9366 27.4028L27.2518 28.1459C27.7798 27.657 28.4181 27.2963 29.1151 27.0929V25.6094H31.7695V27.0929C32.4755 27.2991 33.1099 27.6635 33.6315 28.1459L34.9481 27.4028L36.2752 29.6476L34.96 30.3906C35.1282 31.0821 35.1282 31.8025 34.96 32.494L36.2752 33.2358L34.9481 35.4805L33.6328 34.7387C33.1047 35.2272 32.4664 35.5874 31.7695 35.7904V37.2752H29.1151V35.7891C28.4182 35.5861 27.7799 35.2259 27.2518 34.7374L25.9366 35.4792L24.6094 33.2358L25.9246 32.4927V32.494ZM30.4423 33.3862C30.7097 33.3957 30.9763 33.3525 31.2262 33.2591C31.4761 33.1657 31.7041 33.0241 31.8967 32.8426C32.0893 32.6612 32.2425 32.4437 32.3472 32.2031C32.4518 31.9625 32.5058 31.7037 32.5058 31.4423C32.5058 31.1809 32.4518 30.9221 32.3472 30.6815C32.2425 30.4409 32.0893 30.2234 31.8967 30.042C31.7041 29.8605 31.4761 29.7189 31.2262 29.6255C30.9763 29.5321 30.7097 29.4889 30.4423 29.4984C29.9273 29.5168 29.4396 29.7297 29.0818 30.0922C28.7241 30.4547 28.5242 30.9387 28.5242 31.4423C28.5242 31.9459 28.7241 32.4299 29.0818 32.7924C29.4396 33.155 29.9273 33.3678 30.4423 33.3862Z" fill="#FF4400" />
                     </svg>
-                    <h5  data-aos="fade-up" data-aos-delay="300" className="font-semibold text-xl mt-2 mb-3">API Driven</h5>
+                    <h5  data-aos="fade-up" data-aos-delay="300" className="font-semibold text-xl mt-4 mb-3">API Driven</h5>
                     <p  data-aos="fade-up" data-aos-delay="300">Assemble your business for scale with our total API-driven robotization that requires zero manual intercession.</p>
                 </div>
                 <div className="">
@@ -51,7 +51,7 @@ function ProductFeatures2() {
                         <path d="M18 40.6H42V43H18V40.6ZM18 25L30 19L42 25V29.8H18V25ZM20.4 26.4832V27.4H39.6V26.4832L30 21.6832L20.4 26.4832ZM30 26.2C29.6817 26.2 29.3765 26.0736 29.1515 25.8485C28.9264 25.6235 28.8 25.3183 28.8 25C28.8 24.6817 28.9264 24.3765 29.1515 24.1515C29.3765 23.9264 29.6817 23.8 30 23.8C30.3183 23.8 30.6235 23.9264 30.8485 24.1515C31.0736 24.3765 31.2 24.6817 31.2 25C31.2 25.3183 31.0736 25.6235 30.8485 25.8485C30.6235 26.0736 30.3183 26.2 30 26.2Z" fill="white" />
                         <path d="M20.1816 31H22.5816V39.4H20.1816V31ZM26.1816 31H28.5816V39.4H26.1816V31ZM30.9816 31H33.3816V39.4H30.9816V31ZM36.9816 31H39.3816V39.4H36.9816V31Z" fill="#FF4400" />
                     </svg>
-                    <h5  data-aos="fade-up" data-aos-delay="300" className="font-semibold text-xl mt-2 mb-3">Multiple payment methods</h5>
+                    <h5  data-aos="fade-up" data-aos-delay="300" className="font-semibold text-xl mt-4 mb-3">Multiple payment methods</h5>
                     <p  data-aos="fade-up" data-aos-delay="300">Offer your customer the luxury of payment methond that waya pay supports including credit/debit cards, USSD, Bank and wallets.</p>
                 </div>
                 <div className="">
@@ -61,7 +61,7 @@ function ProductFeatures2() {
                         <path d="M40.3629 32.5015L32.5091 40.3573C32.3057 40.5611 32.0641 40.7227 31.7981 40.833C31.5322 40.9432 31.2471 41 30.9592 41C30.6713 41 30.3862 40.9432 30.1203 40.833C29.8543 40.7227 29.6127 40.5611 29.4092 40.3573L20 30.9566V20H30.9537L40.3629 29.4117C40.771 29.8223 41 30.3777 41 30.9566C41 31.5355 40.771 32.0909 40.3629 32.5015V32.5015Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                         <circle cx="25.5" cy="25.5" r="1.5" fill="white" />
                     </svg>
-                    <h5  data-aos="fade-up" data-aos-delay="300" className="font-semibold text-xl mt-2 mb-3">Simple Pricing</h5>
+                    <h5  data-aos="fade-up" data-aos-delay="300" className="font-semibold text-xl mt-4 mb-3">Simple Pricing</h5>
                     <p  data-aos="fade-up" data-aos-delay="300">Our imaginative installment arrangements with serious evaluating simplify installments.</p>
                 </div>
                 <div className="">
@@ -71,7 +71,7 @@ function ProductFeatures2() {
                         <path d="M47 29.9353H45.2629V33H42.2822V29.9353H36.1234V27.7606L42.45 18.2124H45.2629V27.5078H47V29.9353ZM42.2822 27.5078V24.9993C42.2822 24.5813 42.2986 23.9744 42.3315 23.1787C42.3644 22.383 42.3908 21.9211 42.4105 21.793H42.3315C42.0881 22.3459 41.7953 22.8854 41.4531 23.4113L38.808 27.5078H42.2822Z" fill="white" />
                         <path d="M32.8881 38.9201V41.9201C32.8892 42.1986 32.8322 42.4743 32.7206 42.7294C32.6091 42.9846 32.4454 43.2137 32.2402 43.402C32.035 43.5902 31.7927 43.7336 31.5289 43.8228C31.265 43.912 30.9855 43.9452 30.7081 43.9201C27.631 43.5857 24.6751 42.5342 22.0781 40.8501C19.6619 39.3148 17.6135 37.2663 16.0781 34.8501C14.3881 32.2413 13.3364 29.2711 13.0081 26.1801C12.9831 25.9036 13.016 25.6249 13.1046 25.3617C13.1932 25.0986 13.3357 24.8568 13.5229 24.6517C13.7101 24.4466 13.9379 24.2828 14.1919 24.1706C14.4459 24.0584 14.7205 24.0004 14.9981 24.0001H17.9981C18.4834 23.9953 18.9539 24.1672 19.3219 24.4836C19.6898 24.8001 19.9302 25.2395 19.9981 25.7201C20.1247 26.6802 20.3596 27.6228 20.6981 28.5301C20.8327 28.888 20.8618 29.277 20.782 29.651C20.7023 30.0249 20.517 30.3682 20.2481 30.6401L18.9781 31.9101C20.4017 34.4136 22.4746 36.4865 24.9781 37.9101L26.2481 36.6401C26.52 36.3712 26.8633 36.1859 27.2372 36.1062C27.6112 36.0264 28.0002 36.0556 28.3581 36.1901C29.2654 36.5286 30.2081 36.7635 31.1681 36.8901C31.6539 36.9586 32.0975 37.2033 32.4146 37.5776C32.7318 37.9519 32.9003 38.4297 32.8881 38.9201Z" stroke="#FF4400" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                     </svg>
-                    <h5  data-aos="fade-up" data-aos-delay="300" className="font-semibold text-xl mt-2 mb-3">Best in Industry Support</h5>
+                    <h5  data-aos="fade-up" data-aos-delay="300" className="font-semibold text-xl mt-4 mb-3">Best in Industry Support</h5>
                     <p  data-aos="fade-up" data-aos-delay="300">Continuously accessible email, telephone and talk based help to help you in all your means.</p>
                 </div>
                 <div className="">
@@ -83,7 +83,7 @@ function ProductFeatures2() {
                         <path d="M33.1328 30.0312H42.1614" stroke="white" stroke-linecap="round" />
                         <path d="M33.1328 33.043H42.1614" stroke="white" stroke-linecap="round" />
                     </svg>
-                    <h5  data-aos="fade-up" data-aos-delay="300" className="font-semibold text-xl mt-2 mb-3">Dashboard Reporting</h5>
+                    <h5  data-aos="fade-up" data-aos-delay="300" className="font-semibold text-xl mt-4 mb-3">Dashboard Reporting</h5>
                     <p  data-aos="fade-up" data-aos-delay="300">Continuous information and bits of knowledge on your Wayapay Dashboard to settle on informed business choices.</p>
                 </div>
                 <div className="">
@@ -93,7 +93,7 @@ function ProductFeatures2() {
                         <path d="M31.3867 30.0977H42.9996" stroke="#FF4400" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                         <path d="M28.6414 18.0637C28.4151 17.9788 28.1656 17.9788 27.9392 18.0637L18.6489 21.5475C18.2586 21.6939 18 22.067 18 22.4839V30.6129C18 34.5432 20.6043 37.7003 22.9867 39.7848C24.1988 40.8455 25.4063 41.6751 26.3087 42.2391C26.761 42.5218 27.1393 42.7394 27.4068 42.8875C27.5406 42.9616 27.647 43.0184 27.7212 43.0573C27.7583 43.0768 27.7874 43.0918 27.8079 43.1023L27.8321 43.1147L27.8393 43.1183L27.8416 43.1195C27.842 43.1197 27.8431 43.1202 28.2903 42.2258L27.8431 43.1202C28.1246 43.261 28.456 43.261 28.7375 43.1202L28.2903 42.2258C28.7375 43.1202 28.7372 43.1204 28.7375 43.1202L28.739 43.1195L28.7413 43.1183L28.7485 43.1147L28.7728 43.1023C28.7933 43.0918 28.8224 43.0768 28.8595 43.0573C28.9337 43.0184 29.04 42.9616 29.1738 42.8875C29.4414 42.7394 29.8197 42.5218 30.2719 42.2391C31.1744 41.6751 32.3818 40.8455 33.594 39.7848C34.1972 39.257 34.8146 38.6605 35.4004 38H32.5901C32.4863 38.0946 32.3819 38.1879 32.277 38.2797C31.1666 39.2513 30.0514 40.0184 29.2119 40.5431C28.8403 40.7754 28.5248 40.9589 28.2903 41.0903C28.0559 40.9589 27.7403 40.7754 27.3687 40.5431C26.5292 40.0184 25.4141 39.2513 24.3037 38.2797C22.0408 36.2997 20 33.6503 20 30.6129V23.1769L28.2903 20.068L36.5806 23.1769V24H38.5806V22.4839C38.5806 22.067 38.3221 21.6939 37.9318 21.5475L28.6414 18.0637Z" fill="white" />
                     </svg>
-                    <h5  data-aos="fade-up" data-aos-delay="300" className="font-semibold text-xl mt-2 mb-3">Secure</h5>
+                    <h5  data-aos="fade-up" data-aos-delay="300" className="font-semibold text-xl mt-4 mb-3">Secure</h5>
                     <p  data-aos="fade-up" data-aos-delay="300">PCI DSS Level 1 consistent arrangement which eliminates your weight of administrative consistence.</p>
                 </div>
             </div>
