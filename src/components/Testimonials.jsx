@@ -24,50 +24,50 @@ function Testimonials() {
                 onSwiper={(swiper) => console.log(swiper)}
             >
                 <SwiperSlide>
-                    <div className="w-full testimonial px-8 md:px-32 grid grid-cols-1 md:grid-cols-3 pt-10">
+                    <div className="w-full testimonial px-8 md:px-32 grid grid-cols-1 lg:grid-cols-3 pt-10">
                         <div className="">
                             <img src={Testimonial1} alt="Testimonials" />
                         </div>
-                        <div className="col-span-2 md:pt-32 px-4 md:px-32">
-                            <p className="text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ante id malesuada mauris orci vulputate ut blandit et. Pharetra dui suscipit odio diam et nunc suspendisse. Sagittis pretium fringilla egestas facilisi ornare sit fames. Tortor, dui, sit tellus hendrerit pharetra arcu quis.</p>
+                        <div className="col-span-2 md:pt-16 lg:pt-32 px-4 md:px-16 lg:px-32">
+                            <p className="text-justify md:text-xl">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ante id malesuada mauris orci vulputate ut blandit et. Pharetra dui suscipit odio diam et nunc suspendisse. Sagittis pretium fringilla egestas facilisi ornare sit fames. Tortor, dui, sit tellus hendrerit pharetra arcu quis.</p>
                             <h5 className="font-semibold text-xl mt-6">Rahul Salem</h5>
-                            <p>Product Manager</p>
+                            <p>Product Manager 1</p>
                         </div>
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <div className="w-full testimonial px-8 md:px-32 grid grid-cols-1 md:grid-cols-3 pt-10">
+                <div className="w-full testimonial px-8 md:px-32 grid grid-cols-1 lg:grid-cols-3 pt-10">
                         <div className="">
                             <img src={Testimonial1} alt="Testimonials" />
                         </div>
-                        <div className="col-span-2 md:pt-32 px-4 md:px-32">
-                            <p className="text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ante id malesuada mauris orci vulputate ut blandit et. Pharetra dui suscipit odio diam et nunc suspendisse. Sagittis pretium fringilla egestas facilisi ornare sit fames. Tortor, dui, sit tellus hendrerit pharetra arcu quis.</p>
-                            <h5 className="font-semibold text-xl mt-6">Rahul Salem</h5>
-                            <p>Frontend Engineer</p>
+                        <div className="col-span-2 md:pt-16 lg:pt-32 px-4 md:px-16 lg:px-32">
+                            <p className="text-justify md:text-xl">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ante id malesuada mauris orci vulputate ut blandit et. Pharetra dui suscipit odio diam et nunc suspendisse. Sagittis pretium fringilla egestas facilisi ornare sit fames. Tortor, dui, sit tellus hendrerit pharetra arcu quis.</p>
+                            <h5 className="font-semibold text-xl mt-6">James Fowler</h5>
+                            <p>Product Manager 2</p>
                         </div>
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <div className="w-full testimonial px-8 md:px-32 grid grid-cols-1 md:grid-cols-3 pt-10">
+                <div className="w-full testimonial px-8 md:px-32 grid grid-cols-1 lg:grid-cols-3 pt-10">
                         <div className="">
                             <img src={Testimonial1} alt="Testimonials" />
                         </div>
-                        <div className="col-span-2 md:pt-32 px-4 md:px-32">
-                            <p className="text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ante id malesuada mauris orci vulputate ut blandit et. Pharetra dui suscipit odio diam et nunc suspendisse. Sagittis pretium fringilla egestas facilisi ornare sit fames. Tortor, dui, sit tellus hendrerit pharetra arcu quis.</p>
+                        <div className="col-span-2 md:pt-16 lg:pt-32 px-4 md:px-16 lg:px-32">
+                            <p className="text-justify md:text-xl">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ante id malesuada mauris orci vulputate ut blandit et. Pharetra dui suscipit odio diam et nunc suspendisse. Sagittis pretium fringilla egestas facilisi ornare sit fames. Tortor, dui, sit tellus hendrerit pharetra arcu quis.</p>
                             <h5 className="font-semibold text-xl mt-6">Rahul Salem</h5>
-                            <p>Product Manager</p>
+                            <p>Product Manager 3</p>
                         </div>
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <div className="w-full testimonial px-8 md:px-32 grid grid-cols-1 md:grid-cols-3 pt-10">
+                <div className="w-full testimonial px-8 md:px-32 grid grid-cols-1 lg:grid-cols-3 pt-10">
                         <div className="">
                             <img src={Testimonial1} alt="Testimonials" />
                         </div>
-                        <div className="col-span-2 md:pt-32 px-4 md:px-32">
-                            <p className="text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ante id malesuada mauris orci vulputate ut blandit et. Pharetra dui suscipit odio diam et nunc suspendisse. Sagittis pretium fringilla egestas facilisi ornare sit fames. Tortor, dui, sit tellus hendrerit pharetra arcu quis.</p>
+                        <div className="col-span-2 md:pt-16 lg:pt-32 px-4 md:px-16 lg:px-32">
+                            <p className="text-justify md:text-xl">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ante id malesuada mauris orci vulputate ut blandit et. Pharetra dui suscipit odio diam et nunc suspendisse. Sagittis pretium fringilla egestas facilisi ornare sit fames. Tortor, dui, sit tellus hendrerit pharetra arcu quis.</p>
                             <h5 className="font-semibold text-xl mt-6">Rahul Salem</h5>
-                            <p>Product Manager</p>
+                            <p>Product Manager 4</p>
                         </div>
                     </div>
                 </SwiperSlide>

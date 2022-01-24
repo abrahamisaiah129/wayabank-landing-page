@@ -15,14 +15,14 @@ function Caution() {
     }, []);
     return (
         <React.Fragment>
-            <div data-aos="fade-up" data-aos-delay="300" className="caution-container mt-16 w-full h-auto md:h-96 grid grid-cols-1 md:grid-cols-3 px-8 md:px-24 py-8">
+            <div data-aos="fade-up" data-aos-delay="300" className="caution-container mt-16 w-full h-auto md:h-auto lg:h-96 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 px-8 md:px-24 py-8">
                 <div className="flex items-center justify-center">
                     <img src={PCI1} alt="" width="64%" />
                 </div>
-                <div className="col-span-2 pt-20 md:pr-72">
-                    <h4 className="text-center text-primary-theme font-semibold text-4xl leading-10">Keeping your business safe is our priority</h4>
-                    <p className="text-center text-gray-600 font-medium mt-2">Account is secured by</p>
-                    <button className="mt-10 flex mx-auto">
+                <div className="col-span-2 pt-20 md:pr-32 lg:pr-72">
+                    <h4 className="text-center md:text-left lg:text-center text-primary-theme font-semibold text-4xl leading-10">Keeping your business safe is our priority</h4>
+                    <p className="text-center md:text-left lg:text-center md:text-xl text-gray-600 font-medium mt-2">Account is secured by</p>
+                    <button className="mt-10 flex mx-auto md:mx-0 lg:mx-auto">
                         <img src={PCI2} alt="" width="90%" />
                     </button>
                 </div>

@@ -12,10 +12,10 @@ function ProductFeatures2() {
         <div className="product-features2 w-full h-auto pb-20">
             <div className="flex flex-col items-center pt-16">
                 <h4 data-aos="fade-up" className="text-3xl font-semibold">Unique Features</h4>
-                <p data-aos="fade-up" data-aos-delay="100" className="w-full md:w-3/5 text-center font-medium mt-4 px-5 md:px-14 text-xl text-gray-500 ...">Enable your business with the appropriate tools to acknowledge online payments and give the best client experience</p>
+                <p data-aos="fade-up" data-aos-delay="100" className="w-full md:w-3/5 text-center font-medium mt-4 px-5 md:px-2 lg:px-12 text-xl text-gray-500 ...">Enable your business with the appropriate tools to acknowledge online payments and give the best client experience</p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-10 mt-12 px-12 md:px-20">
+            <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-10 mt-12 px-12 md:px-20">
                 <div className="">
                     <svg  data-aos="fade-up" data-aos-delay="300" width="61" height="61" viewBox="0 0 61 61" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <circle cx="30.5" cy="30.5" r="30.5" fill="#2626BC" />

@@ -10,7 +10,7 @@ function HrBanner() {
                     <h4 className="title text-center text-gray-500 text-4xl font-semibold">Wayapay Web</h4>
                     <p className="mt-4 text-gray-500 text-lg">Sell online with an ecommerce website, Mobile App and more.</p>
                     <div class="btn-container mt-10 space-y-3 flex flex-col md:flex-row rounded">
-                        <button class="btn-register2 rounded text-sm shadow">
+                        <button class="btn-register2 rounded md:mt-3 text-sm shadow">
                             Get started
                             <svg width="10" height="12" viewBox="0 0 10 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M0.890625 12L6.51563 7L0.890624 2L2.01562 -3.31582e-08L9.89063 7L2.01563 14L0.890625 12Z" fill="white" />
