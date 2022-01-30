@@ -1,36 +1,18 @@
-<<<<<<< HEAD
-import React from 'react';
-import { Home } from './components';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
-import "./App.css";
-
-function App() {
-    return (
-        <Router>
-            <div>
-                <Route path="/" exact strict component={Home} />
-            </div>
-        </Router>
-    )
-}
-
-export default App
-=======
 import Blog from './pages/blog';
-import ContactPage from './pages/contact'
-import MerchantPage from './pages/merchant'
-import CommercePage from './pages/commerce'
+import ContactPage from './pages/contact';
+import MerchantPage from './pages/merchant';
+import CommercePage from './pages/commerce';
 import SignIn from './pages/signIn';
 import WayaGram from './pages/wayagram';
-import WayaPay from './pages/wayapay'
-import Home from './pages/home'
-import About from './pages/about'
+import WayaPay from './pages/wayapay';
+import Home from './pages/home';
+import About from './pages/about';
 import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Redirect
-} from "react-router-dom";
+  Redirect,
+} from 'react-router-dom';
 import './styles/App.scss';
 import WayaChat from './pages/wayachat';
 import Agent from './pages/agent';
@@ -42,22 +24,24 @@ import PricingPage from './pages/pricing';
 import DeveloperPage from './pages/developer';
 import WayaPos from './pages/product/wayapos';
 // import SignUp from './pages/signup';
+import Login from './pages/Auth/login';
+import Signup from './pages/Auth/signup';
 
 function App() {
   return (
     <div>
       <Router>
         <Switch>
-          <Route exact path="/about">
+          <Route exact path='/about'>
             <About />
           </Route>
-          <Route exact path="/blogs">
+          <Route exact path='/blogs'>
             <Blog />
           </Route>
           <Route exact path='/agent'>
             <Agent />
           </Route>
-          <Route exact path="/contact">
+          <Route exact path='/contact'>
             <ContactPage />
           </Route>
           <Route exact path='/merchant'>
@@ -105,7 +89,9 @@ function App() {
           <Route path={`/blogs/:topicId`}>
             <SinglePost />
           </Route>
-          <Route exact path="/">
+          <Route path='/login' component={Login} />
+          <Route path='/signup' component={Signup} />
+          <Route exact path='/'>
             <Home />
           </Route>
         </Switch>
@@ -115,4 +101,3 @@ function App() {
 }
 
 export default App;
->>>>>>> 55902da59a1939e6ea01cce18e062824d2675dec
