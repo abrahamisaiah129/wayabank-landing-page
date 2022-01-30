@@ -13,6 +13,7 @@ import ResetPassword from '../../componentParts/Modals/ResetPassword';
 import ResendOtp from '../../componentParts/Modals/Otp/ResendOtpOutside';
 import VerifyOtp from '../../componentParts/Modals/Otp/VerifyOtp';
 import Logo from '../../assets/images/wayaBankLogo.png';
+import { envConfig } from '../../utils/envConfig';
 
 const LoginPage = () => {
   const history = useHistory();
@@ -85,42 +86,6 @@ const LoginPage = () => {
     }
   };
 
-  const createPin = async () => {
-    setLoading(true);
-
-    if (!validator.equals(otp, confirmOtp)) {
-      swal('Oops!', 'Pin do not match', 'error');
-      setLoading(false);
-      return;
-    }
-
-    const userId = localStorage.getItem('userId');
-
-    const postData = {
-      phoneOrEmail: email,
-      pin: Number(otp),
-      userId,
-    };
-
-    const res = await httpPost(
-      '/api/v1/pin/create-pin',
-      postData,
-      customBaseUrl.authUrl
-    );
-    if (res.status) {
-      setLoading(false);
-      setOtp('');
-      setEmail('');
-      swal('Done', res.message, 'success').then(() => {
-        history.push('/products');
-        // setShowPin(false);
-      });
-    } else {
-      setLoading(false);
-      swal('Oops!', res.message, 'error');
-    }
-  };
-
   const completeSignup = async () => {
     setLoading(true);
     const postData = {
@@ -165,40 +130,32 @@ const LoginPage = () => {
     );
     console.log(res);
     if (res?.status) {
-      localStorage.setItem('token', res?.data?.token);
-      localStorage.setItem('userId', res?.data?.user.id);
-      localStorage.setItem('wayaUserData', JSON.stringify(res?.data));
-      localStorage.setItem('corporate', res?.data?.corporate);
-      setLoading(false);
-      setEmail(data?.emailOrPhoneNumber);
-      // if (!res.data.user.isPhoneVerified) {
-      //   hideModal(false);
-      //   setShowVerifyOtp(true);
-      // }
       if (!res.data.pinCreated) {
         localStorage.setItem('firstLogin', true);
         // setShowPin(true);
       }
-      localStorage.setItem('showSplashScreen', true);
-      localStorage.setItem('isEmailVerified', res?.data?.user?.isEmailVerified);
-      localStorage.setItem('isPhoneVerified', res?.data?.user?.isPhoneVerified);
-      httpPost(
-        '/api/v1/history/save',
-        {
-          city: location?.userLocation?.city,
-          country: location?.userLocation?.country_name,
-          device: location?.device,
-          id: 0,
-          ip: location?.userLocation?.IPv4,
-          province: location?.userLocation?.state,
-          userId: res.data.user.id,
-        },
-        customBaseUrl.authUrl
-      );
+      // httpPost(
+      //   '/api/v1/history/save',
+      //   {
+      //     city: location?.userLocation?.city,
+      //     country: location?.userLocation?.country_name,
+      //     device: location?.device,
+      //     id: 0,
+      //     ip: location?.userLocation?.IPv4,
+      //     province: location?.userLocation?.state,
+      //     userId: res.data.user.id,
+      //   },
+      //   customBaseUrl.authUrl
+      // );
       if (sharedPost) {
         history.push(`/post/${sharedPostId}`);
       } else {
-        history.push('/products');
+        // history.push('/products');
+        if (res.data.corporate) {
+          window.location.href = `${envConfig.corporateAppUrl}/login?from=web&token=${res?.data?.token}&userId=${res?.data?.user.id}&pinCreated=${res.data?.pinCreated}`;
+        } else {
+          window.location.href = `${envConfig.personalAppUrl}/login?from=web&token=${res?.data?.token}&userId=${res?.data?.user.id}&pinCreated=${res.data?.pinCreated}`;
+        }
       }
     } else {
       setLoading(false);
@@ -227,6 +184,7 @@ const LoginPage = () => {
       });
     }
   };
+
   useEffect(() => {
     getLocationInfo();
     return () => {
@@ -357,12 +315,6 @@ const LoginPage = () => {
       )}
     </div>
   );
-};
-
-LoginPage.propTypes = {
-  // center: PropTypes.bool.isRequired,
-  // history: PropTypes.shape.isRequired,
-  // setShowPin: PropTypes.func.isRequired,
 };
 
 export default LoginPage;
