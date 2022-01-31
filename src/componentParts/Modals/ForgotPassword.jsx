@@ -7,6 +7,7 @@ import './index.scss';
 import { customBaseUrl, httpGet } from '../../services/http';
 import Button from '../Button';
 import { checkAcess } from '../../utils/helper';
+import Logo from '../../assets/images/wayaIcon.png';
 
 const ForgotPassword = (props) => {
   const {
@@ -67,6 +68,7 @@ const ForgotPassword = (props) => {
         <div
           id='forgot-password-modal'
           className='modal-body-rs col-sm-12 col-md-10'
+          style={{ marginTop: '30px' }}
         >
           <div className='header-sec-modal'>
             <input
@@ -79,8 +81,9 @@ const ForgotPassword = (props) => {
             />
             <img
               className='header-sec-logo'
-              src='./assets/image/appLogo.png'
+              src={Logo}
               alt=''
+              style={{ height: '35px' }}
             />
             <input
               type='image'

@@ -12,7 +12,7 @@ import ForgotPassword from '../../componentParts/Modals/ForgotPassword';
 import ResetPassword from '../../componentParts/Modals/ResetPassword';
 import ResendOtp from '../../componentParts/Modals/Otp/ResendOtpOutside';
 import VerifyOtp from '../../componentParts/Modals/Otp/VerifyOtp';
-import Logo from '../../assets/images/wayaBankLogo.png';
+import Logo from '../../assets/images/wayaIcon.png';
 import { envConfig } from '../../utils/envConfig';
 
 const LoginPage = () => {
