@@ -9,7 +9,6 @@ import { getHome, getSettings, getFeatures } from "../states/home";
 import { imageUrl } from "../services/axios";
 import { Button, Image, Switch } from "antd";
 import { useState } from "react";
-import HomeImg1 from "../assets/images/homeimg1.png";
 import send from "../assets/svgs/send.svg";
 import perform from "../assets/svgs/perform.svg";
 import recieve from "../assets/svgs/recieve.svg";
@@ -29,6 +28,16 @@ import smallBlue from "../assets/images/smallBlue.png";
 import phoneinhand from "../assets/images/phoneinhand.png";
 import appstore from "../assets/images/appstore.png";
 import googleplay from "../assets/images/googleplay.png";
+import Backg from "../assets/images/wayaBg.png";
+import Backg2 from "../assets/images/wayaBg2.png";
+import list from "../assets/images/List.png";
+import transferLogo from "../assets/images/transferLogo.png";
+import ssimg from "../assets/svgs/ssimg.svg";
+import qr from "../assets/svgs/qr.svg";
+import devices from "../assets/images/devices.png";
+import mail from "../assets/images/mail.png";
+import diary from "../assets/images/diary.png";
+import anotherBg from "../assets/images/anotherBg.png";
 
 function Home() {
   const [posType, setPosType] = useState("web");
@@ -108,44 +117,103 @@ function Home() {
       com: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ante id malesuada mauris orci vulputate ut blandit et. Pharetra dui suscipit odio diam et nunc suspendisse. Sagittis pretium fringilla egestas facilisi ornare sit fames. Tortor, dui, sit tellus hendrerit pharetra arcu quis.",
     },
   ];
-  console.log(posType);
+  
   return (
     <div id="homesection">
       <TopNav className="mb-4" />
       <div
         className="home-jumbotron pt-4 "
-        style={{ backgroundImage: "url(/grain.png)" }}
+        style={{
+          backgroundImage: `url(${Backg})`,
+          backgroundSize: "cover",
+        }}
       >
-        <div className="container">
-          <div className="py-4 row">
-            <Fade left className="w-100 ">
-              <div className="col-md-12 text-center px-lg-5 mb-lg-5">
-                <h1 className="w-75 mx-auto">
-                  Accept payment, make Transfers and transact seamlessly
-                </h1>
-                <p className="w-75 mx-auto px-lg-5">
-                  Waya Bank is an all-in-one platform that enable you accept
-                  payments, transfer, request fund, pay your bills and perform
-                  safe and secure transactions.
-                </p>
+        <div className="topHj">
+          <Fade left>
+            <div className="leftHj">
+              <div className="lhj-top">
+                Bank of the new Age, digitally built for you!
               </div>
-            </Fade>
-            <Fade right>
-              <div className="col-md-12 text-center md-m">
-                {/* initial image url  */}
-                {/* `${imageUrl}${home.hero_image_url}` */}
-                <img src={HomeImg1} className="m-0 p-0" alt="jumbotron" />
+              <div className="lhj-bot">
+                Waya Bank is an all-in-one platform that enable you accept
+                payments, transfer, request fund, pay your bills and perform
+                safe and secure transactions.
               </div>
-            </Fade>
-          </div>
+            </div>
+          </Fade>
+          <Fade right>
+            <div className="rightHj">
+              <img src={Backg2} className="" alt="jumbotron" />
+            </div>
+          </Fade>
         </div>
       </div>
 
+      <div
+        className="bottom-section"
+        style={{
+          backgroundImage: `url(${anotherBg})`,
+          background:
+            "linear-gradient(0deg, rgba(0, 0, 0, 0.12), rgba(0, 0, 0, 0.12))",
+        }}
+      >
+        <Fade bottom>
+          <div className="first-bs">
+            <div className="fbs-f">
+              We offer you <br />
+              <span
+                style={{
+                  color: "#fc4200",
+                }}
+              >
+                Amazing
+              </span>{" "}
+              Features
+            </div>
+            <div className="fbs-s">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ante id
+              malesuada mauris orci vulputate ut blandit et. Pharetra dui
+              suscipit odio diam et nunc suspendisse. Sagittis pretium fringilla
+              egestas facilisi ornare sit fames. Tortor, dui, sit tellus
+              hendrerit pharetra arcu quis.
+            </div>
+            <div className="fbs-t">
+              <img src={list} alt="" />
+            </div>
+            <div className="fbs-ft">
+              <div className="fbs-ft-img">
+                <img src={ssimg} alt="" />
+              </div>
+              <div className="fbs-ft-cont">
+                <div className="fbsft-t">Safe and secure</div>
+                <div className="fbsft-b">
+                  Transactions are safe and secure when you send and receive
+                  money and our fees are low (10N).
+                </div>
+              </div>
+            </div>
+          </div>
+        </Fade>
+        <Fade top>
+          <div className="second-bs">
+            <img src={devices} alt="" className="w-100" />
+            <div className="fbs-ft">
+              <div className="fbs-ft-img">
+                <img src={qr} alt="" />
+              </div>
+              <div className="fbs-ft-cont">
+                <div className="fbsft-t">QR Code Scanner</div>
+                <div className="fbsft-b">
+                  Quick and easy transactions by scanning a QR code.
+                </div>
+              </div>
+            </div>
+          </div>
+        </Fade>
+      </div>
+
       <Fade bottom>
-        <div
-          className="genericJumbo py-4"
-          style={{ backgroundImage: "url(/grain.png)" }}
-        >
+        <div className="genericJumbo py-4">
           <GenericJumbotron
             titleText="How Waya Bank Works"
             desc="Waya Bank provide users the platform to carryout financial activities as an Individual (personal) or corporate (Merchants, Agents and Aggregators). Access to the platform is by downloading the mobile application from app store or playstore or accessing the web version via the url (www.wayabank.com).​ WayaBank payment platform combine a lots of financial benefits and features, our mobile platform ease the challenges of all financial transactions.
@@ -154,11 +222,7 @@ function Home() {
           />
         </div>
 
-        <div
-          style={{
-            backgroundImage: "url(/grain.png)",
-          }}
-        >
+        <div>
           <div
             className="mx-auto howBottom "
             style={{
@@ -202,7 +266,7 @@ function Home() {
         </div>
       </Fade>
 
-      <section className="categories">
+      {/* <section className="categories">
         <div className="cat-item-2">
           <div>Our Amazing </div>
           <div
@@ -277,9 +341,9 @@ function Home() {
             <div>Explore more</div>
           </div>
         </div>
-      </section>
+      </section> */}
 
-      <section
+      {/* <section
         className="features text-center"
         style={{
           backgroundImage: "url(/grain.png)",
@@ -449,7 +513,69 @@ function Home() {
             </div>
           </Fade>
         </div>
-      </section>
+      </section> */}
+
+      <div
+        className="another-bottom-section"
+        style={{ backgroundImage: "url(/grain.png)" }}
+      >
+        <Fade right>
+          <div className="abs-left">
+            <div className="absl-1">The easy-to-use Banking platform</div>
+            <div className="absl-2">
+              We re-engineered this app to proudly enable you do alot + perform
+              financial transactions with ease. All you need is the reciever’s
+              email or phone and you pay absolutely nothing for sending money
+              with these.
+            </div>
+            <div className="absl-3">Open an Account in minutes</div>
+            <div className="absl-4">
+              <div className="absl-text">
+                <div className="abslt-top">Unlimited Transfers</div>
+                <div className="abslt-bot">
+                  We designed a banking app to make your busy lifestyle easy. We
+                  have made it ease for you to transfer or receive money with
+                  your phone number. That’s all you need to make the right moves
+                  with your money, no sweat.
+                </div>
+              </div>
+              <img src={transferLogo} alt="" />
+            </div>
+          </div>
+        </Fade>
+        <Fade left>
+          <div className="abs-right">
+            <div className="absl-4 align-self-end">
+              <div className="absl-text">
+                <div className="abslt-top">
+                  Easy life! Send or receive money with email address
+                </div>
+                <div className="abslt-bot">
+                  We designed a banking app to make your busy lifestyle easy. We
+                  have made it ease for you to transfer or receive money with
+                  your phone number. That’s all you need to make the right moves
+                  with your money, no sweat.
+                </div>
+              </div>
+              <img src={mail} alt="" />
+            </div>
+            <div className="absl-4">
+              <div className="absl-text">
+                <div className="abslt-top">
+                  Easy life! Send or receive money with email address
+                </div>
+                <div className="abslt-bot">
+                  We designed a banking app to make your busy lifestyle easy. We
+                  have made it ease for you to transfer or receive money with
+                  your phone number. That’s all you need to make the right moves
+                  with your money, no sweat.
+                </div>
+              </div>
+              <img src={diary} alt="" />
+            </div>
+          </div>
+        </Fade>
+      </div>
 
       <section className="wayaCustomerFeedback my-4">
         <div className="">

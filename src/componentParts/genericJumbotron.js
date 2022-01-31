@@ -3,10 +3,7 @@ import Fade from "react-reveal/Fade";
 
 function GenericJumbotron(props) {
   return (
-    <div
-      className="about-jumbotron pl-lg-4"
-      style={{ backgroundImage: "url(/grain.png)" }}
-    >
+    <div className="about-jumbotron pl-lg-4">
       <div className="mx-auto">
         <div className="pt-4 ml-lg-4 pl-lg-4 row">
           <Fade right cascade>
