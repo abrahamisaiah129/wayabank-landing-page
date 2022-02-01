@@ -47,7 +47,7 @@ function TopNav(params) {
       />
       <div className="midText">
         <Link
-          // to="/solution"
+          to="/solution"
           className={
             location?.pathname === "/solution"
               ? "mr-4 border-bottom text-white"
