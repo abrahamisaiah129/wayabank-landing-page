@@ -46,7 +46,7 @@ function PageFooter() {
                 PayChat and our services, check our FAQ or contact our Customer
                 Support
               </p>
-              <div className="contacts row">
+              <div className="contacts row align-items-center">
                 <div className="col-sm-3 col-md-12 col-lg-3 mr-4">
                   <a href={`tel:${social.phone}`}>
                     <button type="submit" className="orange">
@@ -57,7 +57,7 @@ function PageFooter() {
                     </button>
                   </a>
                 </div>
-                <div className="col col-md-12 col-lg-8 row socials">
+                <div className="col col-md-12 col-lg-8 row socials align-items-center">
                   <div className="col ml-4 pt-1 pl-4">
                     <a href={social.twitter} target="_blank">
                       <img
@@ -103,15 +103,18 @@ function PageFooter() {
                 Amazing Business Offers
               </p>
               <form onSubmit={handleSubmit}>
-                <input
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  type="text"
-                  placeholder="Enter your email address"
-                />
-                <button type="submit">
-                  {loading ? "Loading..." : "Subscribe"}
-                </button>
+                <div className="d-flex align-items-center">
+                  <input
+                    className="px-3"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    type="text"
+                    placeholder="Enter your email address"
+                  />
+                  <button type="submit">
+                    {loading ? "Loading..." : "Subscribe"}
+                  </button>
+                </div>
               </form>
             </div>
           </Fade>

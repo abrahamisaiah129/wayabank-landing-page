@@ -3,8 +3,8 @@
 @tailwind components;
 @tailwind utilities;
 
-:root{
-  --primary-theme: #FF4400;
+:root {
+  --primary-theme: #ff4400;
 }
 
 body {
@@ -22,7 +22,12 @@ code {
 }
 
 input:focus,
-select:focus{
+select:focus {
   outline: none;
 }
 
+.btn-primary {
+  color: #fff !important;
+  background: #ff4400;
+  border: none !important;
+}
