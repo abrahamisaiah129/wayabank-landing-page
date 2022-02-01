@@ -19,7 +19,7 @@ import MerchantForm3 from '../../componentParts/Modals/MerchantForm3';
 import VerifyOtp from '../../componentParts/Modals/Otp/VerifyOtp';
 import ResendOtp from '../../componentParts/Modals/Otp/ResendOtpOutside';
 import { getBusinessTypes } from '../../services/calls';
-import Logo from '../../assets/images/wayaIcon.png';
+import Logo from '../../assets/images/wayaBankLogo1.png';
 
 const SignupPage = () => {
   const history = useHistory();

@@ -7,7 +7,7 @@ import './index.scss';
 import { customBaseUrl, httpGet } from '../../services/http';
 import Button from '../Button';
 import { checkAcess } from '../../utils/helper';
-import Logo from '../../assets/images/wayaIcon.png';
+import Logo from '../../assets/images/wayaBankLogo1.png';
 
 const ForgotPassword = (props) => {
   const {

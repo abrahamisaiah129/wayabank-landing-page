@@ -135,9 +135,8 @@ function Home() {
                 Bank of the new Age, digitally built for you!
               </div>
               <div className='lhj-bot'>
-                Waya Bank is an all-in-one platform that enable you accept
-                payments, transfer, request fund, pay your bills and perform
-                safe and secure transactions.
+                We are the bank of the easy-to-use, secured and commited to help
+                you save time and charges from your day to day transactions.
               </div>
             </div>
           </Fade>
@@ -171,11 +170,11 @@ function Home() {
               Features
             </div>
             <div className='fbs-s'>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ante id
-              malesuada mauris orci vulputate ut blandit et. Pharetra dui
-              suscipit odio diam et nunc suspendisse. Sagittis pretium fringilla
-              egestas facilisi ornare sit fames. Tortor, dui, sit tellus
-              hendrerit pharetra arcu quis.
+              Are you a Business or an individual? Wayabank provide services
+              that help personal and businesses carryout financial activities
+              easily without any delay and hinderance. Our users can make
+              seamless cash transfers, withdrawal, pay bills, request and
+              receive money.
             </div>
             <div className='fbs-t'>
               <img src={list} alt='' />
@@ -266,255 +265,6 @@ function Home() {
         </div>
       </Fade>
 
-      {/* <section className="categories">
-        <div className="cat-item-2">
-          <div>Our Amazing </div>
-          <div
-            style={{
-              color: "#FA4400",
-            }}
-          >
-            Waya Bank
-          </div>
-          <div>Features</div>
-        </div>
-        <div className="cat-item">
-          <img src={send} alt="send" className="cat-img" />
-          <div className="ci-title">Send Money</div>
-          <div className="ci-content">
-            On WayaBank, you can send money to anyone, both WayaBank users &
-            non-users. They will receive the money seamlessly.
-          </div>
-          <div className="ci-footer">
-            <img src={explore} alt="" />
-            <div>Explore more</div>
-          </div>
-        </div>
-        <div className="cat-item">
-          <img src={recieve} alt="send" className="cat-img" />
-          <div className="ci-title">Recieve Money</div>
-          <div className="ci-content">
-            Our platform enable our users and non-users to receive money from
-            WayaBank user and non-users. We also enable users to create multiple
-            wallet
-          </div>
-          <div className="ci-footer">
-            <img src={explore} alt="" />
-            <div>Explore more</div>
-          </div>
-        </div>
-        <div className="cat-item">
-          <img src={perform} alt="send" className="cat-img" />
-          <div className="ci-title">
-            Perform Transaction with Phone NumberRecieve Money
-          </div>
-          <div className="ci-content">
-            Do you have phone number? On WayaBank, you can perform any financial
-            transactions with your phone number with ease.
-          </div>
-          <div className="ci-footer">
-            <img src={explore} alt="" />
-            <div>Explore more</div>
-          </div>
-        </div>
-        <div className="cat-item">
-          <img src={request} alt="send" className="cat-img" />
-          <div className="ci-title">Request Fund</div>
-          <div className="ci-content">
-            This Feature allows you to request money from friends and families.
-            With a 10-digit code sent to your phone, you can withdraw the cash
-          </div>
-          <div className="ci-footer">
-            <img src={explore} alt="" />
-            <div>Explore more</div>
-          </div>
-        </div>
-        <div className="cat-item">
-          <img src={pay} alt="send" className="cat-img" />
-          <div className="ci-title">Pay Bills</div>
-          <div className="ci-content">
-            To guaranty that paying your bills at ease. You can pay your power,
-            Tv, data and all subscriptions
-          </div>
-          <div className="ci-footer">
-            <img src={explore} alt="" />
-            <div>Explore more</div>
-          </div>
-        </div>
-      </section> */}
-
-      {/* <section
-        className="features text-center"
-        style={{
-          backgroundImage: "url(/grain.png)",
-          backgroundRepeat: "repeat",
-        }}
-      >
-        <h4>Made for All</h4>
-        <img src={chain} alt="" className="w-50 my-5" />
-        <div className="made4All mx-auto">
-          <div className="m4A-item">
-            <div className="title">Protected Access</div>
-            <div className="content">
-              Your Waya Account is protected with multiple layers of security.
-              If you lose your phone, you can have your Waya PayChat account
-              blocked at any time.
-            </div>
-          </div>
-          <div className="m4A-item">
-            <div className="title">Protected Access</div>
-            <div className="content">
-              Your Waya Account is protected with multiple layers of security.
-              If you lose your phone, you can have your Waya PayChat account
-              blocked at any time.
-            </div>
-          </div>
-          <div className="m4A-item">
-            <div className="title">Protected Access</div>
-            <div className="content">
-              Your Waya Account is protected with multiple layers of security.
-              If you lose your phone, you can have your Waya PayChat account
-              blocked at any time.
-            </div>
-          </div>
-        </div>
-        <div className="infographic row">
-          <Fade big>
-            <div
-              className="col-md-6 singlePhone"
-              //  className='singlePhone'
-            >
-              <Image
-                preview={false}
-                src="/singlePhone.png"
-                alt="feature"
-                placeholder={<Image src={phone} preview={false} width={200} />}
-              />
-            </div>
-          </Fade>
-          <Fade right cascade>
-            <div className="col-md-6">
-              <div className="special-row">
-                <div className="">
-                  <Image
-                    preview={false}
-                    src={safe}
-                    alt="feature"
-                    width={100}
-                    placeholder={
-                      <Image src={bar} preview={false} width={200} />
-                    }
-                  />
-                </div>
-                <div className="theTexts">
-                  <h6>Safe and secure</h6>
-                  <p>
-                    Transactions are safe and secure when you send and receive
-                    money and our fees are low (10N).
-                  </p>
-                </div>
-              </div>
-
-              <div className="special-row">
-                <div className="">
-                  <Image
-                    preview={false}
-                    src={makePayment}
-                    alt="feature"
-                    width={100}
-                    placeholder={
-                      <Image src={makePayment} preview={false} width={200} />
-                    }
-                  />
-                </div>
-                <div className="theTexts">
-                  <h6>Make Payments and Receive cash</h6>
-                  <p>
-                    Banking without restrictions. Perform your financial
-                    transactions anytime, any day. Also USSD codes to make
-                    transactions.
-                  </p>
-                </div>
-              </div>
-              <div className="special-row">
-                <div className="">
-                  <Image
-                    preview={false}
-                    src={qrcode}
-                    alt="feature"
-                    width={100}
-                    placeholder={
-                      <Image src={qrcode} preview={false} width={200} />
-                    }
-                  />
-                </div>
-                <div className="theTexts">
-                  <h6>Qr Code Scanner</h6>
-                  <p>Quick and easy transactions by scanning a QR code.</p>
-                </div>
-              </div>
-              <div className="special-row">
-                <div className="">
-                  <Image
-                    preview={false}
-                    src={agent}
-                    alt="feature"
-                    width={100}
-                    placeholder={
-                      <Image src={agent} preview={false} width={200} />
-                    }
-                  />
-                </div>
-                <div className="theTexts">
-                  <h6>Agents and Kiosks</h6>
-                  <p>Top up your wallet or get cash out via Waya Agent.</p>
-                </div>
-              </div>
-              <div className="special-row">
-                <div className="">
-                  <Image
-                    preview={false}
-                    src={merchant}
-                    alt="feature"
-                    width={100}
-                    placeholder={
-                      <Image src={merchant} preview={false} width={200} />
-                    }
-                  />
-                </div>
-                <div className="theTexts">
-                  <h6>Merchants</h6>
-                  <p>
-                    Make extra cash as a Waya Merchant. Earn commissions every
-                    time your customer pays you using Waya PayChat.
-                  </p>
-                </div>
-              </div>
-              <div className="special-row">
-                <div className="">
-                  <Image
-                    preview={false}
-                    src={chat}
-                    alt="feature"
-                    width={100}
-                    placeholder={
-                      <Image src={chat} preview={false} width={200} />
-                    }
-                  />
-                </div>
-                <div className="theTexts">
-                  <h6>24/7 Support</h6>
-                  <p>
-                    Our support and engineering team are ever on standby to give
-                    you necessary support you need.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </Fade>
-        </div>
-      </section> */}
-
       <div
         className='another-bottom-section'
         style={{ backgroundImage: 'url(/grain.png)' }}
@@ -531,12 +281,12 @@ function Home() {
             <div className='absl-3'>Open an Account in minutes</div>
             <div className='absl-4'>
               <div className='absl-text'>
-                <div className='abslt-top'>Unlimited Transfers</div>
+                <div className='abslt-top'>
+                  Take care of all your business expenses in one place.
+                </div>
                 <div className='abslt-bot'>
-                  We designed a banking app to make your busy lifestyle easy. We
-                  have made it ease for you to transfer or receive money with
-                  your phone number. That’s all you need to make the right moves
-                  with your money, no sweat.
+                  Pay bills and buy airtime easily without switching platforms,
+                  keep yourself organised and your business running smoothly.
                 </div>
               </div>
               <img src={transferLogo} alt='' />
@@ -562,13 +312,12 @@ function Home() {
             <div className='absl-4'>
               <div className='absl-text'>
                 <div className='abslt-top'>
-                  Easy life! Send or receive money with email address
+                  It’s your money, we just help you manage it.
                 </div>
                 <div className='abslt-bot'>
-                  We designed a banking app to make your busy lifestyle easy. We
-                  have made it ease for you to transfer or receive money with
-                  your phone number. That’s all you need to make the right moves
-                  with your money, no sweat.
+                  Save it, spend it, send it. It’s up to you. Whatever you
+                  choose to do with your money, we’ll make sure it’s done better
+                  and free of charge. We take responsibility for that.
                 </div>
               </div>
               <img src={diary} alt='' />
