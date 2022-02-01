@@ -77,9 +77,51 @@ textarea {
 }
 
 .header-sec-logo-log {
-  width: 120.55px;
-  height: 50px;
+  // width: 120.55px;
+  // height: 50px;
+  width: 110.55px;
+  height: 45px;
   cursor: pointer;
+}
+
+// otp inputs
+.otp-inputs {
+  width: 3rem !important;
+  height: 3rem;
+  font-size: 2rem;
+  border-radius: 4px;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.otp-input {
+  width: 3rem !important;
+  height: 3rem;
+  margin: 0 1rem;
+  font-size: 2rem;
+  border-radius: 4px;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  @media (max-width: 376px) {
+    width: 2rem !important;
+  }
+}
+
+.otp-input2 {
+  width: 3rem !important;
+  height: 3rem;
+  margin: 0 1rem;
+  font-size: 2rem;
+  border-radius: 4px;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  @media (max-width: 376px) {
+    width: 2rem !important;
+    margin: 0 !important;
+  }
+}
+
+.otp-bottom {
+  border: none;
+  border-radius: 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3) !important;
 }
 
 @supports (-webkit-appearance: none) or (-moz-appearance: none) {
