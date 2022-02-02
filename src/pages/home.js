@@ -16,6 +16,7 @@ import pay from '../assets/svgs/pay.svg';
 import request from '../assets/svgs/request.svg';
 import explore from '../assets/svgs/explore.svg';
 import chain from '../assets/svgs/chain.svg';
+import arrowRight from '../assets/svgs/arrow-right.svg';
 import qrcode from '../assets/images/qrcode.png';
 import makePayment from '../assets/images/phoneicon.png';
 import bar from '../assets/images/bar.png';
@@ -35,6 +36,10 @@ import transferLogo from '../assets/images/transferLogo.png';
 import ssimg from '../assets/svgs/ssimg.svg';
 import qr from '../assets/svgs/qr.svg';
 import devices from '../assets/images/devices.png';
+import wallet from '../assets/images/wallet.png';
+import wallet2 from '../assets/images/wallet2.png';
+import lock from '../assets/images/lock.png';
+import bank from '../assets/images/bank.png';
 import mail from '../assets/images/mail.png';
 import diary from '../assets/images/diary.png';
 import anotherBg from '../assets/images/anotherBg.png';
@@ -125,7 +130,6 @@ function Home() {
         className='home-jumbotron pt-4 '
         style={{
           backgroundImage: `url(${Backg})`,
-          backgroundSize: 'cover',
         }}
       >
         <div className='topHj'>
@@ -152,82 +156,98 @@ function Home() {
         className='bottom-section'
         style={{
           backgroundImage: `url(${anotherBg})`,
+
           background:
             'linear-gradient(0deg, rgba(0, 0, 0, 0.12), rgba(0, 0, 0, 0.12))',
         }}
       >
-        <Fade bottom>
-          <div className='first-bs'>
-            <div className='fbs-f'>
-              We offer you <br />
-              <span
-                style={{
-                  color: '#fc4200',
-                }}
-              >
-                Amazing
-              </span>{' '}
-              Features
-            </div>
-            <div className='fbs-s'>
-              Are you a Business or an individual? Wayabank provide services
-              that help personal and businesses carryout financial activities
-              easily without any delay and hinderance. Our users can make
-              seamless cash transfers, withdrawal, pay bills, request and
-              receive money.
-            </div>
-            <div className='fbs-t'>
-              <img src={list} alt='' />
-            </div>
-            <div className='fbs-ft'>
-              <div className='fbs-ft-img'>
-                <img src={ssimg} alt='' />
+        <div className='bs-tit'>WayaBank Services</div>
+        <div className='bs-subTit'>Testfully designed for you.</div>
+        <div className='bs-Cont'>
+          <Fade bottom>
+            <div className='first-bs'>
+              <div className='fbs-top'>
+                Are you a Business or an individual? Wayabank provide services
+                that help personal and businesses carryout financial activities
+                easily without any delay and hinderance. Our users can make
+                seamless cash transfers, withdrawal, pay bills, request and
+                receive money.
               </div>
-              <div className='fbs-ft-cont'>
-                <div className='fbsft-t'>Safe and secure</div>
-                <div className='fbsft-b'>
-                  Transactions are safe and secure when you send and receive
-                  money and our fees are low (10N).
+              <div className='fbs-bottom'>
+                <div className='fbsb-top'>
+                  <img src={wallet} alt='' />
+                  <div className='fbsbt-text'>Digital Personal Banking</div>
+                </div>
+                <div className='fbsb-middle'>
+                  Wayabank provides completely digital personal banking via web,
+                  mobile app and USSD.
+                  <br />
+                  <br />
+                  <br />
+                  Available on Android and iOS devices, the Wayabank app allows
+                  customers to make savings and carry out payments.
+                </div>
+                <div className='fbsb-footer'>
+                  <div>Create Wayabank Personal Account</div>
+                  <img src={arrowRight} />
                 </div>
               </div>
             </div>
-          </div>
-        </Fade>
-        <Fade top>
-          <div className='second-bs'>
-            <img src={devices} alt='' className='w-100' />
-            <div className='fbs-ft'>
-              <div className='fbs-ft-img'>
-                <img src={qr} alt='' />
-              </div>
-              <div className='fbs-ft-cont'>
-                <div className='fbsft-t'>QR Code Scanner</div>
-                <div className='fbsft-b'>
-                  Quick and easy transactions by scanning a QR code.
+          </Fade>
+          <Fade top>
+            <div className='second-bs'>
+              <div className='fbs-bottom'>
+                <div className='fbsb-top'>
+                  <img src={wallet} alt='' />
+                  <div className='fbsbt-text'>Digital Business Banking</div>
+                </div>
+                <div className='fbsb-middle'>
+                  Tailor-made for businesses, Wayabank completely digital
+                  platform grants businesses an ability to make savings, carry
+                  out payments, gain commissions as an agents or aggregators and
+                  also have access to Wayabank Open APIs.
+                </div>
+                <div className='fbsb-footer'>
+                  <div>Create Wayabank Business Account</div>
+                  <img src={arrowRight} />
                 </div>
               </div>
             </div>
-          </div>
-        </Fade>
+          </Fade>
+        </div>
       </div>
 
       <Fade bottom>
-        <div className='genericJumbo py-4'>
-          <GenericJumbotron
-            titleText='How Waya Bank Works'
-            desc='Waya Bank provide users the platform to carryout financial activities as an Individual (personal) or corporate (Merchants, Agents and Aggregators). Access to the platform is by downloading the mobile application from app store or playstore or accessing the web version via the url (www.wayabank.com).​ WayaBank payment platform combine a lots of financial benefits and features, our mobile platform ease the challenges of all financial transactions.
-
-              We are committed to providing a secure and cashless payment solution that assists our users, merchants, and organizations, to optimize their daily lives and business processes while taking care of their transactions.'
-          />
+        <div className='genericJumbo '>
+          <div className='gc-title'>How WayaBank Works</div>
+          <div className='gc-underline' />
+          <div className='gc-text'>
+            Wayabank provide users the platform to carryout financial activities
+            as an Individual (personal) or corporate (Merchants, Agents and
+            Aggregators). Access to the platform is by downloading the mobile
+            application from app store, playstore or accessing the web version
+            via the url{' '}
+            <span
+              style={{
+                color: '#ff4400',
+              }}
+            >
+              (www.wayabank.com)
+            </span>
+            . WayaBank payment platform combine a lots of financial benefits and
+            features, our mobile platform ease the challenges of all financial
+            transactions.
+            <br />
+            <br />
+            We are committed to providing a secure and cashless payment solution
+            that assists our users, merchants, and organizations, to optimize
+            their daily lives and business processes while taking care of their
+            transactions.
+          </div>
         </div>
 
         <div>
-          <div
-            className='mx-auto howBottom '
-            style={{
-              width: '85%',
-            }}
-          >
+          <div className='mx-auto howBottom '>
             <div className='hb-item'>
               <img src={smallBlue} alt='' />
               <div className='hbi-right'>
@@ -289,7 +309,17 @@ function Home() {
                   keep yourself organised and your business running smoothly.
                 </div>
               </div>
-              <img src={transferLogo} alt='' />
+              <div
+                style={{
+                  width: '70px',
+                  height: '70px',
+                  borderRadius: '50%',
+                  background: 'rgba(255, 68, 0, 0.14)',
+                  padding: '14px',
+                }}
+              >
+                <img src={wallet2} alt='' />
+              </div>
             </div>
           </div>
         </Fade>
@@ -298,7 +328,8 @@ function Home() {
             <div className='absl-4 align-self-end'>
               <div className='absl-text'>
                 <div className='abslt-top'>
-                  Easy life! Send or receive money with email address
+                  Easy life! Send or receive money with email address or phone
+                  number
                 </div>
                 <div className='abslt-bot'>
                   We designed a banking app to make your busy lifestyle easy. We
@@ -307,12 +338,22 @@ function Home() {
                   with your money, no sweat.
                 </div>
               </div>
-              <img src={mail} alt='' />
+              <div
+                style={{
+                  width: '70px',
+                  height: '70px',
+                  borderRadius: '50%',
+                  background: 'rgba(255, 68, 0, 0.14)',
+                  padding: '14px',
+                }}
+              >
+                <img src={bank} alt='' />
+              </div>
             </div>
             <div className='absl-4'>
               <div className='absl-text'>
                 <div className='abslt-top'>
-                  It’s your money, we just help you manage it.
+                  It’s your money, we just help you manage it.{' '}
                 </div>
                 <div className='abslt-bot'>
                   Save it, spend it, send it. It’s up to you. Whatever you
@@ -320,17 +361,162 @@ function Home() {
                   and free of charge. We take responsibility for that.
                 </div>
               </div>
-              <img src={diary} alt='' />
+              <img src={lock} alt='' />
             </div>
           </div>
         </Fade>
       </div>
 
-      <section className='wayaCustomerFeedback my-4'>
-        <div className=''>
-          <div className='text-center py-5'>
-            <p className='fs-3 fw-sm lh-1 m-0'>Our Customer’s Feedbacks</p>
-            <p className='fs-6'>What our customers love about us</p>
+      <section
+        className='features text-center'
+        style={{
+          backgroundImage: 'url(/grain.png)',
+          backgroundRepeat: 'repeat',
+        }}
+      >
+        <div className='infographic row'>
+          <Fade big>
+            <div
+              className='col-md-6 singlePhone'
+              //  className='singlePhone'
+            >
+              <Image
+                preview={false}
+                src='/singlePhone.png'
+                alt='feature'
+                placeholder={<Image src={phone} preview={false} width={200} />}
+              />
+            </div>
+          </Fade>
+          <Fade right cascade>
+            <div className='col-md-6'>
+              <div className='special-row'>
+                <div className=''>
+                  <Image
+                    preview={false}
+                    src={safe}
+                    alt='feature'
+                    width={100}
+                    placeholder={
+                      <Image src={bar} preview={false} width={200} />
+                    }
+                  />
+                </div>
+                <div className='theTexts'>
+                  <h6>Safe and secure</h6>
+                  <p>
+                    Transactions are safe and secure when you send and receive
+                    money and our fees are low (10N).
+                  </p>
+                </div>
+              </div>
+
+              <div className='special-row'>
+                <div className=''>
+                  <Image
+                    preview={false}
+                    src={makePayment}
+                    alt='feature'
+                    width={100}
+                    placeholder={
+                      <Image src={makePayment} preview={false} width={200} />
+                    }
+                  />
+                </div>
+                <div className='theTexts'>
+                  <h6>Make Payments and Receive cash</h6>
+                  <p>
+                    Banking without restrictions. Perform your financial
+                    transactions anytime, any day. Also USSD codes to make
+                    transactions.
+                  </p>
+                </div>
+              </div>
+              <div className='special-row'>
+                <div className=''>
+                  <Image
+                    preview={false}
+                    src={qrcode}
+                    alt='feature'
+                    width={100}
+                    placeholder={
+                      <Image src={qrcode} preview={false} width={200} />
+                    }
+                  />
+                </div>
+                <div className='theTexts'>
+                  <h6>Qr Code Scanner</h6>
+                  <p>Quick and easy transactions by scanning a QR code.</p>
+                </div>
+              </div>
+              <div className='special-row'>
+                <div className=''>
+                  <Image
+                    preview={false}
+                    src={agent}
+                    alt='feature'
+                    width={100}
+                    placeholder={
+                      <Image src={agent} preview={false} width={200} />
+                    }
+                  />
+                </div>
+                <div className='theTexts'>
+                  <h6>Agents and Kiosks</h6>
+                  <p>Top up your wallet or get cash out via Waya Agent.</p>
+                </div>
+              </div>
+              <div className='special-row'>
+                <div className=''>
+                  <Image
+                    preview={false}
+                    src={merchant}
+                    alt='feature'
+                    width={100}
+                    placeholder={
+                      <Image src={merchant} preview={false} width={200} />
+                    }
+                  />
+                </div>
+                <div className='theTexts'>
+                  <h6>Merchants</h6>
+                  <p>
+                    Make extra cash as a Waya Merchant. Earn commissions every
+                    time your customer pays you using Waya PayChat.
+                  </p>
+                </div>
+              </div>
+              <div className='special-row'>
+                <div className=''>
+                  <Image
+                    preview={false}
+                    src={chat}
+                    alt='feature'
+                    width={100}
+                    placeholder={
+                      <Image src={chat} preview={false} width={200} />
+                    }
+                  />
+                </div>
+                <div className='theTexts'>
+                  <h6>24/7 Support</h6>
+                  <p>
+                    Our support and engineering team are ever on standby to give
+                    you necessary support you need.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </Fade>
+        </div>
+      </section>
+
+      {/* <section className="wayaCustomerFeedback my-4">
+        <div className="">
+          <div className="text-center py-5">
+            <p className="fs-3 fw-sm lh-1 m-0">Our Customer’s Feedbacks</p>
+            <p className="fs-6">What our customers love about us</p>
+
           </div>
           <Fade bottom>
             <div
@@ -430,76 +616,36 @@ function Home() {
             </div>
           </Fade>
         </div>
-      </section>
+      </section> */}
 
       <Zoom>
         <div
-          className=' pt-1  my-5'
+          className=' pt-1  my-5 last-jumboWrapper'
           style={{
             backgroundImage: 'url(/grain.png)',
             backgroundRepeat: 'repeat',
           }}
         >
           <div
+            className='last-jumbotron-left'
             style={{
-              background: '#fff',
               backgroundImage: 'url(/grain.png)',
-              backgroundRepeat: 'repeat',
-              height: '236px',
-              position: 'relative',
             }}
           >
-            <div
-              style={{
-                fontFamily: 'Open Sans',
-                fontStyle: 'normal',
-                fontWeight: '800',
-                fontSize: '72px',
-                lineHeight: '123px',
-                letterSpacing: '-0.03em',
-                color: '#FF4400',
-                position: 'absolute',
-                left: '50%',
-                top: '105px',
-              }}
-            >
+            <div className='download' style={{}}>
               Download
             </div>
-            <img
-              src={phoneinhand}
-              alt=''
-              style={{
-                position: 'absolute',
-                left: '84px',
-                zIndex: '1',
-                top: '55px',
-              }}
-            />
+            <img src={phoneinhand} alt='' style={{}} />
           </div>
           <div
-            className='d-flex last-jumbotron justify-content-end'
+            className='last-jumbotron-right'
             style={{
               backgroundImage: 'url(/grain.png)',
               backgroundRepeat: 'repeat',
-              position: 'relative',
             }}
           >
-            <div
-              style={{
-                fontFamily: 'Open Sans',
-                fontStyle: 'normal',
-                fontWeight: '800',
-                fontSize: '72px',
-                lineHeight: '123px',
-                letterSpacing: '-0.03em',
-                color: '#fff',
-                position: 'absolute',
-                left: '50%',
-              }}
-            >
-              the app
-            </div>
-            <div className='d-flex flex-column w-50 align-self-center'>
+            <div className='theApp'>the app</div>
+            <div className='bottomCont'>
               <div
                 style={{
                   fontFamily: 'Sarabun',

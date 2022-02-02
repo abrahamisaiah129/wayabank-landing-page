@@ -27,24 +27,12 @@ function TopNav(params) {
       <a className="navbar-brand ml-4 pl-3" href="/">
         <img src={wayalogo} alt="wayachat logo" />
       </a>
-      <button
-        className="navbar-toggler"
-        type="button"
-        data-toggle="collapse"
-        data-target="#navbarNavDropdown"
-        aria-controls="navbarNavDropdown"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span className="">
-          <img src="/menu-icon.png"></img>{" "}
-        </span>
-      </button>
       <div
         style={{
           flexGrow: "1",
         }}
       />
+
       <div className="midText">
         <Link
           to="/solution"
@@ -72,6 +60,25 @@ function TopNav(params) {
           flexGrow: "1",
         }}
       />
+      <div
+        style={{
+          flexGrow: "1",
+        }}
+      />
+
+      <button
+        className="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span className="">
+          <img src="/menu-icon.png"></img>{" "}
+        </span>
+      </button>
       <div
         className="collapse navbar-collapse justify-content-end"
         id="navbarNavDropdown"
