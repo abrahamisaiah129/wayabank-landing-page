@@ -6,19 +6,25 @@
   align-items: center;
   padding-top: 98px;
   padding-bottom: 128px;
+  width: 85%;
 
   .hb-item {
     display: flex;
-    width: 33%;
-    align-items: baseline;
+    width: 32%;
+    align-items: flex-start;
+    background: #ffffff;
+    box-shadow: 0px 21px 45px rgba(30, 66, 138, 0.1);
+    border-radius: 10px;
+    padding: 30px 17px;
     img {
-      width: 15px;
-      height: 15px;
-      border-radius: 50%;
+      width: 38.25px;
+      height: 44px;
       margin-right: 20px;
+      margin-top: 10px;
     }
 
     .hbi-right {
+      align-self: flex-start;
       .title {
         font-family: Open Sans;
         font-style: normal;
@@ -41,7 +47,7 @@
 
 .home-jumbotron {
   min-height: 100vh;
-
+  background-size: "cover";
   .topHj {
     display: flex;
     .leftHj {
@@ -79,112 +85,141 @@
   }
 }
 .bottom-section {
-  display: flex;
   min-height: 100vh;
-
-  .first-bs {
-    padding: 111px 101px;
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    .fbs-f {
-      font-family: Open Sans;
-      font-style: normal;
-      font-weight: bold;
-      font-size: 50px;
-      line-height: 75px;
-      color: #333333;
-      margin-bottom: 43px;
-    }
-    .fbs-s {
-      font-family: Open Sans;
-      font-style: normal;
-      font-weight: normal;
-      font-size: 18px;
-      line-height: 36px;
-      color: #333333;
-      width: 80%;
-      margin-bottom: 55.22px;
-    }
-    .fbs-t {
-      padding-left: 70px;
-    }
-    .fbs-ft {
-      background: #ffffff;
-      box-shadow: 0px 21px 45px rgba(30, 66, 138, 0.1);
-      border-radius: 15px;
-      display: flex;
-      width: 70%;
-      align-items: center;
-      padding: 31px 21px;
-      img {
-        background: #ff4400;
-        padding: 19.66px;
-        border-radius: 50%;
-        margin-right: 23px;
-      }
-      .fbs-ft-cont {
-        flex-direction: column;
-        .fbsft-t {
-          font-family: Open Sans;
-          font-style: normal;
-          font-weight: 800;
-          font-size: 20px;
-          line-height: 40px;
-          text-transform: capitalize;
-          color: #333333;
-        }
-        .fbsft-b {
-          font-family: Open Sans;
-          font-style: normal;
-          font-weight: 400;
-          font-size: 16px;
-          line-height: 23px;
-          color: #333333;
-        }
-      }
-    }
+  background-size: "cover";
+  display: flex;
+  flex-direction: column;
+  padding: 80px 100px;
+  .bs-tit {
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 50px;
+    line-height: 75px;
+    text-align: center;
+    color: #333333;
   }
-  .second-bs {
-    padding-top: 79px;
-    padding-right: 112.29px;
-    width: 50%;
+  .bs-subTit {
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 36px;
+    text-align: center;
+    color: #ff4400;
+    margin-bottom: 76px;
+  }
+  .bs-Cont {
     display: flex;
-    flex-direction: column;
-    .fbs-ft {
-      background: #ffffff;
-      box-shadow: 0px 21px 45px rgba(30, 66, 138, 0.1);
-      border-radius: 15px;
+    justify-content: space-between;
+    .first-bs {
+      width: 48%;
       display: flex;
-      width: 70%;
-      align-items: center;
-      align-self: flex-end;
-      padding: 31px 21px;
-      .fbs-ft-img {
-        background: #ff4400;
-        padding: 19.66px;
-        border-radius: 50%;
-        margin-right: 23px;
+      flex-direction: column;
+      .fbs-top {
+        font-family: Open Sans;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 36px;
+        color: #333333;
+        margin-bottom: 53px;
       }
-
-      .fbs-ft-cont {
-        flex-direction: column;
-        .fbsft-t {
-          font-family: Open Sans;
-          font-style: normal;
-          font-weight: 800;
-          font-size: 20px;
-          line-height: 40px;
-          text-transform: capitalize;
-          color: #333333;
+      .fbs-bottom {
+        background: #ffffff;
+        box-shadow: 0px 21px 45px rgba(30, 66, 138, 0.1);
+        border-radius: 20px;
+        padding: 43px 50px;
+        .fbsb-top {
+          display: flex;
+          align-items: center;
+          margin-bottom: 34px;
+          .fbsbt-text {
+            font-family: Open Sans;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 30px;
+            line-height: 45px;
+            color: #333333;
+          }
         }
-        .fbsft-b {
+        .fbsb-middle {
           font-family: Open Sans;
           font-style: normal;
-          font-weight: 400;
-          font-size: 16px;
-          line-height: 23px;
+          font-weight: normal;
+          font-size: 18px;
+          line-height: 27px;
           color: #333333;
+          margin-bottom: 44px;
+        }
+        .fbsb-footer {
+          background: rgba(255, 68, 0, 0.1);
+          border-radius: 10px;
+          padding: 12.5px;
+          display: flex;
+          align-items: center;
+          font-family: Open Sans;
+          font-style: normal;
+          font-weight: 600;
+          font-size: 18px;
+          line-height: 27px;
+          color: #ff4400;
+          justify-content: center;
+          img {
+            margin-left: 17px;
+          }
+        }
+      }
+    }
+    .second-bs {
+      padding-top: 79px;
+      padding-right: 112.29px;
+      width: 48%;
+      display: flex;
+      flex-direction: column;
+      .fbs-bottom {
+        background: #ffffff;
+        box-shadow: 0px 21px 45px rgba(30, 66, 138, 0.1);
+        border-radius: 20px;
+        padding: 43px 50px;
+        .fbsb-top {
+          display: flex;
+          align-items: center;
+          margin-bottom: 34px;
+          .fbsbt-text {
+            font-family: Open Sans;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 30px;
+            line-height: 45px;
+            color: #333333;
+          }
+        }
+        .fbsb-middle {
+          font-family: Open Sans;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 18px;
+          line-height: 27px;
+          color: #333333;
+          margin-bottom: 44px;
+        }
+        .fbsb-footer {
+          background: rgba(255, 68, 0, 0.1);
+          border-radius: 10px;
+          padding: 12.5px;
+          display: flex;
+          align-items: center;
+          font-family: Open Sans;
+          font-style: normal;
+          font-weight: 600;
+          font-size: 18px;
+          line-height: 27px;
+          color: #ff4400;
+          justify-content: center;
+          img {
+            margin-left: 17px;
+          }
         }
       }
     }
@@ -302,6 +337,34 @@
 }
 
 .genericJumbo {
+  padding: 102px 100px;
+  .gc-title {
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 50px;
+    line-height: 58px;
+    color: #333333;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  .gc-underline {
+    border: 5px solid #ff4400;
+    width: 117.11px;
+    height: 0px;
+    margin-right: auto;
+    margin-left: auto;
+    border-radius: 4px;
+    margin-bottom: 73.5px;
+  }
+  .gc-text {
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 35px;
+    color: #333333;
+  }
   .gjButton {
     .btn-orange {
       background-color: #ff4400;
@@ -610,37 +673,84 @@ section.features {
     }
   }
 }
+.last-jumboWrapper {
+  .last-jumbotron-left {
+    background: #fff;
+    background-repeat: repeat;
+    height: 236px;
+    position: relative;
 
-.last-jumbotron {
-  background-color: #ff4400;
-  background-blend-mode: darken;
-  background-repeat: no-repeat;
-  border-radius: 0px 0px 0px 82px;
-  position: relative;
-  height: 399px;
-
-  h1 {
-    font-family: "Open Sans", sans-serif;
-    font-weight: 800;
-    font-size: 68px;
-    line-height: 102.6%;
-    letter-spacing: -0.03em;
-    color: #ffffff;
+    .download {
+      font-family: Open Sans;
+      font-style: normal;
+      font-weight: 800;
+      font-size: 72px;
+      line-height: 123px;
+      letter-spacing: -0.03em;
+      color: #ff4400;
+      position: absolute;
+      left: 50%;
+      top: 105px;
+    }
+    img {
+      position: absolute;
+      left: 84px;
+      z-index: 1;
+      top: 55px;
+    }
   }
-  p {
-    font-family: "Sarabun", sans-serif;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 150%;
-    color: #ffffff;
-    max-width: 400px;
+  .last-jumbotron-right {
+    background-color: #ff4400;
+    background-blend-mode: darken;
+    background-repeat: no-repeat;
+    border-radius: 0px 0px 0px 82px;
+    position: relative;
+    height: 399px;
+    display: flex;
+    justify-content: flex-end;
+    .theApp {
+      font-family: Open Sans;
+      font-style: normal;
+      font-weight: 800;
+      font-size: 72px;
+      line-height: 123px;
+      letter-spacing: -0.03em;
+      color: #fff;
+      position: absolute;
+      left: 50%;
+    }
+    .bottomCont {
+      display: flex;
+      flex-direction: column;
+      width: 50%;
+      align-self: center;
+    }
+
+    h1 {
+      font-family: "Open Sans", sans-serif;
+      font-weight: 800;
+      font-size: 68px;
+      line-height: 102.6%;
+      letter-spacing: -0.03em;
+      color: #ffffff;
+    }
+    p {
+      font-family: "Sarabun", sans-serif;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 150%;
+      color: #ffffff;
+      max-width: 400px;
+    }
   }
 }
+
 @media (max-width: 768px) {
   .home-jumbotron {
     display: flex;
     flex-direction: column;
     width: 100%;
+    background-size: inherit;
 
     .topHj {
       display: flex;
@@ -650,9 +760,27 @@ section.features {
       .leftHj {
         width: 100%;
         text-align: center;
+        margin-bottom: 10px;
+        padding: 15px;
         .lhj-top {
+          font-family: Open Sans;
+          font-style: normal;
+          font-weight: bold;
+          font-size: 30px;
+          line-height: 50px;
+          text-transform: capitalize;
+          color: #ffffff;
+          width: 90%;
+          margin-bottom: 30px;
         }
         .lhj-bot {
+        }
+      }
+      .rightHj {
+        padding: 15px;
+        img {
+          padding-top: 0px;
+          width: 100%;
         }
       }
     }
@@ -665,8 +793,11 @@ section.features {
       width: 100%;
       align-self: center;
       text-align: center;
+      padding: 15px;
+
       .fbs-f {
         width: 100%;
+        padding: 15px;
       }
       .fbs-s {
         width: 100%;
@@ -695,11 +826,92 @@ section.features {
     flex-direction: column;
     width: 100%;
   }
+
+  .howBottom {
+    width: 100%;
+    flex-direction: column;
+    padding: 15px;
+    .hb-item {
+      width: 100%;
+      margin-bottom: 25px;
+    }
+  }
   .another-bottom-section {
-    display: none;
+    // display: none;
+    flex-direction: column;
+    width: 100%;
+    padding: 15px;
+    .abs-left {
+      padding: 0px;
+      width: 100%;
+      .absl-1 {
+        text-align: center;
+      }
+      .absl-3 {
+        margin-bottom: 45px;
+      }
+    }
+    .abs-right {
+      padding: 0px;
+      width: 100%;
+      .absl-4 {
+        width: 100%;
+        margin-top: 30px;
+      }
+    }
+  }
+  .last-jumboWrapper {
+    .last-jumbotron-left {
+      background: #fff;
+      background-repeat: repeat;
+      height: 236px;
+      position: relative;
+      .download {
+        display: none;
+      }
+      img {
+        display: none;
+      }
+    }
+    .last-jumbotron-right {
+      background-color: #ff4400;
+      background-blend-mode: darken;
+      background-repeat: no-repeat;
+      border-radius: 0px 0px 0px 82px;
+      position: relative;
+      height: auto;
+      display: flex;
+      justify-content: center;
+      .theApp {
+        display: none;
+      }
+      .bottomCont {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding: 30px;
+      }
+
+      h1 {
+        font-family: "Open Sans", sans-serif;
+        font-weight: 800;
+        font-size: 68px;
+        line-height: 102.6%;
+        letter-spacing: -0.03em;
+        color: #ffffff;
+      }
+      p {
+        font-family: "Sarabun", sans-serif;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 150%;
+        color: #ffffff;
+        max-width: 400px;
+      }
+    }
   }
   .wayaCustomerFeedback {
-    display: none;
+    // display: none;
   }
 }
 // .wayaPosFeatures{
