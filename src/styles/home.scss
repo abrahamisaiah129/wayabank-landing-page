@@ -47,7 +47,7 @@
 
 .home-jumbotron {
   min-height: 100vh;
-  background-size: "cover";
+  background-size: 'cover';
   .topHj {
     display: flex;
     .leftHj {
@@ -73,7 +73,6 @@
         font-weight: bold;
         font-size: 65px;
         line-height: 83px;
-        text-transform: capitalize;
         color: #ffffff;
         width: 90%;
         margin-bottom: 55px;
@@ -98,7 +97,7 @@
 }
 .bottom-section {
   min-height: 100vh;
-  background-size: "cover";
+  background-size: 'cover';
   display: flex;
   flex-direction: column;
   padding: 80px 100px;
@@ -404,7 +403,7 @@
     //     background-color: #FE7756;
     // }
   }
-  img[alt="jumbotron"] {
+  img[alt='jumbotron'] {
     //    position: absolute;
     max-width: 58%;
     //    right: 8%;
@@ -502,7 +501,7 @@ section.features {
   }
   h6 {
     padding-block-start: 3%;
-    font-family: "Open Sans", sans-serif;
+    font-family: 'Open Sans', sans-serif;
     font-size: 20px;
     color: #fff;
     text-align: left;
@@ -511,7 +510,7 @@ section.features {
   }
   p {
     text-align: left;
-    font-family: "Sarabun", sans-serif;
+    font-family: 'Sarabun', sans-serif;
     font-size: 15px;
     line-height: 30px;
     font-weight: 400;
@@ -554,7 +553,7 @@ section.features {
       max-width: 92%;
     }
     .singlePhone:before {
-      content: " ";
+      content: ' ';
       background: #fff;
       display: inline-block;
       position: absolute;
@@ -567,7 +566,7 @@ section.features {
       border-radius: 1rem;
     }
     .singlePhone::after {
-      content: " ";
+      content: ' ';
       background: #fff;
       display: inline-block;
       position: absolute;
@@ -587,13 +586,13 @@ section.features {
         max-width: 78%;
       }
       h6 {
-        font-family: "Open Sans" sans-serif;
+        font-family: 'Open Sans' sans-serif;
         font-weight: bold;
         font-size: 14px;
         line-height: 116.6%;
       }
       p {
-        font-family: "Sarabun", sans-serif;
+        font-family: 'Sarabun', sans-serif;
         font-weight: 500;
         font-size: 14px;
         line-height: 150%;
@@ -616,7 +615,7 @@ section.features {
 
   /* Timeline vertical line */
   ul.timeline:before {
-    content: " ";
+    content: ' ';
     background: #ff4400;
     display: inline-block;
     position: absolute;
@@ -630,7 +629,7 @@ section.features {
   li.timeline-item {
     margin: 0px 0;
     strong {
-      font-family: "Open Sans", sans-serif;
+      font-family: 'Open Sans', sans-serif;
       font-weight: bold;
       font-size: 20px;
       line-height: 116.6%;
@@ -638,7 +637,7 @@ section.features {
       color: #ff4400;
     }
     p {
-      font-family: "Sarabun", sans-serif;
+      font-family: 'Sarabun', sans-serif;
       font-size: 18px;
       line-height: 150%;
       color: #333333;
@@ -648,7 +647,7 @@ section.features {
 
   /* Timeline item circle marker */
   li.timeline-item::before {
-    content: " ";
+    content: ' ';
     background: #ff4400;
     display: inline-block;
     position: absolute;
@@ -740,7 +739,7 @@ section.features {
     }
 
     h1 {
-      font-family: "Open Sans", sans-serif;
+      font-family: 'Open Sans', sans-serif;
       font-weight: 800;
       font-size: 68px;
       line-height: 102.6%;
@@ -748,7 +747,7 @@ section.features {
       color: #ffffff;
     }
     p {
-      font-family: "Sarabun", sans-serif;
+      font-family: 'Sarabun', sans-serif;
       font-weight: 500;
       font-size: 16px;
       line-height: 150%;
@@ -781,7 +780,6 @@ section.features {
           font-weight: bold;
           font-size: 30px;
           line-height: 50px;
-          text-transform: capitalize;
           color: #ffffff;
           width: 90%;
           margin-bottom: 30px;
@@ -906,7 +904,7 @@ section.features {
       }
 
       h1 {
-        font-family: "Open Sans", sans-serif;
+        font-family: 'Open Sans', sans-serif;
         font-weight: 800;
         font-size: 68px;
         line-height: 102.6%;
@@ -914,7 +912,7 @@ section.features {
         color: #ffffff;
       }
       p {
-        font-family: "Sarabun", sans-serif;
+        font-family: 'Sarabun', sans-serif;
         font-weight: 500;
         font-size: 16px;
         line-height: 150%;
