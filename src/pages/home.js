@@ -268,11 +268,10 @@ function Home() {
             <div className='hb-item'>
               <img src={smallBlue} alt='' />
               <div className='hbi-right'>
-                <div className='title'>Complete your KYC</div>
+                <div className='title'>Verify Your Account</div>
                 <div className='content'>
-                  You dont have a website? Don’t worry. Use our payment link
-                  feature to collect payment from your cutomers. Just create and
-                  share.
+                  You need to verify your email address, phone number and BVN to
+                  ensure your account security.
                 </div>
               </div>
             </div>
@@ -281,9 +280,8 @@ function Home() {
               <div className='hbi-right'>
                 <div className='title'>Start Transacting</div>
                 <div className='content'>
-                  You dont have a website? Don’t worry. Use our payment link
-                  feature to collect payment from your cutomers. Just create and
-                  share.
+                  Start enjoying wayabank. Make savings, withdrawal, Transfers,
+                  Bills payment and others.
                 </div>
               </div>
             </div>
