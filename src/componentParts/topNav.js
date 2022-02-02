@@ -55,16 +55,6 @@ function TopNav(params) {
           CONTACT
         </Link>
       </div>
-      <div
-        style={{
-          flexGrow: "1",
-        }}
-      />
-      <div
-        style={{
-          flexGrow: "1",
-        }}
-      />
 
       <button
         className="navbar-toggler"
