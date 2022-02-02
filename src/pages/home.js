@@ -253,20 +253,18 @@ function Home() {
               <div className='hbi-right'>
                 <div className='title'>Download WayaBank App</div>
                 <div className='content'>
-                  You dont have a website? Don’t worry. Use our payment link
-                  feature to collect payment from your cutomers. Just create and
-                  share.
+                  It only takes a few minutes to start enjoying free benefits.
+                  Download Wayabank on Google Play or the App Store.
                 </div>
               </div>
             </div>
             <div className='hb-item'>
               <img src={smallBlue} alt='' />
               <div className='hbi-right'>
-                <div className='title'>Complete your KYC</div>
+                <div className='title'>Verify Your Account</div>
                 <div className='content'>
-                  You dont have a website? Don’t worry. Use our payment link
-                  feature to collect payment from your cutomers. Just create and
-                  share.
+                  You need to verify your email address, phone number and BVN to
+                  ensure your account security.
                 </div>
               </div>
             </div>
@@ -275,9 +273,8 @@ function Home() {
               <div className='hbi-right'>
                 <div className='title'>Start Transacting</div>
                 <div className='content'>
-                  You dont have a website? Don’t worry. Use our payment link
-                  feature to collect payment from your cutomers. Just create and
-                  share.
+                  Start enjoying wayabank. Make savings, withdrawal, Transfers,
+                  Bills payment and others.
                 </div>
               </div>
             </div>
@@ -424,11 +421,10 @@ function Home() {
                   />
                 </div>
                 <div className='theTexts'>
-                  <h6>Make Payments and Receive cash</h6>
+                  <h6>USSD Access</h6>
                   <p>
-                    Banking without restrictions. Perform your financial
-                    transactions anytime, any day. Also USSD codes to make
-                    transactions.
+                    No internet? No problem. Waya has free USSD codes so you can
+                    simply dial to make transactions.
                   </p>
                 </div>
               </div>
@@ -462,8 +458,11 @@ function Home() {
                   />
                 </div>
                 <div className='theTexts'>
-                  <h6>Agents and Kiosks</h6>
-                  <p>Top up your wallet or get cash out via Waya Agent.</p>
+                  <h6>Agents</h6>
+                  <p>
+                    Make deposits, withdrawals, transfers, cash out and bills
+                    payment via Wayabank Agent.
+                  </p>
                 </div>
               </div>
               <div className='special-row'>
@@ -479,10 +478,11 @@ function Home() {
                   />
                 </div>
                 <div className='theTexts'>
-                  <h6>Merchants</h6>
+                  <h6>Merchants, Agents and Agents Aggregator</h6>
                   <p>
-                    Make extra cash as a Waya Merchant. Earn commissions every
-                    time your customer pays you using Waya PayChat.
+                    Make extra cash as a Wayabank Merchant, Agents or Agents
+                    Aggregator. Earn commissions every time your customer pays
+                    you using Wayabank.
                   </p>
                 </div>
               </div>
@@ -658,8 +658,7 @@ function Home() {
                   marginTop: '50px',
                 }}
               >
-                Download Waya PayChat and start enjoying our great <br />{' '}
-                features.
+                Download Wayabank and start enjoying our great <br /> features.
               </div>
               <div className='d-flex'>
                 <img src={googleplay} alt='' className='mr-4' />
