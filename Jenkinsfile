@@ -63,7 +63,7 @@ pipeline {
                 REACT_APP_CORPORATE_APP = 'https://business.staging.wayabank.ng'
                 REACT_APP_PERSONAL_APP = 'https://ibank.staging.wayabank.ng'
                 REACT_APP_BASE_URL = 'https://services.staging.wayabank.ng'
-                IS_LIVE = 'true,false'
+                IS_LIVE = 'false'
             }
             when {
                 branch 'staging'
@@ -84,7 +84,7 @@ pipeline {
                 REACT_APP_CORPORATE_APP = 'https://business.wayabank.ng'
                 REACT_APP_PERSONAL_APP = 'https://ibank.wayabank.ng'
                 REACT_APP_BASE_URL = 'https://services.wayabank.ng'
-                IS_LIVE = 'true,false'
+                IS_LIVE = 'true'
             }
             when {
                 branch 'production'
