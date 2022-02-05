@@ -1,27 +1,28 @@
 import axios from 'axios';
 import swal from 'sweetalert';
 import { NotificationManager } from 'react-notifications';
+import { envConfig } from '../utils/envConfig';
 // import { hideLoader } from '../utils/loader';
 
-let baseUrl = 'https://services.staging.mywayapay.com';
+let baseUrl = envConfig.baseUrl;
 
-const wayagramUrl = `${baseUrl}/wayagram-service`; // http://157.245.84.14:1000
-const authUrl = `${baseUrl}/auth-service`; // http://68.183.60.114:8059
-const kycUrl = `${baseUrl}/kyc-service`; // http://46.101.41.187:8070
-const bvnUrl = `${baseUrl}/bvn-service`; // http://46.101.41.187:8070
-const cardUrl = `${baseUrl}/card-service`; // http://157.230.223.54:3020
-const contactUrl = `${baseUrl}/contact-service`; // http://46.101.41.187:8065
-const billPaymentUrl = `${baseUrl}/billspayment-service`; // http://157.230.223.54:8181
-const walletUrl = `${baseUrl}/temporal-service`; // http://157.230.223.54:9009
-const paymentRequestUrl = `${baseUrl}/payment-request`; // http://157.230.223.54:9300/payment-request-service
-const accountCreationUrl = `${baseUrl}/account-service`; // http://46.101.41.187:7090
-const roleUrl = `${baseUrl}/role-service`; // http://46.101.41.187:8061/api/v1
+const wayagramUrl = `${baseUrl}/wayagram-service`;
+const authUrl = `${baseUrl}/auth-service`;
+const kycUrl = `${baseUrl}/kyc-service`;
+const bvnUrl = `${baseUrl}/bvn-service`;
+const cardUrl = `${baseUrl}/card-service`;
+const contactUrl = `${baseUrl}/contact-service`;
+const billPaymentUrl = `${baseUrl}/billspayment-service`;
+const walletUrl = `${baseUrl}/temporal-service`;
+const paymentRequestUrl = `${baseUrl}/payment-request`;
+const accountCreationUrl = `${baseUrl}/account-service`;
+const roleUrl = `${baseUrl}/role-service`;
 const withdrawalUrl = `${baseUrl}/withdrawal-service`;
-const ussdUrl = `${baseUrl}/ussd-service`; // http://157.230.223.54:4040
-const disputeUrl = `${baseUrl}/social-dispute`; // 'http://157.230.223.54:8086/api/v1
-const socketUrl = `${baseUrl}/chats-service`; // http://157.245.84.14:6006
-const logUrl = `${baseUrl}/logs-service`; // http://46.101.41.187:8083
-const wayapayDispute = `${baseUrl}/complaint-service`; // http://46.101.41.187:9400/complaint-service
+const ussdUrl = `${baseUrl}/ussd-service`;
+const disputeUrl = `${baseUrl}/social-dispute`;
+const socketUrl = `${baseUrl}/chats-service`;
+const logUrl = `${baseUrl}/logs-service`;
+const wayapayDispute = `${baseUrl}/complaint-service`;
 const contentManagementUrl = `${baseUrl}/content-management-service`;
 const notificationUrl = `${baseUrl}/notification-service`;
 const fileResourseUrl = `${baseUrl}/file-resource-service`;
