@@ -310,7 +310,7 @@ const SignupPage = () => {
                 className={mode === 'individual' ? 'col reg-active' : 'col'}
                 onClick={() => setMode('individual')}
               >
-                Individual
+                Personal
               </div>
               <div
                 role='button'
@@ -321,14 +321,14 @@ const SignupPage = () => {
                   setMode('corporate');
                 }}
               >
-                Corporate
+                Business
               </div>
             </div>
           </div>
           {mode === 'individual' && (
             <>
               <h1 className='modal-header-data-log'>
-                Create your individual WayaPay account
+                Create your personal WayaPay account
               </h1>
 
               <form>
@@ -448,7 +448,7 @@ const SignupPage = () => {
           {mode === 'corporate' && (
             <>
               <h1 className='modal-header-data'>
-                Create your Corporate WayaPay account
+                Create your Business WayaPay account
               </h1>
               {page === 1 ? (
                 <MerchantForm
