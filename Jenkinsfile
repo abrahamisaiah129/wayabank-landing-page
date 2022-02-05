@@ -60,6 +60,10 @@ pipeline {
         stage('Deploy to Staging') {
             environment { 
                 NAMESPACE = 'staging'
+                REACT_APP_CORPORATE_APP = ''
+                REACT_APP_PERSONAL_APP = ''
+                REACT_APP_BASE_URL = ''
+                IS_LIVE = ''
             }
             when {
                 branch 'staging'
@@ -77,6 +81,10 @@ pipeline {
         stage('Deploy to Production') {
             environment { 
                 NAMESPACE = 'production'
+                REACT_APP_CORPORATE_APP = ''
+                REACT_APP_PERSONAL_APP = ''
+                REACT_APP_BASE_URL = ''
+                IS_LIVE = ''
             }
             when {
                 branch 'production'
