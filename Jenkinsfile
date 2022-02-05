@@ -60,10 +60,10 @@ pipeline {
         stage('Deploy to Staging') {
             environment { 
                 NAMESPACE = 'staging'
-                REACT_APP_CORPORATE_APP = ''
-                REACT_APP_PERSONAL_APP = ''
-                REACT_APP_BASE_URL = ''
-                IS_LIVE = ''
+                REACT_APP_CORPORATE_APP = 'https://business.staging.wayabank.ng'
+                REACT_APP_PERSONAL_APP = 'https://ibank.staging.wayabank.ng'
+                REACT_APP_BASE_URL = 'https://services.staging.wayabank.ng'
+                IS_LIVE = 'true,false'
             }
             when {
                 branch 'staging'
@@ -81,10 +81,10 @@ pipeline {
         stage('Deploy to Production') {
             environment { 
                 NAMESPACE = 'production'
-                REACT_APP_CORPORATE_APP = ''
-                REACT_APP_PERSONAL_APP = ''
-                REACT_APP_BASE_URL = ''
-                IS_LIVE = ''
+                REACT_APP_CORPORATE_APP = 'https://business.wayabank.ng'
+                REACT_APP_PERSONAL_APP = 'https://ibank.wayabank.ng'
+                REACT_APP_BASE_URL = 'https://services.wayabank.ng'
+                IS_LIVE = 'true,false'
             }
             when {
                 branch 'production'
