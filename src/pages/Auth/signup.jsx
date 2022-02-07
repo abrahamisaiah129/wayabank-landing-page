@@ -286,6 +286,13 @@ const SignupPage = () => {
     };
   }, []);
 
+  useEffect(() => {
+    const { location } = history;
+    if (new URLSearchParams(location.search).get('tab') === 'corporate') {
+      setMode('corporate');
+    }
+  }, []);
+
   return (
     <div
       id='login-bg'
