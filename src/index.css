@@ -9,15 +9,16 @@
 
 body {
   margin: 0;
-  font-family: 'Inter', 'Open Sans', sans-serif;
+  font-family: "Inter", "Open Sans", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   border: 0;
   font-weight: 400;
+  width: 100vw;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
 

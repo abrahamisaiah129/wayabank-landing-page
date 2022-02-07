@@ -1,3 +1,4 @@
+import { useHistory } from 'react-router';
 import PageFooter from '../componentParts/footer';
 import GenericJumbotron from '../componentParts/genericJumbotron';
 import TopNav from '../componentParts/topNav';
@@ -46,6 +47,7 @@ import diary from '../assets/images/diary.png';
 import anotherBg from '../assets/images/anotherBg.png';
 
 function Home() {
+  const history = useHistory();
   const [posType, setPosType] = useState('web');
   const data = useRecoilValueLoadable(getHome);
   const dataS = useRecoilValueLoadable(getSettings);
@@ -143,7 +145,7 @@ function Home() {
                 We are the bank of the easy-to-use, secured and commited to help
                 you save time and charges from your day to day transactions.
               </div>
-              <div className='img-Cont '>
+              <div className='img-Cont'>
                 <img src={appstore} alt='' />
                 <img src={googleplay} alt='' />
                 <img src={webWaya} alt='' />
@@ -193,8 +195,13 @@ function Home() {
                   Available on Android and iOS devices, the Wayabank app allows
                   customers to make savings and carry out payments.
                 </div>
-                <div className='fbsb-footer'>
-                  <div>Create Wayabank Personal Account</div>
+                <div
+                  className='fbsb-footer'
+                  onClick={() => history.push('/signup')}
+                >
+                  <div onClick={() => history.push('/signup')}>
+                    Create Wayabank Personal Account
+                  </div>
                   <img src={arrowRight} />
                 </div>
               </div>
@@ -213,8 +220,13 @@ function Home() {
                   out payments, gain commissions as an agents or aggregators and
                   also have access to Wayabank Open APIs.
                 </div>
-                <div className='fbsb-footer'>
-                  <div>Create Wayabank Business Account</div>
+                <div
+                  className='fbsb-footer'
+                  onClick={() => history.push('/signup?tab=corporate')}
+                >
+                  <div onClick={() => history.push('/signup?tab=corporate')}>
+                    Create Wayabank Business Account
+                  </div>
                   <img src={arrowRight} />
                 </div>
               </div>
@@ -396,7 +408,7 @@ function Home() {
             </div>
           </Fade>
           <Fade right cascade>
-            <div className='col-md-6'>
+            <div className='col-lg-6 col-md-12 col-sm-12'>
               <div className='special-row'>
                 <div className=''>
                   <Image
