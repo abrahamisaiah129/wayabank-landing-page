@@ -1,5 +1,5 @@
 import React from "react";
-import "../styles/support.scss";
+import "../styles/solution.scss";
 import TopNav from "../componentParts/topNav";
 import PageFooter from "../componentParts/footer";
 import SupportPhone from "../assets/images/supportPhone.png";
