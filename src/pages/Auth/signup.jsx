@@ -328,7 +328,7 @@ const SignupPage = () => {
           {mode === 'individual' && (
             <>
               <h1 className='modal-header-data-log'>
-                Create your personal WayaPay account
+                Create your personal WayaBank account
               </h1>
 
               <form>
@@ -448,7 +448,7 @@ const SignupPage = () => {
           {mode === 'corporate' && (
             <>
               <h1 className='modal-header-data'>
-                Create your Business WayaPay account
+                Create your Business WayaBank account
               </h1>
               {page === 1 ? (
                 <MerchantForm

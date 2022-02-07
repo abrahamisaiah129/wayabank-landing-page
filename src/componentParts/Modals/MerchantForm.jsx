@@ -35,48 +35,50 @@ export default function MerchantForm(props) {
 
   return (
     <form>
-      <div className="inputbox-with-one-input">
+      <div className='inputbox-with-one-input'>
         <input
-          placeholder="Organization Name"
-          type="text"
+          placeholder='Organization Name'
+          type='text'
           onChange={(e) => {
             setData({ ...data, orgName: e.target.value });
           }}
         />
       </div>
 
-      <div className="inputbox-with-one-input">
+      <div className='inputbox-with-one-input'>
         <select
           value={data.businessType}
           onChange={(e) => {
             setData({ ...data, businessType: e.target.value });
           }}
         >
-          <option value="" selected data-default hidden>
+          <option value='' selected data-default hidden>
             Business Type
           </option>
-          {businessTypes.map((item) => (
-            <option value={item.businessType} key={item}>
-              {item.businessType}
-            </option>
-          ))}
+          {businessTypes.length
+            ? businessTypes.map((item) => (
+                <option value={item.businessType} key={item}>
+                  {item.businessType}
+                </option>
+              ))
+            : ''}
         </select>
       </div>
 
-      <div className="inputbox-with-one-input">
+      <div className='inputbox-with-one-input'>
         <input
-          placeholder="Organization Email Address"
-          type="text"
+          placeholder='Organization Email Address'
+          type='text'
           onChange={(e) => {
             setData({ ...data, orgEmail: e.target.value });
           }}
         />
       </div>
 
-      <div className="inputbox-with-one-input">
+      <div className='inputbox-with-one-input'>
         <PhoneInput
-          placeholder="Organization Phone Number"
-          defaultCountry="NG"
+          placeholder='Organization Phone Number'
+          defaultCountry='NG'
           international
           value={data.orgPhone}
           onChange={(e) => setData({ ...data, orgPhone: e })}
@@ -93,11 +95,11 @@ export default function MerchantForm(props) {
         </span>
       </div> */}
 
-      <div className="submit-modal-btn-wrap">
+      <div className='submit-modal-btn-wrap'>
         <Button
-          type="button"
+          type='button'
           loading={loading}
-          content="Next"
+          content='Next'
           onClick={() => {
             setLoading(true);
             // console.log(data);
