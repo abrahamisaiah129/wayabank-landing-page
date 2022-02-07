@@ -33,29 +33,6 @@ function TopNav(params) {
         }}
       />
 
-      <div className="midText">
-        <Link
-          to="/solution"
-          className={
-            location?.pathname === "/solution"
-              ? "mr-4 border-bottom text-white"
-              : "mr-4 text-white"
-          }
-        >
-          OUR SOLUTION
-        </Link>
-        <Link
-          to="/contact"
-          className={
-            location?.pathname === "/contact"
-              ? "mr-4 border-bottom  text-white"
-              : "mr-4 text-white"
-          }
-        >
-          CONTACT
-        </Link>
-      </div>
-
       <button
         className="navbar-toggler"
         type="button"
@@ -253,15 +230,30 @@ function TopNav(params) {
               </div>
             </div>
           </li> */}
-          {/* <li className="nav-item">
-            <a className="nav-link" href="/how-it-works">How it works</a>
+          <li className="nav-item">
+            <a
+              className={
+                location?.pathname === "/solution"
+                  ? "mr-4 border-bottom nav-link "
+                  : "nav-link"
+              }
+              href="/solution"
+            >
+              OUR SOLUTION
+            </a>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="/pricing">Contact</a>
+            <a
+              className={
+                location?.pathname === "/contact"
+                  ? "mr-4 border-bottom nav-link "
+                  : "nav-link"
+              }
+              href="/contact"
+            >
+              Contact
+            </a>
           </li>
-          <li className="nav-item">
-            <a className="nav-link" href="/blogs">Blog</a>
-          </li> */}
           <li
             className={`${
               location.pathname == "/signin" ? "hiding" : "showing"
