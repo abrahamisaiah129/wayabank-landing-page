@@ -42,7 +42,7 @@ function SignIn() {
       localStorage.setItem("isEmailVerified", data?.user.isEmailVerified)
       localStorage.setItem("isPhoneVerified", data.user.isPhoneVerified)
       localStorage.setItem("showSplashScreen", false)
-      window.location.replace('http://dev.webapp.waya-pay.com/wayapay')
+      window.location.replace('http://dev.webapp.waya-pay.com/wayaquick')
     } else {
       setResponse({ status: "warning", message: res.message || res, show: true })
     }
@@ -61,7 +61,7 @@ function SignIn() {
           <div id='loginSection' className='login row justify-content-center' >
             <form onSubmit={handleSubmit}>
               <div className='text-center pb-2'>
-                <img src='wayapaychatLogo.png' />
+                <img src="/src/assets/waya-quick-logo.png" alt="WayaQuick" />
               </div>
               <h5 className='text-center py-2'>Login</h5>
               <div className='inputGroup text-left py-1'>
