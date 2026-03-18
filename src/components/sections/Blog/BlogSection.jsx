@@ -43,19 +43,19 @@ const BlogSection = () => {
                   {blog.category}
                 </span>
               </div>
-              <div className="px-2">
-                <div className="flex items-center gap-2 mb-3 text-white text-xs font-bold uppercase tracking-wider">
+              <div className="px-6 py-6 border-t border-gray-50">
+                <div className="flex items-center gap-2 mb-3 text-gray-500 text-xs font-bold uppercase tracking-wider">
                   <span>{dateFormater(blog.updated_at)}</span>
                   <span className="w-1.5 h-1.5 rounded-full bg-orange-500"></span>
                   <span>{blog.views} views</span>
                 </div>
-                <h3 className="text-xl font-black text-orange-500 mb-3 group-hover:text-orange-400 transition-colors line-clamp-2 leading-snug">
+                <h3 className="text-xl font-black text-gray-900 mb-3 group-hover:text-orange-500 transition-colors line-clamp-2 leading-snug tracking-tight">
                   {blog.title}
                 </h3>
-                <p className="text-white text-md line-clamp-2 leading-relaxed font-black mb-4">
+                <p className="text-gray-600 text-sm line-clamp-2 leading-relaxed font-medium mb-6">
                   {blog.short_content}
                 </p>
-                <span className="inline-flex items-center justify-center px-6 py-2.5 bg-orange-500 text-white text-sm font-black rounded-xl hover:bg-orange-600 transition-all shadow-lg hover:shadow-orange-500/25 group-hover:scale-105 active:scale-95">
+                <span className="inline-flex items-center justify-center px-6 py-3 bg-orange-500 text-white text-xs font-black rounded-xl hover:bg-black transition-all shadow-lg hover:shadow-orange-500/10 group-hover:scale-105 active:scale-95 uppercase tracking-widest">
                   Read Story
                   <svg className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
