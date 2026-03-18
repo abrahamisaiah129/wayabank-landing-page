@@ -2,8 +2,19 @@ import React from 'react';
 import Fade from 'react-reveal/Fade';
 
 const QuoteSection = () => {
+  const crossHatchStyle = {
+    backgroundImage: `
+      linear-gradient(45deg, rgba(255, 103, 0, 0.05) 25%, transparent 25%), 
+      linear-gradient(-45deg, rgba(255, 103, 0, 0.05) 25%, transparent 25%), 
+      linear-gradient(45deg, transparent 75%, rgba(255, 103, 0, 0.05) 75%), 
+      linear-gradient(-45deg, transparent 75%, rgba(255, 103, 0, 0.05) 75%)
+    `,
+    backgroundSize: '20px 20px',
+    backgroundColor: '#ffffff'
+  };
+
   return (
-    <section className="py-24 bg-white overflow-hidden relative">
+    <section className="py-24 overflow-hidden relative" style={crossHatchStyle}>
       <div className="container px-6 mx-auto relative z-10">
         <div className="max-w-5xl mx-auto text-center">
           <Fade bottom>
