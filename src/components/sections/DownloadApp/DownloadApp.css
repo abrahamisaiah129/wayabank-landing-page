@@ -1,0 +1,16 @@
+.download-cta {
+  background-color: #fff;
+}
+
+.shadow-3xl {
+  box-shadow: 0 40px 100px -20px rgba(0, 0, 0, 0.4);
+}
+
+.text-primary-theme {
+  color: #ff5f00 !important;
+}
+
+.from-primary-theme {
+  --tw-gradient-from: #ff5f00;
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(255, 95, 0, 0));
+}

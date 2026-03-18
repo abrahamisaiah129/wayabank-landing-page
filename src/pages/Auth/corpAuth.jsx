@@ -2,11 +2,11 @@ import React, { useState } from 'react';
 import { useHistory } from 'react-router';
 import swal from 'sweetalert';
 import validator from 'validator';
-import ToggleInput from '../../shared/ToggleInput';
-import { customBaseUrl, httpPost } from '../../../action/http';
-import Button from '../../shared/Button';
-import { hideLoader } from '../../../utils/loader';
-import Logo from '../../../assets/image/wayaIcon.png';
+import ToggleInput from '../../components/parts/ToggleInput';
+import { customBaseUrl, httpPost } from '../../services/http';
+import Button from '../../components/parts/Button';
+// import { hideLoader } from '../../utils/loader';
+import Logo from '../../assets/images/wayaBankLogo1.png';
 
 const CorpAppLoginPage = () => {
   const [data, setData] = useState({
@@ -35,7 +35,7 @@ const CorpAppLoginPage = () => {
       setLoading(false);
     } else {
       setLoading(false);
-      hideLoader(false);
+      // hideLoader(false);
       swal('Wrong!', res.message, 'error');
     }
   };

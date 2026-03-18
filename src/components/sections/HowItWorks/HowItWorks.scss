@@ -1,0 +1,29 @@
+.how-it-works-v3 {
+  .perspective-1000 {
+    perspective: 1500px;
+  }
+}
+
+.hiw-section-v2 {
+  padding: 100px 0;
+  background-color: #fcfcfc;
+  overflow: hidden;
+}
+
+.text-primary-theme {
+  color: #ff5f00 !important;
+}
+
+.bg-primary-theme {
+  background-color: #ff5f00 !important;
+}
+
+/* Animations */
+@keyframes pulse-slow {
+  0%, 100% { transform: scale(1); opacity: 0.8; }
+  50% { transform: scale(1.2); opacity: 1; }
+}
+
+.animate-pulse {
+  animation: pulse-slow 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}

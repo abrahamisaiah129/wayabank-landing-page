@@ -10,13 +10,13 @@
         }
         h1{
             text-transform: uppercase;
-            color: #FF4400;
-            font-family: 'Open Sans', sans-serif;
+            color: var(--waya-primary);
+            font-family: Inter, sans-serif;
             font-weight: 800;
             font-size: 50px;
         }
         h1 + p {
-            font-family: 'Sarabun', sans-serif;
+            font-family: Inter, sans-serif;
             font-size: 22px;
             line-height: 126%;
             color: #4F4F4F;
@@ -26,7 +26,7 @@
         background-color: #E4E4E3;
         h3{
            
-            font-family: 'Open Sans', sans-serif;
+            font-family: Inter, sans-serif;
             font-weight: 800;
             font-size: 32px;
             line-height: 116.6%;
@@ -40,12 +40,12 @@
     .bottom-jumbotron{
         margin-left: 55px;
         h5{
-            font-family: 'Open Sans', sans-serif;
+            font-family: Inter, sans-serif;
             font-weight: bold;
             font-size: 28px;
             line-height: 116.6%;
             text-transform: capitalize;
-            color: #FF4400;
+            color: var(--waya-primary);
             padding-bottom: 10%;
         }
         .last-banner-phones{
@@ -58,7 +58,7 @@
                 margin-right: 10px;
                 margin-left: 10px;
                 p{
-                    font-family: 'Sarabun', sans-serif;
+                    font-family: Inter, sans-serif;
                     font-weight: 600;
                     font-size: 14px;
                     line-height: 116.6%;
@@ -88,7 +88,7 @@
      /* Timeline vertical line */
     ul.timeline:before {
         content: ' ';
-        background: #FF4400;
+        background: var(--waya-primary);
         display: inline-block;
         position: absolute;
         left: 17.5px;
@@ -106,7 +106,7 @@
     /* Timeline item circle marker */
     li.timeline-item::before {
         content: ' ';
-        background: #FF4400;
+        background: var(--waya-primary);
         display: inline-block;
         position: absolute;
         border-radius: 50%;
@@ -121,7 +121,7 @@
         background-position: top;
         background-repeat: no-repeat;
         h2{
-            font-family: 'Open Sans', sans-serif;
+            font-family: Inter, sans-serif;
             font-style: normal;
             font-weight: bold;
             font-size: 50px;
@@ -137,11 +137,11 @@
 
     }
     section{
-        background-color: #FF4400;
+        background-color: var(--waya-primary);
         height: 1000px;
         h4{
             padding-block-start: 3%;
-            font-family: 'Open Sans', sans-serif;
+            font-family: Inter, sans-serif;
             font-size: 35px;
             line-height: 116.6%;
             font-weight: bold;
@@ -159,7 +159,7 @@
                 display: none;
             }
             label{
-                font-family: 'Sarabun', sans-serif;
+                font-family: Inter, sans-serif;
                 font-weight: 600;
                 font-size: 14px;
                 line-height: 116.6%;
@@ -168,7 +168,7 @@
             }
             label::after{
                 content: '*';
-                color: red;
+                color: var(--waya-primary);
                 padding-inline-start: 5px;
             }
             .inputGroup{
@@ -224,7 +224,7 @@
                 .single{
                     margin-bottom: 60px;
                     p{
-                        font-family: 'Sarabun', sans-serif;
+                        font-family: Inter, sans-serif;
                         font-weight: 600;
                         font-size: 14px;
                         line-height: 116.6%;

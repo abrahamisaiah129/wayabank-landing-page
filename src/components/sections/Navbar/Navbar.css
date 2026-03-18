@@ -1,0 +1,97 @@
+.waya-navbar {
+  transition: all 0.4s ease-in-out;
+  background: transparent;
+}
+
+.waya-navbar.scrolled {
+  background: rgba(0, 0, 0, 0.95);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+}
+
+.waya-navbar a {
+  text-decoration: none !important;
+  color: rgba(10, 11, 16, 0.85);
+  transition: color 0.3s ease;
+}
+
+.waya-navbar a:hover {
+  color: var(--waya-primary, #FF6B00);
+}
+
+.waya-navbar .nav-links button {
+  position: relative;
+  letter-spacing: 0.05em;
+  color: rgba(10, 11, 16, 0.85);
+}
+
+.waya-navbar .nav-links button::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--waya-primary, #FF6B00);
+  transition: width 0.3s ease;
+}
+
+.waya-navbar .nav-links div:hover > button::after {
+  width: 100%;
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-down {
+  animation: fadeInDown 0.3s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.3s ease-out forwards;
+}
+
+.translate-x-full { transform: translateX(100%); }
+.translate-x-0 { transform: translateX(0); }
+
+.navbar-brand img {
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.05));
+}
+
+.logo-bold {
+  filter: brightness(1.1) contrast(1.1) drop-shadow(0 0 1px rgba(0,0,0,0.1));
+}
+
+/* Glassmorphism for dropdowns */
+.waya-navbar .absolute {
+  background: rgba(255, 255, 255, 0.98);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  color: #0a0b10;
+}
+
+.shadow-xl {
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}

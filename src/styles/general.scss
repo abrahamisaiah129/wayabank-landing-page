@@ -1,6 +1,6 @@
 // miscellaneous stylings
 .text-orange{
-    color: #FF4400;
+    color: var(--waya-primary);
 }
 .text-silver{
     color: silver;
@@ -9,23 +9,23 @@
     background-color: silver;
 }
 .bg-orange{
-    background-color: #FF4400;
+    background-color: var(--waya-primary);
 }
 .bg-orange-fade{
-    background-color: #FE7756;
+    background-color: var(--waya-primary);
 }
 .bg-faintblue{
     background-color: aliceblue;
 }
 .bg-orange-faint{
-    background-color: #f6ecea;
+    background-color: var(--waya-primary);
 }
 .border-start.border-5.border-orange{
-    border-color: #FE7756;
+    border-color: var(--waya-primary);
 }
 
 .btn-orange{
-    background-color: #FF4400;
+    background-color: var(--waya-primary);
     color: #fff;
     border-radius: 4px;
     padding-inline-start: 10px;
@@ -35,11 +35,11 @@
 }
 .btn-orange:hover{
     background-color: #fff;
-    color: #FF4400;
+    color: var(--waya-primary);
 }
 
 .btn-link{
-    color: #FF4400;
+    color: var(--waya-primary);
     transition: all 1s ease-out;
 }
 
@@ -47,7 +47,7 @@
     color: grey;
 }
 .btn-text-orange:focus,.btn-text-orange:hover{
-    color: #FF4400;
+    color: var(--waya-primary);
 }
 
 .list-group-item-info{

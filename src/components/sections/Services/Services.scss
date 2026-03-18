@@ -1,0 +1,194 @@
+.services-section {
+  width: 100%;
+  padding: 100px 5%;
+  box-sizing: border-box;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+
+  .section-title {
+    margin-bottom: 1rem;
+    /* Uses global section-title styles from index.css */
+  }
+
+  .section-title-accent {
+    color: var(--waya-primary, #FF6B00);
+  }
+
+  .section-divider {
+    width: 48px;
+    height: 3px;
+    background: var(--waya-primary, #FF6B00);
+    margin: 0 auto 1.5rem;
+    border-radius: 2px;
+  }
+
+  .section-subtitle {
+    margin-bottom: 64px;
+    /* Uses global section-subtitle styles from index.css */
+  }
+
+  .waya-row {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    flex-wrap: wrap;
+    margin-bottom: 24px;
+
+    &.row-bottom {
+      margin-bottom: 0;
+    }
+  }
+
+  .waya-card-container {
+    width: 360px;
+    display: flex;
+  }
+}
+
+/* ── Card ── */
+.service-card,
+.feature-card {
+  width: 100%;
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 40px 32px;
+  text-align: left;
+  box-sizing: border-box;
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: default;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, rgba(255, 107, 0, 0.6), transparent);
+    opacity: 0;
+    transition: opacity 0.35s ease;
+  }
+
+  &:hover {
+    transform: translateY(-6px);
+    background: #ffffff;
+    border-color: rgba(255, 107, 0, 0.25);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08), 0 0 0 1px rgba(255, 107, 0, 0.1);
+
+    &::before {
+      opacity: 1;
+    }
+
+    .icon-wrap {
+      background: rgba(255, 107, 0, 0.1);
+      border-color: rgba(255, 107, 0, 0.3);
+
+      svg {
+        stroke: #FF6B00;
+        filter: drop-shadow(0 0 4px rgba(255, 107, 0, 0.2));
+      }
+    }
+
+    .card-title {
+      color: #000000;
+    }
+  }
+
+  .icon-wrap {
+    width: 60px;
+    height: 60px;
+    border-radius: 14px;
+    background: rgba(255, 107, 0, 0.05);
+    border: 1px solid rgba(255, 107, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 24px;
+    transition: all 0.35s ease;
+    flex-shrink: 0;
+
+    svg {
+      stroke: rgba(255, 107, 0, 0.85);
+      stroke-width: 1.8px;
+      width: 28px;
+      height: 28px;
+      transition: all 0.35s ease;
+    }
+  }
+
+  .card-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #1e293b;
+    margin-bottom: 12px;
+    line-height: 1.3;
+    transition: color 0.3s ease;
+  }
+
+  .card-desc {
+    font-size: 0.95rem;
+    color: #64748b;
+    line-height: 1.6;
+    flex-grow: 1;
+  }
+}
+
+/* ── CTA ── */
+.services-cta-container {
+  margin-top: 64px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+
+  .services-cta-btn {
+    min-width: 240px;
+    padding: 16px 48px;
+    font-size: 1rem;
+    font-weight: 700;
+    box-shadow: 0 10px 30px rgba(255, 107, 0, 0.25);
+
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 20px 40px rgba(255, 107, 0, 0.35);
+    }
+  }
+}
+
+/* ── Responsive ── */
+@media (max-width: 1100px) {
+  .services-section .waya-card-container {
+    width: 45%;
+  }
+}
+
+@media (max-width: 768px) {
+  .services-section {
+    padding: 70px 20px;
+
+    .waya-row {
+      flex-direction: column;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .waya-card-container {
+      width: 100%;
+      max-width: 420px;
+    }
+  }
+
+  .service-card,
+  .feature-card {
+    padding: 32px 24px;
+  }
+}

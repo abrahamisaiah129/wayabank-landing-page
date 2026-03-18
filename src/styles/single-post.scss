@@ -5,7 +5,7 @@
         margin-right: 15%;
     }
     p{
-        color: #FF4400 !important;
+        color: var(--waya-primary) !important;
     }
     .jumbotron{
         margin-bottom: 0;
@@ -15,6 +15,32 @@
     }
     section{
        text-align: justify;
+    }
+
+    .blog-content-rich {
+        h4 {
+            font-size: 1.5rem;
+            font-weight: 900;
+            color: #1a1a1a;
+            margin-top: 2.5rem;
+            margin-bottom: 1.25rem;
+            letter-spacing: -0.02em;
+        }
+        p {
+            font-size: 1.125rem;
+            line-height: 1.8;
+            color: #4b5563 !important;
+            margin-bottom: 1.5rem;
+        }
+        ul {
+            margin-bottom: 1.5rem;
+            li {
+                list-style-type: disc;
+                margin-left: 1.5rem;
+                margin-bottom: 0.5rem;
+                color: #4b5563;
+            }
+        }
     }
 }
 

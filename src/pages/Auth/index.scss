@@ -9,12 +9,12 @@ select:focus {
 
 .btn-primary {
   color: #fff !important;
-  background: #ff4400;
+  background: var(--waya-primary);
   border: none !important;
 }
 .btn-primary:hover {
   color: #fff !important;
-  background: #ff4400;
+  background: var(--waya-primary);
   border: none !important;
 }
 
@@ -40,7 +40,7 @@ textarea {
 }
 
 .react-responsive-modal-modal {
-  border-top: 4px solid #ff4400;
+  border-top: 4px solid var(--waya-primary);
 }
 
 @media (min-width: 400px) {
@@ -355,8 +355,8 @@ textarea {
   height: 50px;
   font-weight: 500;
   font-size: 16px;
-  background: #ff4400;
-  border-radius: 4px;
+  background: var(--waya-primary);
+  border-radius: 12px;
   color: white;
   border: none;
 }
@@ -610,7 +610,7 @@ input {
 }
 
 .termsnconditionText {
-  font-family: Lato;
+  font-family: Inter;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;

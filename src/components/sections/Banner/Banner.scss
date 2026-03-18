@@ -1,0 +1,418 @@
+// ─── Premium Black & White Banner ───────────────────────────────────────────
+// Deep black base, crisp white type, bold Waya orange accent
+
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=DM+Sans:wght@400;500&display=swap');
+
+// ── Tokens ────────────────────────────────────────────────────────────
+$black-base:        #000000;
+$black-alt:         #0a0a0a;
+$black-deep:        #050505;
+$waya-accent:       #FF6B00;       // Waya signature orange
+$waya-accent-alt:   #FF8533;       // Lighter orange for highlights
+$white:             #FFFFFF;
+$white-70:          rgba(255,255,255,0.70);
+$white-40:          rgba(255,255,255,0.40);
+$white-12:          rgba(255,255,255,0.12);
+$white-06:          rgba(255,255,255,0.06);
+
+// ── Base ──────────────────────────────────────────────────────────────
+.minimal-banner {
+  position: relative;
+  overflow: hidden;
+  background: $black-base;
+  font-family: 'Sora', sans-serif;
+  padding: 0 0 0 0;
+
+  // Rich radial depth — sleek dark mode feel
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse 80% 60% at 60% -10%, rgba(30, 30, 30, 0.7) 0%, transparent 60%),
+      radial-gradient(ellipse 50% 40% at 100% 80%, rgba(20, 20, 20, 0.5) 0%, transparent 55%),
+      linear-gradient(160deg, $black-base 0%, #111111 45%, $black-base 100%);
+    z-index: 0;
+  }
+}
+
+// ── Background decorative blobs ───────────────────────────────────────
+.bg-blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(72px);
+  pointer-events: none;
+  z-index: 0;
+
+  &--1 {
+    width: 520px;
+    height: 520px;
+    background: rgba(30, 30, 30, 0.35);
+    top: -160px;
+    right: -80px;
+  }
+  &--2 {
+    width: 320px;
+    height: 320px;
+    background: rgba(255, 107, 0, 0.10);
+    bottom: 80px;
+    left: -60px;
+  }
+  &--3 {
+    width: 240px;
+    height: 240px;
+    background: rgba(255, 133, 51, 0.08);
+    top: 40%;
+    left: 40%;
+  }
+}
+
+// Subtle dot-grid overlay — Kuda's site uses geometric texture
+.bg-grid {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background-image: radial-gradient(circle, rgba(255,255,255,0.06) 1px, transparent 1px);
+  background-size: 32px 32px;
+  pointer-events: none;
+}
+
+// ── Inner layout ──────────────────────────────────────────────────────
+.banner-inner {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 96px 48px 64px;
+  gap: 48px;
+
+  @media (max-width: 960px) {
+    flex-direction: column;
+    padding: 72px 24px 48px;
+    text-align: center;
+  }
+}
+
+// ── Left content ──────────────────────────────────────────────────────
+.banner-content-wrapper {
+  flex: 1 1 0;
+  max-width: 560px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+  @media (max-width: 960px) {
+    align-items: center;
+    max-width: 100%;
+  }
+}
+
+// ── Trust badge ───────────────────────────────────────────────────────
+.trust-badge-top {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: $white-06;
+  border: 1px solid $white-12;
+  border-radius: 100px;
+  padding: 8px 16px;
+  font-size: 12px;
+  font-weight: 600;
+  color: $white-70;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  backdrop-filter: blur(8px);
+  width: fit-content;
+
+  .anticon {
+    color: $waya-accent-alt;
+    font-size: 14px;
+  }
+}
+
+// ── Headline ──────────────────────────────────────────────────────────
+.banner-headline {
+  font-family: 'Sora', sans-serif;
+  font-size: clamp(36px, 5vw, 58px);
+  font-weight: 800;
+  line-height: 1.1;
+  color: $white;
+  margin: 0;
+  letter-spacing: -0.02em;
+}
+
+.text-accent-minimal {
+  color: $waya-accent;
+  position: relative;
+  display: inline-block;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: $waya-accent;
+    border-radius: 2px;
+    opacity: 0.45;
+  }
+}
+
+// ── Subheadline ───────────────────────────────────────────────────────
+.banner-subhead {
+  font-family: 'DM Sans', sans-serif;
+  font-size: clamp(15px, 1.6vw, 18px);
+  font-weight: 400;
+  line-height: 1.7;
+  color: $white-70;
+  margin: 0;
+  max-width: 460px;
+}
+
+// ── CTA ───────────────────────────────────────────────────────────────
+.banner-cta-wrapper {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+
+  // Override the shared Button
+  button, .btn, [class*="btn"] {
+    background: $waya-accent !important;
+    border: none !important;
+    border-radius: 12px !important;
+    color: $white !important;
+    font-family: 'Sora', sans-serif !important;
+    font-weight: 700 !important;
+    font-size: 15px !important;
+    padding: 14px 28px !important;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+    box-shadow: 0 8px 32px rgba(255, 107, 0, 0.35);
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    &:hover {
+      background: lighten($waya-accent, 6%) !important;
+      transform: translateY(-2px);
+      box-shadow: 0 14px 40px rgba(255, 107, 0, 0.45);
+    }
+
+    &:active {
+      transform: translateY(0);
+    }
+  }
+}
+
+// ── Testimonial ───────────────────────────────────────────────────────
+.testimonial-preview {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 16px 20px;
+  background: $white-06;
+  border: 1px solid $white-12;
+  border-radius: 16px;
+  backdrop-filter: blur(8px);
+  width: fit-content;
+
+  @media (max-width: 960px) {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .avatars {
+    display: flex;
+    flex-shrink: 0;
+
+    img {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      border: 2px solid $white-12;
+      object-fit: cover;
+
+      &:not(:first-child) {
+        margin-left: -10px;
+      }
+    }
+  }
+
+  .testimonial-text {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+
+    .stars {
+      color: $waya-accent-alt;
+      font-size: 12px;
+      display: flex;
+      gap: 2px;
+    }
+
+    .quote {
+      font-size: 13px;
+      font-weight: 700;
+      color: $white;
+    }
+
+    .users {
+      font-size: 12px;
+      color: $white-70;
+    }
+  }
+}
+
+// ── Phone image ───────────────────────────────────────────────────────
+.banner-phone-wrapper {
+  position: relative;
+  flex-shrink: 0;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  z-index: 1;
+
+  .phone-glow {
+    position: absolute;
+    bottom: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 280px;
+    height: 280px;
+    background: radial-gradient(circle, rgba(60, 60, 60, 0.5) 0%, transparent 70%);
+    filter: blur(40px);
+    pointer-events: none;
+  }
+
+  .banner-phone-img {
+    position: relative;
+    z-index: 1;
+    height: clamp(380px, 50vw, 560px);
+    width: auto;
+    object-fit: contain;
+    filter: drop-shadow(0 32px 64px rgba(0,0,0,0.5));
+    animation: phoneFloat 4s ease-in-out infinite;
+  }
+}
+
+@keyframes phoneFloat {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-12px); }
+}
+
+// ── Trust signals ─────────────────────────────────────────────────────
+.trust-signals-bottom {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 48px 40px;
+
+  @media (max-width: 640px) {
+    flex-direction: column;
+    padding: 0 24px 32px;
+    gap: 16px;
+  }
+}
+
+.trust-divider {
+  width: 1px;
+  height: 40px;
+  background: $white-12;
+  margin: 0 40px;
+
+  @media (max-width: 640px) {
+    display: none;
+  }
+}
+
+.trust-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+
+  .trust-icon {
+    font-size: 26px;
+    color: $waya-accent-alt;
+    flex-shrink: 0;
+  }
+
+  .trust-text {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+
+    .trust-text-main {
+      font-size: 15px;
+      font-weight: 700;
+      color: $white;
+    }
+
+    .trust-text-sub {
+      font-size: 13px;
+      color: $white-70;
+    }
+  }
+}
+
+// ── Stats ─────────────────────────────────────────────────────────────
+.banner-stats-row {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 32px 48px 64px;
+  border-top: 1px solid $white-12;
+
+  @media (max-width: 640px) {
+    flex-wrap: wrap;
+    padding: 24px 24px 48px;
+    gap: 24px;
+  }
+}
+
+.stat-unit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  flex: 1;
+
+  .stat-value {
+    font-family: 'Sora', sans-serif;
+    font-size: clamp(26px, 3vw, 36px);
+    font-weight: 800;
+    color: $white;
+    letter-spacing: -0.02em;
+    line-height: 1;
+  }
+
+  .stat-label {
+    font-size: 13px;
+    font-weight: 500;
+    color: $white-70;
+    letter-spacing: 0.03em;
+  }
+}
+
+.stat-divider {
+  width: 1px;
+  height: 48px;
+  background: $white-12;
+  flex-shrink: 0;
+
+  @media (max-width: 640px) {
+    display: none;
+  }
+}

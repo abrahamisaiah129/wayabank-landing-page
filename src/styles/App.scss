@@ -17,11 +17,11 @@ button.orange{
   width: 170px;
   padding-inline-start: 5px;
   height: 42px;
-  background-color: #FF4400;
+  background-color: var(--waya-primary);
   border-radius: 4px;
   text-align: center;
   color: #fff;
-  font-family: 'Open Sans', sans-serif;
+  font-family: Inter, sans-serif;
   outline: none;
   border:none;
   font-size:18px;
@@ -33,7 +33,7 @@ button.orange{
   }
 }
 button.orange:hover{
-  background-color: #f75c24 !important;
+  background-color: var(--waya-primary) !important;
 }
 button.orange:active{
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
@@ -48,7 +48,7 @@ div.wayapayJumbotron{
       align-self: center;
   }
   h2{
-   font-family: 'Open Sans', sans-serif;
+   font-family: Inter, sans-serif;
    font-weight: 700;
    font-size: 42px;
    line-height: 116.6%;
@@ -60,7 +60,7 @@ div.wayapayJumbotron{
    color: #4F4F4F;
    word-spacing: 3px;
    max-width: 90%;
-   font-family: 'Sarabun', sans-serif;
+   font-family: Inter, sans-serif;
   }
   img{
       max-width: 430px !important;
@@ -94,11 +94,11 @@ div.wayapayJumbotron{
   background-position:right;
   height: 80% !important;
   h2{
-      font-family:'Open Sans', sans-serif;
+      font-family:Inter, sans-serif;
       font-weight: 500;
       font-size: 57px;
       line-height: 116.6%;
-      color: #FF4400;
+      color: var(--waya-primary);
   }
 }
 
@@ -125,7 +125,7 @@ div.wayapayJumbotron{
     background-color: #fff;
     background-image: none !important;
     h2{
-      font-family: 'Open Sans', sans-serif;
+      font-family: Inter, sans-serif;
       font-weight: bold;
       font-size: 23px;
 

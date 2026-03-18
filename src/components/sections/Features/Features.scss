@@ -1,0 +1,27 @@
+.features-v2 {
+  position: relative;
+}
+
+.underline-primary {
+  position: relative;
+  display: inline-block;
+}
+
+.underline-primary::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 60px;
+  height: 4px;
+  background-color: #ff5f00;
+  border-radius: 2px;
+}
+
+.feature-card-v2 {
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.feature-card-v2:hover {
+  transform: translateY(-8px);
+}

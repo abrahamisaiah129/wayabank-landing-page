@@ -3,14 +3,14 @@
     // background-color: ;
     .pricing-top{
         height: 500px;
-        background-color: #FF4400;
+        background-color: var(--waya-primary);
         background-blend-mode: darken;
         background-repeat: no-repeat;
         overflow-y: visible;
         margin-bottom: 100px;
     }
 
-    @media screen and(max-width: 500px){
+    @media screen and (max-width: 500px){
         // min-height: 500vh;
         .pricing-top{
             height: 100%;

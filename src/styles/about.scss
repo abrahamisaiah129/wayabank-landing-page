@@ -1,15 +1,15 @@
 #aboutsection{
     h1{
-        font-family:'Open Sans', sans-serif;
+        font-family:Inter, sans-serif;
         font-weight: 800;
         font-size: 27px;
         line-height: 116.6%;
 
-        color: #FF4400;
+        color: var(--waya-primary);
     }
     p{
         color: #333333;
-        font-family: 'Sarabun', sans-serif;
+        font-family: Inter, sans-serif;
         font-size: 17px;
         font-weight: 400;
         line-height: 34px;
@@ -18,7 +18,7 @@
         display: grid;
         grid-template-columns: repeat(4, 3fr);
         h6{
-            color: #FF4400;
+            color: var(--waya-primary);
             font-weight: 500;
             font-size: 15px;
         }
@@ -27,7 +27,7 @@
             line-height: 190%;
             font-size: 13px;
             text-align: center;
-            font-family: 'Sarabun', sans-serif;
+            font-family: Inter, sans-serif;
         }
     }
 

@@ -1,0 +1,148 @@
+.waya-footer {
+  background-color: #000;
+  color: #fff;
+  padding: 80px 5% 40px;
+  font-family: 'Inter', sans-serif;
+  border-top: 4px solid #ff6700;
+  position: relative;
+  z-index: 10;
+}
+
+.footer-nav-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 40px;
+  margin-bottom: 60px;
+}
+
+.footer-nav-group h3 {
+  color: #888;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  margin-bottom: 24px;
+}
+
+.footer-nav-group ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-nav-group li {
+  margin-bottom: 12px;
+}
+
+.footer-nav-group a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: color 0.2s ease;
+  font-weight: 500;
+}
+
+.footer-nav-group a:hover {
+  color: var(--waya-primary);
+}
+
+.footer-bottom {
+  border-top: 1px solid #333;
+  padding-top: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.footer-logo-socials {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.footer-logo img {
+  height: 32px;
+}
+
+.footer-socials {
+  display: flex;
+  gap: 16px;
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: #222;
+  border-radius: 50%;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.social-link:hover {
+  background: var(--waya-primary);
+  transform: translateY(-2px);
+}
+
+.social-link img {
+  width: 20px;
+  height: 20px;
+  filter: brightness(0) invert(1);
+}
+
+.footer-legal-apps {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.legal-text {
+  max-width: 600px;
+  font-size: 0.8rem;
+  color: #888;
+  line-height: 1.6;
+}
+
+.app-store-badges {
+  display: flex;
+  gap: 12px;
+}
+
+.app-badge img {
+  height: 40px;
+  transition: opacity 0.2s ease;
+}
+
+.app-badge:hover img {
+  opacity: 0.8;
+}
+
+.footer-copyright {
+  font-size: 0.85rem;
+  color: #666;
+  margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+  .footer-nav-container {
+    grid-template-columns: 1fr 1fr;
+  }
+  .footer-legal-apps {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-nav-container {
+    grid-template-columns: 1fr;
+  }
+  .footer-logo-socials {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

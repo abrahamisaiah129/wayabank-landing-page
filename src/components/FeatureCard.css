@@ -1,0 +1,13 @@
+
+.waya-icon-bg {
+    background-color: var(--waya-primary, #ff6700) !important; 
+    color: #ffffff !important;
+    border-radius: 1.25rem !important; /* 20px matching rounded-2xl */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.waya-feature-card-container {
+    height: 100%;
+}

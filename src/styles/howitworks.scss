@@ -16,7 +16,7 @@
 }
 
 .accordion {
-    background-color: #FF4400;
+    background-color: var(--waya-primary);
     color: #fff;
     cursor: pointer;
     padding: 18px;
@@ -30,7 +30,7 @@
   }
   
   .active, .accordion:hover {
-    background-color: #FE7756;
+    background-color: var(--waya-primary);
   }
   
   .accordion:after {
@@ -51,11 +51,11 @@
     background-color: white;
     max-height: 0;
     overflow: hidden;
-    border: 1px solid #FF4400;
+    border: 1px solid var(--waya-primary);
     transition: max-height 0.2s ease-out;
     p, ul{
         text-align: left;
-        font-family: 'Sarabun', sans-serif;;
+        font-family: Inter, sans-serif;;
         font-size: 17px;
         line-height: 150%;
         color: #4F4F4F;
