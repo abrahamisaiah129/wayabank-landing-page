@@ -46,13 +46,13 @@ function ApiReferencePage() {
                     <div className='text-secondary'>
                         <h5 className='text-secondary'>API Reference Guide</h5>
                         <span className='py-5 lh-sm text-secondary'>Razorpay APIs are completely RESTful and all our responses are returned in JSON.</span><br/>
-                        <span className='py-5 lh-sm text-secondary'>You can use Wayapaychat APIs in two modes, Test and Live. The API key is different for each mode. Know about generating API Keys.</span>
+                        <span className='py-5 lh-sm text-secondary'>You can use WayaQuick APIs in two modes, Test and Live. The API key is different for each mode. Know about generating API Keys.</span>
                     </div>
                     <div className='bg-light py-2 my-3 border-start border-primary border-5'>
                         <ul className="" id='android-integration'>
                             <p className="">Integrations</p>
-                            <li className='my-2'>Looking to integrate your website, ecommerce store or mobile app with Wayapaychat Payment Gateway? Find the right integration method.</li>
-                            <li className='my-2'>Accept payments without a website or app using other Wayapaychat products, such as Payment Links, Payment Pages, Subscription Links, Invoices and Smart Collect.</li>
+                            <li className='my-2'>Looking to integrate your website, ecommerce store or mobile app with WayaQuick Payment Gateway? Find the right integration method.</li>
+                            <li className='my-2'>Accept payments without a website or app using other WayaQuick products, such as Payment Links, Payment Pages, Subscription Links, Invoices and Smart Collect.</li>
                             <li className='my-2'>For S2S integration, contact Support team with your requirements.</li>
                         </ul>
                     </div>
@@ -61,12 +61,12 @@ function ApiReferencePage() {
                 <div className='text-secondary' id='apierror'>
                     <div className='text-secondary'>
                         <h5 className='text-secondary'>API Gateway URL</h5>
-                        <span className='py-5 lh-sm text-secondary'>The Wayapaychat API Gateway URL is <a href='#' className='text-silver'>https://api.wayapaychat.com/v1</a>. You need to include this before each API endpoint to make API calls.</span>
+                        <span className='py-5 lh-sm text-secondary'>The WayaQuick API Gateway URL is <a href='#' className='text-silver'>https://api.wayapaychat.com/v1</a>. You need to include this before each API endpoint to make API calls.</span>
                     </div>
                     <div className='bg-orange-faint py-2 my-3 border-start border-5 border-warning'>
                         <ul className="" id='android-integration'>
                             <p className="">Recommendation</p>
-                            <span>While sending API requests to Wayapaychat servers, it is recommended to honor the TTL of the entries and not cache the DNS aggressively at your end. This is applicable when you are not using Wayapaychat SDKs. However, if you are using Wayapaychat SDKs, be informed that our SDKs can handle DNS caching and honor the TTLs that are set in the records.</span>
+                            <span>While sending API requests to WayaQuick servers, it is recommended to honor the TTL of the entries and not cache the DNS aggressively at your end. This is applicable when you are not using WayaQuick SDKs. However, if you are using WayaQuick SDKs, be informed that our SDKs can handle DNS caching and honor the TTLs that are set in the records.</span>
                         </ul>
                     </div>
                 </div>
