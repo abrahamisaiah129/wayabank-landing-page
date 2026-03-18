@@ -113,7 +113,18 @@ export default function Testimonials({ id }) {
                 <div className="reviewer-info">
                   <div className="reviewer-avatar overflow-hidden">
                     {review.image ? (
-                      <img src={review.image} alt={review.name} className="w-full h-full object-cover" />
+                      <>
+                        <img 
+                          src={review.image} 
+                          alt={review.name} 
+                          className="w-full h-full object-cover" 
+                          referrerPolicy="no-referrer"
+                          onError={(e) => { e.target.style.display = 'none'; e.target.nextSibling.style.display = 'flex'; }}
+                        />
+                        <span className="initials-fallback" style={{ display: 'none', width: '100%', height: '100%', alignItems: 'center', justifyContent: 'center', background: '#ff6700', color: 'white', fontWeight: 'bold' }}>
+                          {getInitials(review.name)}
+                        </span>
+                      </>
                     ) : (
                       <span className="text-white font-bold">{getInitials(review.name)}</span>
                     )}

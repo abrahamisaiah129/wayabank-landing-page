@@ -1,11 +1,31 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './FloatingBot.css';
 
 const FloatingBot = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [showHelpMsg, setShowHelpMsg] = useState(false);
+
+  useEffect(() => {
+    // Show help message after 2 seconds if bot isn't open
+    const timer = setTimeout(() => {
+      if (!isOpen) {
+        setShowHelpMsg(true);
+      }
+    }, 2000);
+
+    return () => clearTimeout(timer);
+  }, [isOpen]);
 
   const toggleBot = () => {
     setIsOpen(!isOpen);
+    if (!isOpen) {
+      setShowHelpMsg(false);
+    }
+  };
+
+  const closeHelpMsg = (e) => {
+    e.stopPropagation();
+    setShowHelpMsg(false);
   };
 
   return (
@@ -31,6 +51,19 @@ const FloatingBot = () => {
                 <span>Integrated with Zoho CRM</span>
               </div>
             </div>
+          </div>
+        </div>
+      )}
+
+      {showHelpMsg && !isOpen && (
+        <div className="help-message-box animate-fade-in-right">
+          <button className="close-help-msg" onClick={closeHelpMsg} aria-label="Close help message">
+            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+          <div className="help-text">
+            Hi 👋. Need any help?
           </div>
         </div>
       )}

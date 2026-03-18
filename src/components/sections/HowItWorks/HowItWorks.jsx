@@ -11,9 +11,7 @@ const steps = [
     description:
       "It only takes a few minutes to start enjoying free benefits. Download WayaBank on Google Play or the App Store.",
     align: "left",
-    icon: (
-      <img src={step1Img} alt="Download WayaBank App" className="w-full h-full object-cover rounded-[3.5rem] transform hover:scale-110 transition-transform duration-700" />
-    ),
+    imgSrc: step1Img,
   },
   {
     number: "02",
@@ -21,9 +19,7 @@ const steps = [
     description:
       "Verify your email address, phone number, and BVN to ensure your account security.",
     align: "right",
-    icon: (
-      <img src={step2Img} alt="Verify Your Account" className="w-full h-full object-cover rounded-[3.5rem] transform hover:scale-110 transition-transform duration-700" />
-    ),
+    imgSrc: step2Img,
   },
   {
     number: "03",
@@ -31,9 +27,7 @@ const steps = [
     description:
       "Start enjoying WayaBank. Make savings, withdrawals, transfers, bill payments, and more.",
     align: "left",
-    icon: (
-      <img src={step3Img} alt="Start Transacting" className="w-full h-full object-cover rounded-[3.5rem] transform hover:scale-110 transition-transform duration-700" />
-    ),
+    imgSrc: step3Img,
   },
 ];
 
@@ -71,8 +65,13 @@ const HowItWorks = ({ id }) => {
                       <div className="absolute inset-0 bg-[#0a0a0a] shadow-2xl border border-white/10 rounded-[3rem] rotate-3 scale-100 group-hover:rotate-0 transition-transform duration-700"></div>
                       
                       {/* Icon Container */}
-                      <div className="relative w-full max-w-[420px] aspect-square flex items-center justify-center overflow-hidden rounded-[3.5rem] shadow-2xl border border-white/5">
-                        {step.icon}
+                      <div className="relative w-full max-w-[420px] aspect-square flex overflow-hidden rounded-[3.5rem] shadow-2xl border border-white/10 bg-[#0a0a0a]">
+                        <img 
+                          src={step.imgSrc} 
+                          alt={step.title} 
+                          className="w-full h-full object-cover transform hover:scale-105 transition-transform duration-700" 
+                          style={{ height: '100%', width: '100%', objectFit: 'cover', display: 'block' }}
+                        />
                       </div>
 
                       {/* Floating Step Badge */}

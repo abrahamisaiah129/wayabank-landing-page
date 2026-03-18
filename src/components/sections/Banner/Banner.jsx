@@ -7,6 +7,16 @@ import './Banner.scss';
 import { useSetRecoilState } from 'recoil';
 import { downloadModalState } from '../../../states/home';
 
+// Helper function to get initials from name
+const getInitials = (name) => {
+  if (!name) return "";
+  const parts = name.split(" ");
+  if (parts.length >= 2) {
+    return (parts[0].charAt(0) + parts[1].charAt(0)).toUpperCase();
+  }
+  return name.charAt(0).toUpperCase();
+};
+
 const Banner = ({ id }) => {
   const setDownloadModal = useSetRecoilState(downloadModalState);
 
@@ -38,9 +48,29 @@ const Banner = ({ id }) => {
 
             <div className="testimonial-preview">
               <div className="avatars">
-                <img src="https://play-lh.googleusercontent.com/a-/ALV-UjW7pD0OU_DnTgN5fqrV1LpOh3qPUc9V2Jc437qw8i1NJAFnqojkpw=s128-rw" alt="Oyeniyi Muideen" />
-                <img src="https://play-lh.googleusercontent.com/a-/ALV-UjWMMOpgT0wHVeWojK_Vj4MesmI6JK64q1QaB3C_f4bsKWtDhmc=s128-rw" alt="June Johnson" />
-                <img src="https://play-lh.googleusercontent.com/a-/ALV-UjWl0sbgzTF5ijBxK0xC8IUBVBqYGWQTk4bXthULcHyA_-Ff7Q5J=s128-rw" alt="Tobi Olatunji" />
+                <img 
+                  src="https://play-lh.googleusercontent.com/a-/ALV-UjW7pD0OU_DnTgN5fqrV1LpOh3qPUc9V2Jc437qw8i1NJAFnqojkpw=s128-rw" 
+                  alt="Oyeniyi Muideen" 
+                  referrerPolicy="no-referrer"
+                  onError={(e) => { e.target.style.display = 'none'; e.target.nextSibling.style.display = 'flex'; }}
+                />
+                <span className="initials-fallback" style={{ display: 'none' }}>OM</span>
+                
+                <img 
+                  src="https://play-lh.googleusercontent.com/a-/ALV-UjWMMOpgT0wHVeWojK_Vj4MesmI6JK64q1QaB3C_f4bsKWtDhmc=s128-rw" 
+                  alt="June Johnson" 
+                  referrerPolicy="no-referrer"
+                  onError={(e) => { e.target.style.display = 'none'; e.target.nextSibling.style.display = 'flex'; }}
+                />
+                <span className="initials-fallback" style={{ display: 'none' }}>JJ</span>
+
+                <img 
+                  src="https://play-lh.googleusercontent.com/a-/ALV-UjWl0sbgzTF5ijBxK0xC8IUBVBqYGWQTk4bXthULcHyA_-Ff7Q5J=s128-rw" 
+                  alt="Tobi Olatunji" 
+                  referrerPolicy="no-referrer"
+                  onError={(e) => { e.target.style.display = 'none'; e.target.nextSibling.style.display = 'flex'; }}
+                />
+                <span className="initials-fallback" style={{ display: 'none' }}>TO</span>
               </div>
               <div className="testimonial-text">
                 <div style={{ color: '#fa8c16', fontSize: '14px', marginBottom: '2px' }}>
