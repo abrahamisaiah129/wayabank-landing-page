@@ -1,3 +1,4 @@
+@use 'sass:color';
 // ─── Premium Black & White Banner ───────────────────────────────────────────
 // Deep black base, crisp white type, bold Waya orange accent
 
@@ -211,7 +212,7 @@ $white-06:          rgba(255,255,255,0.06);
     }
 
     &:hover {
-      background: lighten($waya-accent, 5%) !important;
+      background: color.adjust($waya-accent, $lightness: 5%) !important;
       transform: translateY(-3px);
       box-shadow: 0 15px 40px rgba(255, 107, 0, 0.4);
     }
