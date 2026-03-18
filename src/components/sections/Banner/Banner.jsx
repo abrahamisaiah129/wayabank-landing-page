@@ -27,7 +27,7 @@ const Banner = ({ id }) => {
               Your entire finance made <span className="text-accent-minimal">Easy</span>
             </h1>
             <h2 className="banner-subhead">
-          Wire your money your way <span className='text-accent-minimal'>-</span>    Experience the new age of digital banking. Secure your money, earn high interest, and manage your finances effortlessly without any hidden fees.
+          Wire your money your way <span className='text-orange-500'>-</span>    Experience the new age of digital banking. Secure your money, earn high interest, and manage your finances effortlessly without any hidden fees.
             </h2>
 
           <div className="banner-cta-wrapper">
