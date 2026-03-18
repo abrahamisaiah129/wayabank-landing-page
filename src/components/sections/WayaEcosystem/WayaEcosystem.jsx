@@ -12,12 +12,12 @@ const products = [
     icon: <img src="https://wayabank.ng/static/media/wayagram.41f374a0.png" alt="WayaGram" className="w-full h-auto object-contain" />
   },
   {
-    title: "WayaPay",
+    title: "WayaQuick",
     description: "Accept payment on your website or mobile application via card, USSD, bank, wallet, PayAttitude.",
-    buttonText: "Explore WayaPay",
+    buttonText: "Explore WayaQuick",
     link: "https://wayapay.ng",
     color: "#007BFF",
-    icon: <img src="https://wayalinks.com/icon.png" alt="WayaPay" className="w-full h-auto object-contain" />
+    icon: <img src="https://wayalinks.com/icon.png" alt="WayaQuick" className="w-full h-auto object-contain" />
   },
   {
     title: "WayaPOS",
