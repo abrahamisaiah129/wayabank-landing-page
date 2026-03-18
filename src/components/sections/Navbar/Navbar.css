@@ -4,7 +4,8 @@
   height: clamp(64px, 12vw, 85px);
   width: 100%;
   max-width: 100%;
-  overflow-x: hidden;
+  /* FIXED: removed overflow-x: hidden — it was clipping the dropdown */
+  /* overflow-x: hidden; ← this was the culprit */
 }
 
 .waya-navbar.scrolled {
@@ -21,7 +22,7 @@
   background: rgba(0, 0, 0, 0.98);
 }
 
-/* Hamburger Toggle - Thumb Friendly */
+/* Hamburger Toggle */
 .menu-toggle {
   display: flex;
   align-items: center;
@@ -33,12 +34,11 @@
   cursor: pointer;
 }
 
-/* Toggle is now a custom SVG */
 .menu-toggle svg {
   stroke-width: 4px;
 }
 
-/* Mobile Overlay Menu - Full Page */
+/* Mobile Overlay Menu */
 .mobile-menu {
   position: fixed;
   top: 0;
@@ -64,7 +64,6 @@
   visibility: visible;
 }
 
-/* Ensure Logo and Toggle are ABOVE the overlay when open */
 .waya-navbar.menu-open .navbar-brand,
 .waya-navbar.menu-open .menu-toggle {
   z-index: 1100;
@@ -105,12 +104,12 @@
 
 /* Animations */
 @keyframes fadeInDown {
-  from { opacity: 0; transform: translateY(-10px); }
-  to { opacity: 1; transform: translateY(0); }
+  from { opacity: 0; transform: translateY(-8px); }
+  to   { opacity: 1; transform: translateY(0); }
 }
 
 .animate-fade-in-down {
-  animation: fadeInDown 0.3s ease-out forwards;
+  animation: fadeInDown 0.25s ease-out forwards;
 }
 
 .logo-bold {
@@ -118,33 +117,52 @@
   width: clamp(120px, 15vw, 160px);
 }
 
-/* Glassmorphism/Desktop Dropdowns */
-@media (min-width: 1024px) {
-  .waya-navbar .absolute {
-    background: #ffffff;
-    border-radius: 16px;
-    padding: 12px 0;
-    margin-top: 5px;
-    box-shadow: 
-      0 10px 15px -3px rgba(0, 0, 0, 0.1),
-      0 4px 6px -2px rgba(0, 0, 0, 0.05),
-      0 0 0 1px rgba(0, 0, 0, 0.05);
-    overflow: hidden;
-  }
+/* ─────────────────────────────────────────────
+   HOME DROPDOWN
+   Key fixes:
+   1. position: fixed so it escapes ALL parent
+      overflow and stacking-context constraints.
+   2. High z-index so it sits above everything.
+   3. JS sets --dd-left / --dd-top via getBoundingClientRect
+      (see component), falling back to CSS anchoring.
+   ───────────────────────────────────────────── */
+.home-dropdown {
+  position: fixed;          /* ← escapes sticky navbar stacking context */
+  z-index: 9999;            /* ← above everything */
+  min-width: 220px;
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 10px 0;
+  box-shadow:
+    0 20px 40px -8px rgba(0, 0, 0, 0.18),
+    0 4px 12px -2px rgba(0, 0, 0, 0.08),
+    0 0 0 1px rgba(0, 0, 0, 0.06);
+  animation: fadeInDown 0.22s ease-out forwards;
 
-  .waya-navbar .absolute a {
-    padding: 12px 24px;
-    font-size: 13px;
-    font-weight: 600;
-    color: #1e293b !important;
-    display: flex;
-    align-items: center;
-    transition: all 0.2s ease;
-  }
+  /*
+    Positioning trick:
+    The React component sets inline style top/left via a ref +
+    getBoundingClientRect so the dropdown always appears just
+    below the "Home" button regardless of scroll position.
+    See Navbar.jsx for the positioning logic.
+  */
+}
 
-  .waya-navbar .absolute a:hover {
-    background-color: #fff7ed;
-    color: #FF6B00 !important;
-    padding-left: 28px;
-  }
+.home-dropdown a {
+  display: block;
+  padding: 11px 22px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #1e293b !important;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  text-decoration: none !important;
+  transition: background 0.18s ease, color 0.18s ease, padding-left 0.18s ease;
+  border-bottom: none !important;
+}
+
+.home-dropdown a:hover {
+  background: #fff7ed;
+  color: #FF6B00 !important;
+  padding-left: 28px;
 }
