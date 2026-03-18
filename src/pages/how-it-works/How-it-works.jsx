@@ -42,7 +42,7 @@ function HowItWorks() {
         <Zoom>
           <div className='videoSection'>
             {/* <video controls>
-                <source src="https://www.wayapaychat.com/wp-content/uploads/2020/01/Skype_Video2.mp4?_=1" type="video/mp4"/>
+                <source src="https://www.wayaquickchat.com/wp-content/uploads/2020/01/Skype_Video2.mp4?_=1" type="video/mp4"/>
                 Your browser does not support the video tag.
                 </video> */}
             <iframe title="how it work" height="315"

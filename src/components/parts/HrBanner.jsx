@@ -7,7 +7,7 @@ function HrBanner() {
         <div className="w-full px-8 md:px-20 mt-8">
             <div className="bg-blue-50 grid grid-cols-1 lg:grid-cols-2 w-full lg:h-96 rounded-3xl">
                 <div className="pl-8 md:pl-20 pr-8 md:pr-24 py-10">
-                    <h4 className="title text-center text-gray-500 text-4xl font-semibold">Wayapay Web</h4>
+                    <h4 className="title text-center text-gray-500 text-4xl font-semibold">WayaQuick Web</h4>
                     <p className="mt-4 text-gray-500 text-lg">Sell online with an ecommerce website, Mobile App and more.</p>
                     <div class="btn-container mt-10 space-y-3 flex flex-col md:flex-row rounded">
                         <button class="btn-register2 rounded md:mt-3 text-sm shadow">

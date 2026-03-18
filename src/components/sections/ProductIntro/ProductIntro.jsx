@@ -57,7 +57,7 @@ function ProductIntro() {
             </div>
             
             <div className="flex flex-col items-center mt-32">
-                <h4 className="text-black text-4xl font-black mb-10">Wayapay Products</h4>
+                <h4 className="text-black text-4xl font-black mb-10">WayaQuick Products</h4>
 
                 <div className="toggle border border-gray-100 flex items-center w-full max-w-md h-16 rounded-full bg-gray-50 p-1.5 shadow-inner">
                     <div className="w-1/2 h-full flex items-center justify-center rounded-full bg-black shadow-lg">

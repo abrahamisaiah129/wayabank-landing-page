@@ -156,7 +156,7 @@ const ResetPassword = (props) => {
                 className='d-flex text-center w-100'
                 style={{ justifyContent: 'space-between' }}
               >
-                <div>Wayapay</div>
+                <div>WayaQuick</div>
                 <div>About</div>
                 <div>Insights</div>
                 <div>Terms</div>

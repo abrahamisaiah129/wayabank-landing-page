@@ -253,7 +253,7 @@ const LoginPage = () => {
             }}
             className='mx-auto d-flex  login-footer justify-content-between text-black'
           >
-            <span>© Wayapay</span>
+            <span>© WayaQuick</span>
             <span>About</span>
             <span>Insights</span>
             <span>Terms</span>
