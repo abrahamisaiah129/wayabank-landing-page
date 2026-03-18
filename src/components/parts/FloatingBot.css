@@ -1,0 +1,113 @@
+.floating-bot-container {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 10000;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.bot-toggle-btn {
+  width: 60px;
+  height: 60px;
+  border-radius: 30px;
+  background: #FF6B00;
+  color: white;
+  border: none;
+  box-shadow: 0 4px 15px rgba(255, 107, 0, 0.4);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.bot-toggle-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 20px rgba(255, 107, 0, 0.5);
+}
+
+.bot-toggle-btn.active {
+  background: #333;
+}
+
+.bot-window {
+  width: 350px;
+  max-width: calc(100vw - 4rem);
+  height: 500px;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border: 1px solid #eee;
+}
+
+.bot-header {
+  padding: 1.2rem;
+  background: #FF6B00;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bot-header h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.close-bot {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.bot-body {
+  flex: 1;
+  padding: 1.5rem;
+  background: #fdfdfd;
+  display: flex;
+  flex-direction: column;
+}
+
+.zoho-template {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.fake-chat-bubble {
+  background: #f0f0f0;
+  padding: 0.8rem 1rem;
+  border-radius: 15px 15px 15px 0;
+  font-size: 0.95rem;
+  color: #333;
+  max-width: 80%;
+  align-self: flex-start;
+}
+
+.zoho-footer {
+  margin-top: auto;
+  text-align: center;
+  padding-top: 1rem;
+  border-top: 1px solid #eee;
+  font-size: 0.75rem;
+  color: #999;
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.3s ease-out forwards;
+}

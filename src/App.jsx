@@ -5,7 +5,8 @@ import MerchantPage from "./pages/merchant/Merchant";
 import CommercePage from "./pages/commerce/Commerce";
 import SignIn from "./pages/signin/SignIn";
 import WayaGram from "./pages/wayagram/Wayagram";
-import WayaPay from "./pages/wayapay/Wayapay";
+import WayaQuick from "./pages/wayapay/Wayapay";
+import FloatingBot from "./components/parts/FloatingBot";
 import Home from "./pages/home/Home";
 import About from "./pages/about/About";
 import {
@@ -74,8 +75,8 @@ function App() {
           <Route exact path="/developer/:cat">
             <DeveloperPage />
           </Route>
-          <Route exact path="/wayapay">
-            <WayaPay />
+          <Route exact path="/wayaquick">
+            <WayaQuick />
           </Route>
           <Route exact path="/wayagram">
             <WayaGram />
@@ -110,6 +111,7 @@ function App() {
             <Home />
           </Route>
         </Switch>
+        <FloatingBot />
       </Router>
     </div>
   );

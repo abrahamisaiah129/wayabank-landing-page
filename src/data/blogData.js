@@ -25,8 +25,8 @@ export const blogData = [
   },
   {
     id: 2,
-    title: "Empowering Nigerian SMEs with WayaPay",
-    short_content: "WayaPay is more than a payment gateway; it's a growth engine for small businesses across Lagos, Abuja, and beyond.",
+    title: "Empowering Nigerian SMEs with WayaQuick",
+    short_content: "WayaQuick is more than a payment gateway; it's a growth engine for small businesses across Lagos, Abuja, and beyond.",
     category: "Business",
     author: {
       name: "Sarah Adebayo",
@@ -36,9 +36,9 @@ export const blogData = [
     updated_at: "2024-03-12",
     image_url: "https://images.unsplash.com/photo-1556740738-b6a63e27c4df?auto=format&fit=crop&w=800&q=80",
     content: `
-      <p>Small and Medium Enterprises (SMEs) are the lifeblood of Nigeria's economy. At WayaBank, we've tailor-made WayaPay to solve the unique challenges faced by local merchants, from street vendors in Balogun to tech startups in Yaba.</p>
+      <p>Small and Medium Enterprises (SMEs) are the lifeblood of Nigeria's economy. At WayaBank, we've tailor-made WayaQuick to solve the unique challenges faced by local merchants, from street vendors in Balogun to tech startups in Yaba.</p>
       <h4>Seamless Transaction Experience</h4>
-      <p>With WayaPay, your customers can pay via QR codes, USSD, or transfers, and you receive instant notification. This eliminates the 'wait-and-see' approach that often slows down business operations.</p>
+      <p>With WayaQuick, your customers can pay via QR codes, USSD, or transfers, and you receive instant notification. This eliminates the 'wait-and-see' approach that often slows down business operations.</p>
     `,
     gallery: [
       "https://images.unsplash.com/photo-1556742044-3c52d6e88c62?auto=format&fit=crop&w=400&q=80",

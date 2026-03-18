@@ -172,7 +172,7 @@ const MerchantSignup = (props) => {
               </div>
             </div>
             <h1 className='modal-header-data'>
-              Create your Corporate WayaPay account
+              Create your Corporate WayaQuick account
             </h1>
 
             {page === 1 ? (

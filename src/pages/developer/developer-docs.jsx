@@ -49,7 +49,7 @@ function DeveloperDocs() {
                     <div className='' id='introduction'>
                         <div className='text-secondary'>
                             <h5 className='text-secondary'>Payment Gateway</h5>
-                            <p className='text-secondary'>Welcome to WayaPay! This guide you to:</p>
+                            <p className='text-secondary'>Welcome to WayaQuick! This guide you to:</p>
                             <ul>
                                 <li>Sign up for a Wayapay Account</li>
                                 <li>Choose the right product to start accepting payments from your customers</li>

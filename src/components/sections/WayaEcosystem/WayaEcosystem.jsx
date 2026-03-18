@@ -17,7 +17,7 @@ const products = [
     buttonText: "Explore WayaQuick",
     link: "https://wayapay.ng",
     color: "#007BFF",
-    icon: <img src="https://wayalinks.com/icon.png" alt="WayaQuick" className="w-full h-auto object-contain" />
+    icon: <img src="/src/assets/waya-quick-logo.png" alt="WayaQuick" className="w-full h-auto object-contain" />
   },
   {
     title: "WayaPOS",

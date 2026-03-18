@@ -22,7 +22,7 @@ function Agent() {
     {
       id: 1,
       image_url:'/agent/down.png',
-      title:'Download WayaPay',
+      title:'Download WayaQuick',
     },
     {
       id: 2,

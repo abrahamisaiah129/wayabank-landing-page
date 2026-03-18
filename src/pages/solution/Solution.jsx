@@ -75,7 +75,7 @@ const Support = () => {
       img: mobileTopup,
       title: "top-up airtime and data",
       content:
-        "Request and receive money from friends and families, customers etc, using phone number through WayaPay",
+        "Request and receive money from friends and families, customers etc, using phone number through WayaQuick",
     },
   ];
   return (
