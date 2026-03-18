@@ -31,7 +31,7 @@ const BlogSection = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {topBlogs.map((blog, index) => (
-            <Link to={`/blogs/${blog.id}`} className="blog-card group" key={blog.id}>
+            <Link to={`/blogs/${blog.id}`} className="waya-premium-card blog-card group" key={blog.id}>
               <div className="relative h-60 rounded-[2rem] overflow-hidden mb-6 shadow-xl border border-white/10">
                 <img 
                   src={blog.image_url} 
