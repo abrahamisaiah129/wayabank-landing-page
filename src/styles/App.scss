@@ -69,12 +69,13 @@ div.wayapayJumbotron{
   }
 }
 
-.theGrids{
+.theGrids {
   justify-content: center;
   display: grid;
-  grid-template-columns: repeat(3, 300px);
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   grid-column-gap: 20px;
   grid-row-gap: 20px;
+  width: 100%;
 }
 
 .loading{
@@ -110,15 +111,15 @@ div.wayapayJumbotron{
   }
 }
 
-@media only screen and (max-width: 768px){
-  .theGrids{
-    grid-template-columns: repeat(2, 40vw);
+@media (max-width: 768px) {
+  .theGrids {
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   }
 }
 
 @media only screen and (max-width: 425px){
-  .theGrids{
-    grid-template-columns: 300px;
+  .theGrids {
+    grid-template-columns: 1fr;
   }
   div.wayapayJumbotron{
     padding-top:0;

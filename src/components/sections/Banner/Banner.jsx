@@ -20,10 +20,12 @@ const Banner = ({ id }) => {
               <SafetyCertificateOutlined /> NDIC Insured & CBN Licensed
             </div>
 
-            <h1 className="banner-headline">
+            {/* <h1 className="banner-headline">
               Open a Savings Account in <span className="text-accent-minimal">5 Minutes</span>
+            </h1> */}
+ <h1 className="banner-headline">
+              Your entire finance made <span className="text-accent-minimal">Easy</span>
             </h1>
-
             <h2 className="banner-subhead">
           Wire your money your way <span className='text-accent-minimal'>-</span>    Experience the new age of digital banking. Secure your money, earn high interest, and manage your finances effortlessly without any hidden fees.
             </h2>

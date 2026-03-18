@@ -48,9 +48,10 @@
             color: var(--waya-primary);
             padding-bottom: 10%;
         }
-        .last-banner-phones{
+        .last-banner-phones {
             display: grid;
-            grid-template-columns: repeat(3, 120px);
+            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+            gap: 10px;
             .single{
                 background-color: #F4F4F4;
                 height: 100px;
@@ -267,12 +268,12 @@
             h4{
                 font-size: 18px;
             } 
-            form{
+            form {
                 margin: 2% auto;
                 background-color: #fff;
-              
-                max-width: 80vw;
-                padding: 2em 3em;
+                width: 100%;
+                max-width: 100%;
+                padding: 1.5em;
             }
         }
     }

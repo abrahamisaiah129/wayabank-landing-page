@@ -2,7 +2,8 @@
 
 #homesection {
   width: 100%;
-  min-width: 576px;
+  min-width: 0;
+  overflow-x: hidden;
 
 
   .home-jumbotron {
@@ -568,8 +569,9 @@
       text-align: center;
       padding-bottom: 6%;
       video {
-        width: 700px;
-        height: 400px;
+        width: 100%;
+        max-width: 700px;
+        height: auto;
       }
     }
   }
@@ -665,7 +667,7 @@
 
 @media (max-width: 916px) {
   #homesection {
-    min-width: 576px;
+    min-width: 0;
     .home-jumbotron {
       display: flex;
       flex-direction: column;
@@ -724,8 +726,8 @@
         font-family: Inter, sans-serif;
         font-style: normal;
         font-weight: bold;
-        font-size: 50px;
-        line-height: 75px;
+        font-size: clamp(2rem, 8vw, 3.5rem);
+        line-height: 1.2;
         text-align: center;
         color: #333333;
       }
