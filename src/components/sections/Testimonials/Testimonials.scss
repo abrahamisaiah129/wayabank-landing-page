@@ -92,14 +92,19 @@
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
     transition: all 0.4s ease;
     height: 320px;
-    width: 380px;
+    width: clamp(280px, 85vw, 380px);
     flex-shrink: 0;
+    
+    @media (min-width: 768px) {
+      width: 380px;
+    }
     
     &:hover {
       border-color: #ff6700;
       box-shadow: 0 12px 30px rgba(255, 103, 0, 0.08);
       transform: translateY(-5px);
     }
+
 
     .card-top {
       display: flex;

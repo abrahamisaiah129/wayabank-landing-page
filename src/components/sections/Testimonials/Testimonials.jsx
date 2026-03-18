@@ -3,10 +3,11 @@ import './Testimonials.scss';
 
 const reviews = [
   {
-    name: "mackd45",
-    text: "Amazing social community with a well structured interface for efficient transactions. The best banking app in Nigeria!",
+    name: "June Johnson",
+    text: "WayaBank has completely changed how I manage my business finances. The interface is so intuitive and the support is top-notch!",
     rating: 5,
     source: "App Store",
+    image: "https://play-lh.googleusercontent.com/a-/ALV-UjWMMOpgT0wHVeWojK_Vj4MesmI6JK64q1QaB3C_f4bsKWtDhmc=s128-rw"
   },
   {
     name: "Oyeniyi Muideen",
@@ -32,7 +33,7 @@ const reviews = [
     text: "Seamless. The new way to banking! Amazing social community and very efficient for my needs.",
     rating: 5,
     source: "Play Store",
-    image: "https://play-lh.googleusercontent.com/a-/ALV-UjU136EkHMoG8YuBY1QHQXiz1rqtur41j3wlncN-XfHhHt32BD-b=s128-rw"
+    image: "https://play-lh.googleusercontent.com/a-/ALV-UjWl0sbgzTF5ijBxK0xC8IUBVBqYGWQTk4bXthULcHyA_-Ff7Q5J=s128-rw"
   },
   {
     name: "ivy bima",
@@ -45,7 +46,7 @@ const reviews = [
     text: "Waya is the best online banking app, very seamless and convenient to use for everyone.",
     rating: 5,
     source: "Play Store",
-    image: "https://play-lh.googleusercontent.com/a-/ALV-UjWl0sbgzTF5ijBxK0xC8IUBVBqYGWQTk4bXthULcHyA_-Ff7Q5J=s128-rw"
+    image: "https://play-lh.googleusercontent.com/a-/ALV-UjU136EkHMoG8YuBY1QHQXiz1rqtur41j3wlncN-XfHhHt32BD-b=s128-rw"
   },
   {
     name: "Stanley Sylvester",

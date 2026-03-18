@@ -44,7 +44,9 @@ const Banner = ({ id }) => {
                 <div style={{ color: '#fa8c16', fontSize: '14px', marginBottom: '2px' }}>
                   <StarFilled /><StarFilled /><StarFilled /><StarFilled /><StarFilled />
                 </div>
-                <span style={{ fontWeight: 700, color: 'rgba(255, 255, 255, 0.95)' }}>"The best banking app I've used."</span>
+                <span style={{ fontWeight: 800, color: 'rgba(255, 255, 255, 0.95)' }}>
+                  <span style={{ color: '#FF6B00' }}>"</span>The best banking app I've used.<span style={{ color: '#FF6B00' }}>"</span>
+                </span>
                 <span style={{ color: 'rgba(255, 255, 255, 0.7)' }}> — Over 500k+ users trust us.</span>
               </div>
             </div>

@@ -26,7 +26,7 @@ const FeatureCard = ({
   return (
     <div className={`waya-feature-card-container ${containerClassName}`}>
       <div className={`bg-white rounded-[2.5rem] shadow-xl border border-gray-100/50 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 h-full flex flex-col group overflow-hidden relative ${className}`}>
-        <div className="p-8 md:p-10 flex flex-col h-full">
+        <div className="p-6 md:p-10 flex flex-col h-full">
           {/* Icon Wrapper */}
           <div className={`mb-8 transition-all transform-gpu group-hover:scale-110 flex items-center justify-start ${variant === 'logo' ? 'w-full h-auto max-w-[200px]' : 'w-16 h-16 md:w-20 md:h-20 waya-icon-bg'}`}>
             <div className={`${variant === 'logo' ? 'w-full h-full' : 'w-8 h-8 md:w-10 md:h-10 text-white flex items-center justify-center'}`}>

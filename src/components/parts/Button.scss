@@ -11,6 +11,8 @@
   text-decoration: none !important;
   outline: none;
   border-radius: 12px !important;
+  min-height: 44px; /* Thumb-friendly constraint */
+
 
   /* Primary Variant */
   &.variant-primary {

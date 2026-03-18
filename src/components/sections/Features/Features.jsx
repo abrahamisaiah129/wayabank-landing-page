@@ -141,7 +141,7 @@ export default function Features({ id }) {
               </div>
 
               {/* Contained Phone Image */}
-              <div className="relative w-full max-w-[340px] lg:max-w-[400px] flex justify-center">
+              <div className="relative w-full max-w-[280px] sm:max-w-[340px] lg:max-w-[400px] flex justify-center">
                 <div className="absolute inset-0 bg-orange-500/20 blur-[100px] rounded-full"></div>
                 <img 
                   src={phoneImage} 

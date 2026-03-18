@@ -69,10 +69,7 @@ const servicesData = [
 /* ─── Main Component ─── */
 export default function Services({ id, onDownloadClick }) {
   return (
-    <section id={id} className="w-full px-[5%] py-24 font-body bg-white relative overflow-hidden">
-      {/* Subtle Background Decoration */}
-      <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-orange-500/5 rounded-full blur-[100px] -mr-64 -mt-64"></div>
-      <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-orange-500/5 rounded-full blur-[100px] -ml-32 -mb-32"></div>
+    <section id={id} className="w-full px-[5%] py-24 font-body bg-white relative">
 
       {/* Heading */}
       <div className="text-center mb-16 relative z-10">
@@ -99,7 +96,7 @@ export default function Services({ id, onDownloadClick }) {
         <div className="lg:col-span-2">
           <ServiceCard Icon={servicesData[3].Icon} title={servicesData[3].title} desc={servicesData[3].desc} index={3} />
         </div>
-        <div className="lg:col-span-3">
+        <div className="md:col-span-2 lg:col-span-3">
           <ServiceCard Icon={servicesData[4].Icon} title={servicesData[4].title} desc={servicesData[4].desc} index={4} />
         </div>
       </div>

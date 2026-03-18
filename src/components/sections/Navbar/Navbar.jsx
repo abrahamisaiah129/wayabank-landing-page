@@ -25,8 +25,14 @@ function Navbar({ forceScrolled = false }) {
     return () => window.removeEventListener("scroll", handleScroll);
   }, [location.pathname, forceScrolled]);
 
-  const showDropdown = () => {
-    document.querySelector(".dropdown").classList.toggle("hidden");
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
+  const closeMenu = () => {
+    setIsMenuOpen(false);
   };
 
   const homeLinks = [
@@ -40,6 +46,7 @@ function Navbar({ forceScrolled = false }) {
 
   const handleScroll = (e, targetId) => {
     e.preventDefault();
+    closeMenu();
     const element = document.getElementById(targetId.replace("#", ""));
     if (element) {
       element.scrollIntoView({ behavior: 'smooth', block: 'start' });
@@ -49,12 +56,14 @@ function Navbar({ forceScrolled = false }) {
   };
 
   return (
-    <nav className={`navbar waya-navbar z-50 px-8 md:px-16 flex items-center justify-between sticky top-0 w-full transition-all duration-300 h-[72px] ${scrolled ? "scrolled" : ""}`}>
-      <Link to="/" className="navbar-brand">
-        <img src={Logo} alt="" width="180px" className="transition-all duration-300 logo-bold" />
+    <nav className={`navbar waya-navbar z-50 px-6 md:px-16 flex items-center justify-between sticky top-0 w-full transition-all duration-300 ${scrolled ? "scrolled" : ""} ${isMenuOpen ? "menu-open" : ""}`}>
+      <Link to="/" className="navbar-brand z-50">
+        <img src={Logo} alt="WayaBank Logo" className="transition-all duration-300 logo-bold" />
       </Link>
+
       
-      <div className="nav items-center gap-10 hidden md:flex">
+      {/* Desktop Navigation */}
+      <div className="nav items-center gap-10 hidden lg:flex">
         {/* Home Dropdown */}
         <div className="nav-item group relative ">
           <Link to="/" className="font-bold text-sm flex items-center gap-1 transition-colors py-2 uppercase tracking-wide text-white hover:text-orange-500">
@@ -75,23 +84,20 @@ function Navbar({ forceScrolled = false }) {
           </div>
         </div>
 
-        {/* API Documentation */}
         <Link to="/developer/docs" className="font-bold text-sm transition-colors py-2 uppercase tracking-wide text-white hover:text-orange-500">
           API Documentation
         </Link>
 
-        {/* Blog */}
         <Link to="/blogs" className="font-bold text-sm transition-colors py-2 uppercase tracking-wide text-white hover:text-orange-500">
           Blog
         </Link>
 
-        {/* Contact */}
         <Link to="/contact" className="font-bold text-sm transition-colors py-2 uppercase tracking-wide text-white hover:text-orange-500">
           Contact
         </Link>
       </div>
 
-      <div className="items-center gap-6 hidden md:flex">
+      <div className="items-center gap-6 hidden lg:flex">
         <Button 
           onClick={() => setDownloadModal(true)}
           size="md"
@@ -100,33 +106,45 @@ function Navbar({ forceScrolled = false }) {
         </Button>
       </div>
 
-      <div className="flex md:hidden">
-        <span
-          className="menu-btn relative w-6 h-1 bg-white block"
-          onClick={showDropdown}
-        ></span>
+      {/* Mobile Menu Toggle */}
+      <div className="flex lg:hidden z-50">
+        <button
+          className={`menu-toggle ${isMenuOpen ? "active" : ""}`}
+          onClick={toggleMenu}
+          aria-label="Toggle Menu"
+        >
+          <span className="hamburger-box">
+            <span className="hamburger-inner"></span>
+          </span>
+        </button>
+      </div>
 
-        <div className="dropdown absolute w-full left-0 top-24 z-20 flex hidden sm:hidden flex-col h-auto rounded shadow-2xl overflow-hidden bg-white/98 backdrop-blur-xl">
+      {/* Mobile Overflow Menu */}
+      <div className={`mobile-menu lg:hidden fixed inset-0 z-40 bg-black/95 backdrop-blur-2xl transition-all duration-500 ${isMenuOpen ? "opacity-100 visible" : "opacity-0 invisible pointer-events-none"}`}>
+        <div className="flex flex-col h-full pt-32 px-10 gap-8 overflow-y-auto pb-10">
           {homeLinks.map(link => (
             <a 
               key={link.name}
               href={link.href}
               onClick={(e) => handleScroll(e, link.href)}
-              className="font-bold px-6 text-md text-[#0a0b10]/80 border-b border-gray-100 h-14 flex items-center uppercase tracking-wide hover:text-orange-500"
+              className="text-4xl font-black text-white hover:text-orange-500 uppercase tracking-tighter transition-colors"
             >
               {link.name}
             </a>
           ))}
-          <Link to="/developer/docs" className="font-bold px-6 text-md text-[#0a0b10]/80 border-b border-gray-100 h-16 flex items-center uppercase tracking-wide hover:text-orange-500">API DOCUMENTATION</Link>
-          <Link to="/blogs" className="font-bold px-6 text-md text-[#0a0b10]/80 border-b border-gray-100 h-16 flex items-center uppercase tracking-wide hover:text-orange-500">BLOG</Link>
-          <Link to="/contact" className="font-bold px-6 text-md text-[#0a0b10]/80 border-b border-gray-100 h-16 flex items-center uppercase tracking-wide hover:text-orange-500">CONTACT</Link>
-          <Button 
-            onClick={() => { setDownloadModal(true); showDropdown(); }}
-            className="w-full text-left justify-start px-6 h-20 bg-transparent hover:bg-black/5 border-none rounded-none text-[#0a0b10] shadow-none"
-            variant="outline"
-          >
-            SIGN IN
-          </Button>
+          <div className="h-px w-full bg-white/10 my-4" />
+          <Link onClick={closeMenu} to="/developer/docs" className="text-2xl font-bold text-white/70 hover:text-white uppercase tracking-wide transition-colors">API Documentation</Link>
+          <Link onClick={closeMenu} to="/blogs" className="text-2xl font-bold text-white/70 hover:text-white uppercase tracking-wide transition-colors">Blog</Link>
+          <Link onClick={closeMenu} to="/contact" className="text-2xl font-bold text-white/70 hover:text-white uppercase tracking-wide transition-colors">Contact</Link>
+          
+          <div className="mt-8">
+            <Button 
+              onClick={() => { setDownloadModal(true); closeMenu(); }}
+              className="w-full h-16 text-lg !bg-orange-600"
+            >
+              SIGN IN
+            </Button>
+          </div>
         </div>
       </div>
     </nav>

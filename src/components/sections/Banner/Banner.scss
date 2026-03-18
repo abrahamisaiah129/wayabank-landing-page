@@ -81,32 +81,36 @@ $white-06:          rgba(255,255,255,0.06);
 .banner-inner {
   position: relative;
   z-index: 1;
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr;
   align-items: center;
-  justify-content: space-between;
-  max-width: 1200px;
+  justify-items: center;
+  max-width: 1240px;
   margin: 0 auto;
-  padding: 96px 48px 64px;
-  gap: 48px;
+  padding: 80px 24px 48px;
+  gap: 40px;
+  text-align: center;
 
-  @media (max-width: 960px) {
-    flex-direction: column;
-    padding: 72px 24px 48px;
-    text-align: center;
+  @media (min-width: 1024px) {
+    grid-template-columns: 1.2fr 0.8fr;
+    padding: 120px 60px 80px;
+    gap: 60px;
+    text-align: left;
+    justify-items: start;
   }
 }
 
 // ── Left content ──────────────────────────────────────────────────────
 .banner-content-wrapper {
-  flex: 1 1 0;
-  max-width: 560px;
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 20px;
+  width: 100%;
+  max-width: 600px;
+  align-items: center;
 
-  @media (max-width: 960px) {
-    align-items: center;
-    max-width: 100%;
+  @media (min-width: 1024px) {
+    align-items: flex-start;
   }
 }
 
@@ -118,11 +122,11 @@ $white-06:          rgba(255,255,255,0.06);
   background: $white-06;
   border: 1px solid $white-12;
   border-radius: 100px;
-  padding: 8px 16px;
-  font-size: 12px;
-  font-weight: 600;
+  padding: 10px 20px;
+  font-size: 11px;
+  font-weight: 700;
   color: $white-70;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.05em;
   text-transform: uppercase;
   backdrop-filter: blur(8px);
   width: fit-content;
@@ -136,12 +140,16 @@ $white-06:          rgba(255,255,255,0.06);
 // ── Headline ──────────────────────────────────────────────────────────
 .banner-headline {
   font-family: 'Sora', sans-serif;
-  font-size: clamp(36px, 5vw, 58px);
+  font-size: clamp(32px, 10vw, 64px);
   font-weight: 800;
-  line-height: 1.1;
+  line-height: 1.05;
   color: $white;
   margin: 0;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.03em;
+  word-wrap: break-word;
+  white-space: normal;
+  width: 100%;
+  max-width: 100%;
 }
 
 .text-accent-minimal {
@@ -155,55 +163,57 @@ $white-06:          rgba(255,255,255,0.06);
     bottom: -4px;
     left: 0;
     width: 100%;
-    height: 3px;
+    height: 4px;
     background: $waya-accent;
     border-radius: 2px;
-    opacity: 0.45;
+    opacity: 0.4;
   }
 }
 
 // ── Subheadline ───────────────────────────────────────────────────────
 .banner-subhead {
   font-family: 'DM Sans', sans-serif;
-  font-size: clamp(15px, 1.6vw, 18px);
+  font-size: clamp(15px, 2vw, 19px);
   font-weight: 400;
-  line-height: 1.7;
+  line-height: 1.6;
   color: $white-70;
   margin: 0;
-  max-width: 460px;
+  max-width: 520px;
 }
 
 // ── CTA ───────────────────────────────────────────────────────────────
 .banner-cta-wrapper {
   display: flex;
+  flex-direction: column;
   gap: 16px;
-  align-items: center;
+  width: 100%;
+  margin-top: 10px;
 
-  // Override the shared Button
+  @media (min-width: 640px) {
+    flex-direction: row;
+    width: auto;
+  }
+
+  // Override the shared Button - ensure thumb friendly
   button, .btn, [class*="btn"] {
+    min-height: 56px;
     background: $waya-accent !important;
     border: none !important;
-    border-radius: 12px !important;
+    border-radius: 14px !important;
     color: $white !important;
-    font-family: 'Sora', sans-serif !important;
-    font-weight: 700 !important;
-    font-size: 15px !important;
-    padding: 14px 28px !important;
-    cursor: pointer;
-    transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
-    box-shadow: 0 8px 32px rgba(255, 107, 0, 0.35);
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
+    font-size: 16px !important;
+    padding: 0 40px !important;
+    width: 100%;
+    justify-content: center;
 
-    &:hover {
-      background: lighten($waya-accent, 6%) !important;
-      transform: translateY(-2px);
-      box-shadow: 0 14px 40px rgba(255, 107, 0, 0.45);
+    @media (min-width: 640px) {
+      width: auto;
     }
 
-    &:active {
-      transform: translateY(0);
+    &:hover {
+      background: lighten($waya-accent, 5%) !important;
+      transform: translateY(-3px);
+      box-shadow: 0 15px 40px rgba(255, 107, 0, 0.4);
     }
   }
 }
@@ -211,18 +221,23 @@ $white-06:          rgba(255,255,255,0.06);
 // ── Testimonial ───────────────────────────────────────────────────────
 .testimonial-preview {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 14px;
-  padding: 16px 20px;
+  gap: 16px;
+  padding: 24px;
   background: $white-06;
   border: 1px solid $white-12;
-  border-radius: 16px;
+  border-radius: 20px;
   backdrop-filter: blur(8px);
-  width: fit-content;
+  width: 100%;
+  max-width: 440px;
+  margin-top: 12px;
+  text-align: center;
 
-  @media (max-width: 960px) {
-    width: 100%;
-    justify-content: center;
+  @media (min-width: 640px) {
+    flex-direction: row;
+    text-align: left;
+    width: fit-content;
   }
 
   .avatars {
@@ -230,14 +245,14 @@ $white-06:          rgba(255,255,255,0.06);
     flex-shrink: 0;
 
     img {
-      width: 36px;
-      height: 36px;
+      width: clamp(32px, 4vw, 40px);
+      height: clamp(32px, 4vw, 40px);
       border-radius: 50%;
       border: 2px solid $white-12;
       object-fit: cover;
 
       &:not(:first-child) {
-        margin-left: -10px;
+        margin-left: -12px;
       }
     }
   }
@@ -245,104 +260,63 @@ $white-06:          rgba(255,255,255,0.06);
   .testimonial-text {
     display: flex;
     flex-direction: column;
-    gap: 2px;
-
-    .stars {
-      color: $waya-accent-alt;
-      font-size: 12px;
-      display: flex;
-      gap: 2px;
-    }
-
-    .quote {
-      font-size: 13px;
-      font-weight: 700;
-      color: $white;
-    }
-
-    .users {
-      font-size: 12px;
-      color: $white-70;
-    }
+    gap: 4px;
   }
 }
 
 // ── Phone image ───────────────────────────────────────────────────────
 .banner-phone-wrapper {
   position: relative;
-  flex-shrink: 0;
+  width: 100%;
   display: flex;
-  align-items: flex-end;
   justify-content: center;
-  z-index: 1;
+  align-items: center;
+  margin-top: 20px;
 
-  .phone-glow {
-    position: absolute;
-    bottom: -40px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 280px;
-    height: 280px;
-    background: radial-gradient(circle, rgba(60, 60, 60, 0.5) 0%, transparent 70%);
-    filter: blur(40px);
-    pointer-events: none;
+  @media (min-width: 1024px) {
+    margin-top: 0;
+    justify-content: flex-end;
   }
 
   .banner-phone-img {
-    position: relative;
-    z-index: 1;
-    height: clamp(380px, 50vw, 560px);
+    height: clamp(340px, 60vh, 620px);
     width: auto;
     object-fit: contain;
-    filter: drop-shadow(0 32px 64px rgba(0,0,0,0.5));
-    animation: phoneFloat 4s ease-in-out infinite;
+    filter: drop-shadow(0 40px 80px rgba(0,0,0,0.6));
+    animation: phoneFloat 5s ease-in-out infinite;
   }
 }
 
 @keyframes phoneFloat {
-  0%, 100% { transform: translateY(0px); }
-  50%       { transform: translateY(-12px); }
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50%       { transform: translateY(-15px) rotate(1deg); }
 }
 
 // ── Trust signals ─────────────────────────────────────────────────────
 .trust-signals-bottom {
-  position: relative;
-  z-index: 1;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0;
-  max-width: 1200px;
+  flex-direction: column;
+  gap: 32px;
+  padding: 0 24px 48px;
+  max-width: 1240px;
   margin: 0 auto;
-  padding: 0 48px 40px;
 
-  @media (max-width: 640px) {
-    flex-direction: column;
-    padding: 0 24px 32px;
-    gap: 16px;
-  }
-}
-
-.trust-divider {
-  width: 1px;
-  height: 40px;
-  background: $white-12;
-  margin: 0 40px;
-
-  @media (max-width: 640px) {
-    display: none;
+  @media (min-width: 768px) {
+    flex-direction: row;
+    justify-content: center;
+    gap: 64px;
+    padding: 0 60px 64px;
   }
 }
 
 .trust-item {
   display: flex;
   align-items: center;
-  gap: 14px;
+  gap: 16px;
 
   .trust-icon {
-    font-size: 26px;
+    font-size: 28px;
     color: $waya-accent-alt;
-    flex-shrink: 0;
   }
 
   .trust-text {
@@ -351,7 +325,7 @@ $white-06:          rgba(255,255,255,0.06);
     gap: 2px;
 
     .trust-text-main {
-      font-size: 15px;
+      font-size: 16px;
       font-weight: 700;
       color: $white;
     }
@@ -365,20 +339,17 @@ $white-06:          rgba(255,255,255,0.06);
 
 // ── Stats ─────────────────────────────────────────────────────────────
 .banner-stats-row {
-  position: relative;
-  z-index: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 32px 48px 64px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+  padding: 40px 24px;
   border-top: 1px solid $white-12;
+  max-width: 1240px;
+  margin: 0 auto;
 
-  @media (max-width: 640px) {
-    flex-wrap: wrap;
-    padding: 24px 24px 48px;
-    gap: 24px;
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(4, 1fr);
+    padding: 60px;
   }
 }
 
@@ -386,33 +357,23 @@ $white-06:          rgba(255,255,255,0.06);
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 4px;
-  flex: 1;
+  gap: 6px;
 
   .stat-value {
-    font-family: 'Sora', sans-serif;
-    font-size: clamp(26px, 3vw, 36px);
+    font-size: clamp(28px, 4vw, 42px);
     font-weight: 800;
     color: $white;
-    letter-spacing: -0.02em;
+    letter-spacing: -0.03em;
     line-height: 1;
   }
 
   .stat-label {
-    font-size: 13px;
-    font-weight: 500;
+    font-size: 12px;
+    font-weight: 600;
     color: $white-70;
-    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
   }
 }
 
-.stat-divider {
-  width: 1px;
-  height: 48px;
-  background: $white-12;
-  flex-shrink: 0;
-
-  @media (max-width: 640px) {
-    display: none;
-  }
-}
+.stat-divider { display: none; }
