@@ -79,16 +79,17 @@ const Support = () => {
     },
   ];
   return (
-    <div id="solutionPage">
-      <Navbar />
+    <div id="solutionPage" className="bg-[#FAFBFF] min-h-screen relative overflow-hidden">
+      <Navbar forceScrolled={true} />
+      
       <div className="sp-content">
-        <div className="sp-top">
-          <div className="spt-text text-center w-full">
-            <h1 className="section-title">
+        <div className="sp-top py-24 md:py-32 relative z-10">
+          <div className="spt-text text-center w-full px-6">
+            <h1 className="section-title !text-gray-900">
               Send money to friends and family or <span className="section-title-accent">get payments</span> from your customers
             </h1>
             <div className="section-divider" />
-            <p className="section-subtitle">
+            <p className="section-subtitle !text-gray-500">
               Wayabank digital Banking is an all - in - one platform to perform
               safe and secure transactions, pay your bills.
             </p>
@@ -97,14 +98,15 @@ const Support = () => {
             <img src={SupportPhone} alt="phone" />
           </div>
         </div>
-        <div className="sp-bottom grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-6 md:px-12 max-w-[1440px] mx-auto py-20">
+        <div className="sp-bottom grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-6 md:px-12 max-w-[1440px] mx-auto py-20 relative z-10">
           {spbItem?.map((item, index) => (
-            <FeatureCard 
-              key={index}
-              title={item.title}
-              description={item.content}
-              icon={<img src={item.img} alt={item.title} className="w-8 h-8 object-contain" />}
-            />
+            <div key={index} className="waya-premium-card bg-white !border-gray-100 hover:!border-orange-500/30 group shadow-sm">
+              <FeatureCard 
+                title={item.title}
+                description={item.content}
+                icon={<div className="w-12 h-12 rounded-xl bg-orange-500/10 flex items-center justify-center group-hover:bg-orange-500/20 transition-colors"><img src={item.img} alt={item.title} className="w-6 h-6 object-contain" /></div>}
+              />
+            </div>
           ))}
         </div>
       </div>

@@ -1,8 +1,14 @@
 .blog-section {
   .blog-card {
-    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    @extend .waya-premium-card;
+    padding: 0;
+    overflow: hidden;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
     
     &:hover {
+      transform: translateY(-10px);
       .read-story-icon {
         transform: translateX(8px);
       }

@@ -47,14 +47,14 @@ function Blog(props) {
   };
 
   return (
-    <div className="blog-page-v2 bg-white min-h-screen">
-      <Navbar onOpenAccountClick={toggleDownloadModal} />
+    <div className="blog-page-v2 bg-[#FAFBFF] min-h-screen relative overflow-hidden">
+      <Navbar onOpenAccountClick={toggleDownloadModal} forceScrolled={true} />
       
       {/* Blog Hero */}
-      <section className="blog-hero py-24 md:py-32 bg-gray-50/50 text-center px-6 border-b border-gray-100">
-          <span className="text-black font-black tracking-[0.2em] uppercase text-xs mb-4 block opacity-60">Our Blog</span>
+      <section className="blog-hero py-24 md:py-32 bg-transparent text-center px-6 relative z-10">
+          <span className="text-orange-500 font-black tracking-[0.2em] uppercase text-xs mb-4 block">Our Blog</span>
           <h1 className="text-5xl md:text-6xl font-black text-gray-900 mb-6 tracking-tight">
-            Insights & <span className="text-black underline decoration-gray-200 decoration-4 underline-offset-8">Updates</span>
+            Insights & <span className="text-orange-500 underline decoration-black/5 decoration-4 underline-offset-8">Updates</span>
           </h1>
           <p className="text-lg text-gray-600 max-w-xl mx-auto leading-relaxed font-medium">
             The latest updates, stories, and financial guides from the Waya team.
@@ -94,9 +94,9 @@ function Blog(props) {
           </div>
         ) : (
           <>
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-10 relative z-10">
               {currentPosts.length > 0 ? currentPosts.map(el => (
-                  <div key={el.id} className="blog-card-v3 group bg-white rounded-[2.5rem] overflow-hidden shadow-sm border border-gray-100 hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 flex flex-col h-full">
+                  <div key={el.id} className="waya-premium-card group !p-0 overflow-hidden flex flex-col h-full bg-white/5 backdrop-blur-sm !border-white/10 hover:!border-orange-500/50">
                     <div className="relative h-56 overflow-hidden">
                       <img 
                         src={el.image_url} 
@@ -139,7 +139,7 @@ function Blog(props) {
                   </div>
                   <h3 className="text-2xl font-black text-gray-900 mb-2">No matching articles found</h3>
                   <p className="text-gray-500 font-medium mb-8">Try adjusting your search criteria or explore our featured stories.</p>
-                  <button onClick={() => setSearchTerm("")} className="bg-black text-white px-8 py-3 rounded-xl font-black text-xs uppercase tracking-widest hover:scale-105 transition-transform shadow-lg">Reset Filter</button>
+                  <button onClick={() => setSearchTerm("")} className="bg-orange-500 text-white px-8 py-3 rounded-xl font-black text-xs uppercase tracking-widest hover:scale-105 transition-transform shadow-lg">Reset Filter</button>
                 </div>
               )}
             </div>

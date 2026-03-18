@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 import { useSetRecoilState } from "recoil";
 import { downloadModalState } from "../../../states/home";
 import Button from "../../parts/Button";
+import { DownOutlined } from "@ant-design/icons";
 
 function Navbar({ forceScrolled = false }) {
   const setDownloadModal = useSetRecoilState(downloadModalState);
@@ -79,9 +80,15 @@ function Navbar({ forceScrolled = false }) {
           onClick={toggleMenu}
           aria-label="Toggle Menu"
         >
-          <span className="hamburger-box">
-            <span className="hamburger-inner"></span>
-          </span>
+          <svg 
+            className={`w-8 h-8 text-white transition-transform duration-500 ${isMenuOpen ? "rotate-180" : ""}`}
+            fill="none" 
+            viewBox="0 0 24 24" 
+            stroke="currentColor" 
+            strokeWidth="4"
+          >
+            <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+          </svg>
         </button>
       </div>
 
@@ -117,7 +124,7 @@ function Navbar({ forceScrolled = false }) {
                 ></path>
               </svg>
             </Link>
-            <div className="absolute top-full left-0 w-56 shadow-2xl rounded-xl border border-gray-100 py-3 hidden group-hover:block animate-fade-in-down bg-white/98 backdrop-blur-xl">
+            <div className="absolute top-full left-0 w-56 shadow-2xl rounded-xl border border-gray-100 py-3 hidden group-hover:block animate-fade-in-down bg-white/98 backdrop-blur-xl z-[2000]">
               {homeLinks.map((link) => (
                 <a
                   key={link.name}

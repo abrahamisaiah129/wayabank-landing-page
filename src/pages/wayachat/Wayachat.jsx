@@ -67,16 +67,16 @@ function WayaChat() {
   ]
 
   return (
-    <div >
-      <Navbar />
+    <div className="bg-[#FAFBFF] min-h-screen relative overflow-hidden">
+      <Navbar forceScrolled={true} />
       <div id="wayaPayPage" className="">
-        <div className="jumbotron wayagramJumbotron py-1 mb-1" style={{ backgroundImage: 'url(/Ellipse.png)' }}>
+        <div className="jumbotron wayagramJumbotron py-24 relative z-10" style={{ background: 'none' }}>
           <Fade right>
-            <div className="pb-1 row justify-content-center">
-              <div className='col-md-5 pt-4 '>
-                <h2 className="">{categoryData.category_page_title}</h2>
-                <p className='pt-2'>{categoryData.category_description}</p>
-                <p className='lighter'>{categoryData.category_description2}</p>
+            <div className="pb-1 row justify-content-center items-center px-6">
+              <div className='col-md-5 pt-4'>
+                <h2 className="section-title !text-left !text-gray-900 lowercase tracking-tight">{categoryData.category_page_title}</h2>
+                <p className='pt-2 text-gray-600 font-medium text-lg'>{categoryData.category_description}</p>
+                <p className='lighter !text-orange-500 font-black uppercase tracking-widest'>{categoryData.category_description2}</p>
                 {
                   cat === 'waya-pos'?
                   <Fade left>
@@ -95,13 +95,15 @@ function WayaChat() {
           </Fade>
         </div>
         <Fade bottom cascade>
-          <div className='theGrids pb-4' style={{ backgroundColor: '#F9F8F7' }}>
+          <div className='theGrids pb-24 relative z-10 px-6' style={{ backgroundColor: 'transparent' }}>
             {gridData && gridData.map(el => {
-              return <SingleBox key={el.id} bgColor={'white'}
-                title={el.product_name}
-                body={el.product_description}
-                givenId={el.url}
-                imageName={el.product_image_url} />
+              return <div key={el.id} className="waya-premium-card bg-white !border-gray-100 hover:!border-orange-500/30 shadow-sm">
+                <SingleBox bgColor={'transparent'}
+                  title={el.product_name}
+                  body={el.product_description}
+                  givenId={el.url}
+                  imageName={el.product_image_url} />
+              </div>
             })}
           </div>
         </Fade>
